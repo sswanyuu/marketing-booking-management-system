@@ -1,12 +1,16 @@
 {
   "devDependencies": {
+    "sass-embedded": "^1.92.1",
     "scss": "^0.2.4",
-    "vitepress": "^2.0.0-alpha.12"
+    "vitepress": "^1.0.0-rc.31"
   },
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
   }
 }
