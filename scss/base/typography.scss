@@ -1,0 +1,87 @@
+// Font imports
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+
+// Typography Variables
+$font-family-mandarin: "Noto Sans TC";
+$font-family-foreign: "Montserrat";
+
+// Base font stack that automatically selects appropriate font
+$font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
+
+// Typography Mixins
+@mixin headline-bold($size, $letter-spacing: 0%) {
+  font-family: $font-family-base;
+  font-weight: 700;
+  font-size: $size;
+  line-height: auto;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin headline-regular($size, $line-height: auto, $letter-spacing: 0%) {
+  font-family: $font-family-base;
+  font-weight: 400;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin body-text($size, $line-height: 140%, $letter-spacing: 0%) {
+  font-family: $font-family-base;
+  font-weight: 400;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+// Typography Classes
+// Bold Headlines
+.headline-1-bold {
+  @include headline-bold(48px, 0%);
+}
+
+.headline-2-bold {
+  @include headline-bold(44px, 4%);
+}
+
+.headline-3-bold {
+  @include headline-bold(32px, 0%);
+}
+
+.headline-4-bold {
+  @include headline-bold(28px, 0%);
+}
+
+.headline-5-bold {
+  @include headline-bold(24px, 0%);
+}
+
+.headline-6-bold {
+  @include headline-bold(20px, 0%);
+}
+
+.headline-7-bold {
+  @include headline-bold(16px, 0%);
+}
+
+// Regular Headlines
+.headline-1-regular {
+  @include headline-regular(24px, 140%, 0%);
+}
+
+.headline-2-regular {
+  @include headline-regular(20px, auto, 0%);
+}
+
+// Body Text
+.body-1 {
+  @include body-text(16px, 140%, 0%);
+}
+
+.body-2 {
+  @include body-text(14px, 140%, 0%);
+}
+
+.body-3 {
+  @include body-text(12px, auto, 0%);
+}

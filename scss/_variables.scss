@@ -1,10 +1,35 @@
 // Pre-define variables
 // $theme-colors: ( 'primary': #007bff );
+/* Brand */
+$brand-main-1: #7a4ce3; // Main01
+$brand-main-2: #3c11a4; // Main02
+$brand-main-3: #f2f0f6; // Main03
+$brand-black: #252525;
+$brand-white: #ffffff;
+
+/* Neutral */
+$neutral-1: #909090; // Gray01
+$neutral-2: #f7f7f7; // Gray02
 
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/mixins";
+
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "primary": $brand-main-1,
+    "secondary": $brand-main-2,
+    "tertiary": $brand-main-3,
+    "black": $brand-black,
+    "white": $brand-white,
+    "light": $brand-white,
+    "dark": $brand-black,
+    "gray": $neutral-1,
+    "gray-light": $neutral-2,
+  )
+);
 @import "bootstrap/scss/maps";
 
 // Override variables

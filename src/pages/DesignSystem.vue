@@ -1,4 +1,6 @@
-<script setup lang="ts">
+<script setup>
+import Button from "../components/Button.vue"
+
 const themeColors = [
   'primary',
   'secondary',
@@ -13,6 +15,51 @@ const themeColors = [
 
 <template>
   <div class="py-5">
+    <div class="title row">
+      <div class="col-12 my-4">
+        <h2>Custom Button</h2>
+        <Button variant="primary">預約 Demo</Button>
+        <Button variant="primary">Primary</Button>
+        <Button variant="primary" disabled>Primary</Button>
+        <Button variant="secondary">Secondary</Button>
+        <Button variant="secondary" disabled>Secondary</Button>
+        <Button variant="mobile">Mobile</Button>
+        <Button variant="mobile" disabled>Mobile</Button>
+        <Button variant="arrow" />
+        <Button variant="arrow" disabled/>
+      </div>
+    </div>
+    <div class="title row">
+      <div class="row my-4">
+        <h2>Custom Typography</h2>
+        <div class="col-6">       
+          <h1 class="headline-1-bold">Headline 1 Bold</h1>
+          <h2 class="headline-2-bold">Headline 2 Bold</h2>
+          <h3 class="headline-3-bold">Headline 3 Bold</h3>
+          <h4 class="headline-4-bold">Headline 4 Bold</h4>
+          <h5 class="headline-5-bold">Headline 5 Bold</h5>
+          <h6 class="headline-6-bold">Headline 6 Bold</h6>
+          <h7 class="headline-7-bold">Headline 7 Bold</h7>
+          <h1 class="headline-1-regular">Headline 1 Regular</h1>
+          <h2 class="headline-2-regular">Headline 2 Regular</h2>
+        </div>
+ 
+        
+     
+        <div class="col-6">
+          <p class="body-1">Body 1</p>
+          <p class="body-2">Body 2</p>
+          <p class="body-3">Body 3</p>
+          <p class="body-3">中文</p>
+
+        </div>
+      </div>
+    </div>  
+    <div class="title row">
+      <div class="col-12">
+        <h2>Custom input</h2>
+      </div>
+    </div>
     <!--      button      -->
     <div class="title row">
       <div class="col-12">
@@ -23,7 +70,7 @@ const themeColors = [
       <div class="col-8">
         <div class="bs-component mb-3">
           <template v-for="themeColor of themeColors">
-            <button type="button" class="btn " :class="`btn-${themeColor}`">{{ themeColor }}</button>
+            <button type="button" class="btn" :class="`btn-${themeColor}`">{{ themeColor }}</button>
           </template>
           <button type="button" class="btn btn-link">Link</button>
         </div>

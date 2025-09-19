@@ -1,0 +1,120 @@
+@import "../_variables";
+
+// Button Variables
+$button-border-radius: 200px;
+$button-border-radius-mobile: 100px;
+$button-padding-x: 48px;
+$button-padding-y: 24px;
+$button-padding-x-mobile: 16px;
+$button-padding-y-mobile: 16px;
+$button-transition: all 0.2s ease-in-out;
+
+// Button Base Styles
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: $button-transition;
+  white-space: nowrap;
+  border: none;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+// Primary Button
+.btn-primary {
+  background-color: $brand-main-1;
+  color: $brand-white;
+  padding: $button-padding-y $button-padding-x;
+  border-radius: $button-border-radius;
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled) {
+    background-color: $brand-main-2;
+    border-color: $brand-main-2;
+    color: $brand-white;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+// Secondary Button
+.btn-secondary {
+  background-color: $brand-white;
+  color: $brand-main-1;
+  padding: $button-padding-y $button-padding-x;
+  border-radius: $button-border-radius;
+
+  &:hover:not(:disabled),
+  &active:not(:disabled) {
+    background-color: $brand-black;
+    color: $brand-white;
+  }
+
+  &:disabled {
+    color: $brand-main-1;
+    background-color: $brand-white;
+    opacity: 0.4;
+  }
+}
+
+// Mobile Button (same as secondary for now, but can be customized)
+.btn-mobile {
+  @extend .btn-secondary;
+  padding: $button-padding-y-mobile $button-padding-x-mobile;
+  border-radius: $button-border-radius-mobile;
+  &:hover:not(:disabled),
+  &:active:not(:disabled) {
+    background-color: $brand-main-1;
+    color: $brand-white;
+  }
+  &:disabled {
+    display: none;
+  }
+}
+
+// Arrow Button
+.btn-arrow {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 32px;
+  background-color: $brand-black;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+
+    path {
+      stroke: $brand-white;
+    }
+  }
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled) {
+    background-color: $brand-main-1;
+    border-color: $brand-main-1;
+    color: $brand-white;
+
+    svg path {
+      stroke: $brand-white;
+    }
+  }
+
+  &:disabled {
+    border: 1px solid $brand-black;
+    opacity: 0.3;
+
+    svg path {
+      stroke: $brand-black;
+    }
+  }
+}
