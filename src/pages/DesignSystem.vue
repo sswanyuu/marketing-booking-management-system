@@ -1,6 +1,6 @@
 <script setup>
 import Button from "../components/Button.vue"
-
+import InputDemo from "../components/InputDemo.vue"
 const themeColors = [
   'primary',
   'secondary',
@@ -43,22 +43,16 @@ const themeColors = [
           <h1 class="headline-1-regular">Headline 1 Regular</h1>
           <h2 class="headline-2-regular">Headline 2 Regular</h2>
         </div>
- 
-        
-     
         <div class="col-6">
           <p class="body-1">Body 1</p>
           <p class="body-2">Body 2</p>
           <p class="body-3">Body 3</p>
           <p class="body-3">中文</p>
-
         </div>
       </div>
     </div>  
     <div class="title row">
-      <div class="col-12">
-        <h2>Custom input</h2>
-      </div>
+      <InputDemo/>
     </div>
     <!--      button      -->
     <div class="title row">

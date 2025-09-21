@@ -6,6 +6,7 @@ $brand-main-2: #3c11a4; // Main02
 $brand-main-3: #f2f0f6; // Main03
 $brand-black: #252525;
 $brand-white: #ffffff;
+$brand-danger: #f00;
 
 /* Neutral */
 $neutral-1: #909090; // Gray01
@@ -15,6 +16,9 @@ $neutral-2: #f7f7f7; // Gray02
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/mixins";
+
+// Override Bootstrap's danger color
+$danger: $brand-danger;
 
 $theme-colors: map-merge(
   $theme-colors,
@@ -28,10 +32,7 @@ $theme-colors: map-merge(
     "dark": $brand-black,
     "gray": $neutral-1,
     "gray-light": $neutral-2,
+    "danger": $brand-danger,
   )
 );
-@import "bootstrap/scss/maps";
-
-// Override variables
-
 @import "bootstrap/scss/maps";

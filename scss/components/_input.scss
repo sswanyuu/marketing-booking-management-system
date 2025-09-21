@@ -1,0 +1,88 @@
+@import "../variables";
+@import "../base/typography";
+
+// Input Variables
+$input-padding: 16px;
+$input-transition: all 0.2s ease-in-out;
+
+// Input Container
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+// Input Label
+.input-label {
+  color: $brand-black;
+  // Mobile: H7 (headline-7-bold = 16px, bold)
+  // Desktop: H5 (headline-5-bold = 24px, bold)
+  @include media-breakpoint-up(md) {
+    @include headline-bold(24px, 0%); // H5
+  }
+}
+
+// Input Field Base
+.input-field {
+  width: 100%;
+  padding: $input-padding;
+  margin: 8px 0;
+  font-family: $font-family-base;
+  color: $brand-black;
+  background-color: $brand-white;
+  border: 1px solid $neutral-1;
+  transition: $input-transition;
+  outline: none;
+
+  // Mobile: body-3 (12px, 400 weight, auto line-height)
+  // Desktop: regular H2 (headline-2-regular = 20px, 400 weight, auto line-height)
+  @include media-breakpoint-up(md) {
+    @include headline-regular(20px, auto, 0%); // regular H2
+  }
+
+  &::placeholder {
+    color: $neutral-1;
+
+    // Match placeholder typography to input typography
+    @include media-breakpoint-up(md) {
+      @include headline-regular(20px, auto, 0%); // regular H2
+    }
+  }
+
+  &:focus,
+  &:active,
+  &:hover {
+    border-color: $brand-main-1;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    border-color: $neutral-1;
+    color: $neutral-1;
+    cursor: not-allowed;
+  }
+  &.error {
+    border-color: $danger;
+    color: $danger;
+
+    &::placeholder {
+      color: $danger;
+    }
+
+    &:focus {
+      border-color: $danger;
+      color: $danger;
+    }
+  }
+}
+
+// Error Message
+.input-error {
+  font-family: $font-family-base;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $danger;
+  @include media-breakpoint-up(md) {
+    @include body-text(16px, 140%, 0%);
+  }
+}
