@@ -3,10 +3,6 @@
 // Button Variables
 $button-border-radius: 200px;
 $button-border-radius-mobile: 100px;
-$button-padding-x: 48px;
-$button-padding-y: 24px;
-$button-padding-x-mobile: 16px;
-$button-padding-y-mobile: 16px;
 $button-transition: all 0.2s ease-in-out;
 
 // Button Base Styles
@@ -29,7 +25,6 @@ $button-transition: all 0.2s ease-in-out;
 .btn-primary {
   background-color: $brand-main-1;
   color: $brand-white;
-  padding: $button-padding-y $button-padding-x;
   border-radius: $button-border-radius;
 
   &:hover:not(:disabled),
@@ -48,7 +43,6 @@ $button-transition: all 0.2s ease-in-out;
 .btn-secondary {
   background-color: $brand-white;
   color: $brand-main-1;
-  padding: $button-padding-y $button-padding-x;
   border-radius: $button-border-radius;
 
   &:hover:not(:disabled),
@@ -67,8 +61,8 @@ $button-transition: all 0.2s ease-in-out;
 // Mobile Button (same as secondary for now, but can be customized)
 .btn-mobile {
   @extend .btn-secondary;
-  padding: $button-padding-y-mobile $button-padding-x-mobile;
   border-radius: $button-border-radius-mobile;
+  padding: 16px;
   &:hover:not(:disabled),
   &:active:not(:disabled) {
     background-color: $brand-main-1;
@@ -77,8 +71,15 @@ $button-transition: all 0.2s ease-in-out;
   &:disabled {
     display: none;
   }
+  @include media-breakpoint-up(xl) {
+    padding: 16px 24px;
+  }
 }
 
+.btn-mobile-full {
+  @extend .btn-mobile;
+  padding: auto 24px;
+}
 // Arrow Button
 .btn-arrow {
   width: 40px;

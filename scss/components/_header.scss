@@ -1,0 +1,52 @@
+@import "../variables";
+@import "../base/typography";
+
+$header-padding: 12.5px 20%;
+$header-padding-mobile: 12px 8px;
+// Site Header
+.site-header {
+  padding: $header-padding;
+}
+.logo-container {
+  gap: 12px;
+  .features-toggle-container {
+    display: none;
+  }
+  img {
+    width: 172px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+}
+.nav-link {
+  color: $brand-white;
+  @include headline-bold(14px, 0%);
+}
+.navbar-nav {
+  display: flex;
+}
+.nav-item {
+  margin-right: 20px;
+}
+
+.features {
+  gap: 4px;
+}
+
+@include media-breakpoint-down(xl) {
+  .site-header {
+    padding: $header-padding-mobile;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .logo-container {
+    .features-toggle-container {
+      display: block;
+    }
+    img {
+      width: 112px;
+      height: 31px;
+    }
+  }
+}
