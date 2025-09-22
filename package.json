@@ -1,5 +1,9 @@
 {
   "devDependencies": {
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "eslint": "^9.36.0",
+    "eslint-plugin-vue": "^10.5.0",
+    "prettier": "^3.6.2",
     "sass-embedded": "^1.92.1",
     "scss": "^0.2.4",
     "vitepress": "^1.0.0-rc.31"
@@ -8,7 +12,11 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint . --ext .vue,.js,.ts",
+    "lint:fix": "eslint . --ext .vue,.js,.ts --fix"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

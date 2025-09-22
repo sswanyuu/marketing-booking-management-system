@@ -1,10 +1,10 @@
 // Font imports
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
 
 // Typography Variables
-$font-family-mandarin: "Noto Sans TC";
-$font-family-foreign: "Montserrat";
+$font-family-mandarin: 'Noto Sans TC';
+$font-family-foreign: 'Montserrat';
 
 // Base font stack that automatically selects appropriate font
 $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;

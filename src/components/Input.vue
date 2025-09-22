@@ -18,7 +18,7 @@
       @input="handleInput"
       @keydown="handleKeydown"
     />
-    
+
     <div v-if="errorMessage" class="input-error body-3">
       {{ errorMessage }}
     </div>
@@ -26,93 +26,104 @@
 </template>
 
 <script setup>
-import { ref, computed, nextTick } from 'vue'
-import '../../scss/components/_input.scss'
+import { ref, computed, nextTick } from 'vue';
+import '../../scss/components/_input.scss';
 
 const props = defineProps({
   modelValue: {
     type: [String, Number],
-    default: ''
+    default: '',
   },
   label: {
     type: String,
-    default: ''
+    default: '',
   },
   placeholder: {
     type: String,
-    default: ''
+    default: '',
   },
   type: {
     type: String,
     default: 'text',
-    validator: (value) => ['text', 'email', 'password', 'number', 'tel', 'url', 'search'].includes(value)
+    validator: value =>
+      ['text', 'email', 'password', 'number', 'tel', 'url', 'search'].includes(
+        value
+      ),
   },
   state: {
     type: String,
     default: 'default',
-    validator: (value) => ['default', 'error'].includes(value)
+    validator: value => ['default', 'error'].includes(value),
   },
   disabled: {
     type: Boolean,
-    default: false
+    default: false,
   },
   required: {
     type: Boolean,
-    default: false
+    default: false,
   },
   errorMessage: {
     type: String,
-    default: ''
+    default: '',
   },
-})
+});
 
-const emit = defineEmits(['update:modelValue', 'focus', 'blur', 'input', 'keydown'])
+const emit = defineEmits([
+  'update:modelValue',
+  'focus',
+  'blur',
+  'input',
+  'keydown',
+]);
 
-const inputRef = ref(null)
-const inputId = computed(() => `input-${Math.random().toString(36).substr(2, 9)}`)
+const inputRef = ref(null);
+const inputId = computed(
+  () => `input-${Math.random().toString(36).substr(2, 9)}`
+);
 
 const inputValue = computed({
   get: () => props.modelValue,
-  set: (value) => emit('update:modelValue', value)
-})
+  set: value => emit('update:modelValue', value),
+});
 
 const inputClasses = computed(() => {
-  const classes = ['input-field', 'body-3']
-  
+  const classes = ['input-field', 'body-3'];
+
   if (props.state === 'error') {
-    classes.push('error')
-  } 
-  return classes
-})
+    classes.push('error');
+  }
+  return classes;
+});
 
-const handleFocus = (event) => {
-  emit('focus', event)
-}
+const handleFocus = event => {
+  emit('focus', event);
+};
 
-const handleBlur = (event) => {
-  emit('blur', event)
-}
+const handleBlur = event => {
+  emit('blur', event);
+};
 
-const handleInput = (event) => {
-  emit('input', event)
-}
+const handleInput = event => {
+  emit('input', event);
+};
 
-const handleKeydown = (event) => {
-  emit('keydown', event)
-}
+const handleKeydown = event => {
+  emit('keydown', event);
+};
 
 // Expose methods for parent components
 defineExpose({
   focus: () => {
     nextTick(() => {
-      inputRef.value?.focus()
-    })
+      inputRef.value?.focus();
+    });
   },
   blur: () => {
-    inputRef.value?.blur()
+    inputRef.value?.blur();
   },
   select: () => {
-    inputRef.value?.select()
-  }
-})
+    inputRef.value?.select();
+  },
+});
 </script>

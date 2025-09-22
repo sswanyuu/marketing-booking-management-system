@@ -1,5 +1,5 @@
-@import "../variables";
-@import "../base/typography";
+@import '../variables';
+@import '../base/typography';
 
 $header-padding: 12.5px 20%;
 $header-padding-mobile: 12px 8px;
@@ -13,7 +13,7 @@ $header-padding-mobile: 12px 8px;
   .features-toggle-container {
     display: none;
   }
-  img {
+  .logo-img {
     width: 172px;
     height: 48px;
     flex-shrink: 0;
@@ -45,7 +45,6 @@ $header-padding-mobile: 12px 8px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
-  transition: all 0.3s ease;
 
   &.show {
     opacity: 1;
@@ -75,7 +74,7 @@ $header-padding-mobile: 12px 8px;
     .features-toggle-container {
       display: block;
     }
-    img {
+    .logo-img {
       width: 112px;
       height: 31px;
     }

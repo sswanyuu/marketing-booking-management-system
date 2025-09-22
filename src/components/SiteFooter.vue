@@ -4,7 +4,10 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>FullKeep</h3>
-          <p>Building better user experiences through thoughtful design and development.</p>
+          <p>
+            Building better user experiences through thoughtful design and
+            development.
+          </p>
         </div>
         <div class="footer-section">
           <h4>Quick Links</h4>
