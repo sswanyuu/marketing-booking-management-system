@@ -1,6 +1,9 @@
 // Variables
 @import "_variables";
 
+// Bootstrap Icons
+@import "_bootstrap-icons";
+
 // Bootstrap
 @import "bootstrap/scss/bootstrap";
 
@@ -13,6 +16,8 @@
 @import "components/_button";
 @import "components/_input";
 @import "components/_header";
+@import "components/_features-section";
+@import "components/_mobile-menu";
 
 // Layout
 // @import "layout/base";

@@ -1,0 +1,71 @@
+@import "../variables";
+@import "../base/typography";
+
+// Mobile Navigation
+.mobile-nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $zindex-modal;
+
+  .mobile-nav-content {
+    padding: 24px 12px;
+    gap: 13px;
+
+    .mobile-nav-divider {
+      height: 1px;
+      width: 100%;
+    }
+
+    .mobile-nav-section {
+      .mobile-section-title {
+        margin: 0 0 16px 0;
+      }
+      .mobile-nav-header {
+        cursor: pointer;
+
+        .mobile-nav-title {
+          padding: 16px 0;
+        }
+
+        .mobile-chevron {
+          transition: transform 0.3s ease;
+          color: $brand-black;
+
+          &.rotated {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .mobile-nav-title {
+        padding: 16px 0;
+      }
+      .mobile-features-dropdown {
+        gap: 12px;
+
+        &.show {
+          max-height: 500px;
+        }
+
+        .mobile-feature-item {
+          gap: 16px;
+
+          .mobile-feature-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+          }
+
+          .mobile-feature-content {
+            gap: 8px;
+
+            .mobile-feature-description {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

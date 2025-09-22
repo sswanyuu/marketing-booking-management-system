@@ -5,6 +5,7 @@ $header-padding: 12.5px 20%;
 $header-padding-mobile: 12px 8px;
 // Site Header
 .site-header {
+  position: relative;
   padding: $header-padding;
 }
 .logo-container {
@@ -33,6 +34,36 @@ $header-padding-mobile: 12px 8px;
   gap: 4px;
 }
 
+// Desktop Features Section
+.desktop-features-section {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: $brand-white;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+// Chevron Icon Animation
+.chevron-icon {
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+
+  &.rotated {
+    transform: rotate(180deg);
+  }
+}
+
 @include media-breakpoint-down(xl) {
   .site-header {
     padding: $header-padding-mobile;
@@ -48,5 +79,9 @@ $header-padding-mobile: 12px 8px;
       width: 112px;
       height: 31px;
     }
+  }
+
+  .desktop-features-section {
+    display: none;
   }
 }

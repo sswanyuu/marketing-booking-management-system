@@ -63,6 +63,9 @@ $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
 .headline-7-bold {
   @include headline-bold(16px, 0%);
 }
+.headline-8-bold {
+  @include headline-bold(14px, 0%);
+}
 
 // Regular Headlines
 .headline-1-regular {
