@@ -11,7 +11,8 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "vitepress build --outDir dist",
+    "build": "vitepress build --outDir dist",
     "docs:preview": "vitepress preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

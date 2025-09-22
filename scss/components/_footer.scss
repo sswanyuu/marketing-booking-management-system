@@ -1,0 +1,67 @@
+// Site Footer Component Styles
+// Using Bootstrap utilities first, custom styles only where needed
+
+.site-footer {
+  // Custom background and spacing
+  background: #1a1a1a;
+  color: #ffffff;
+  padding: 2rem 0;
+  margin-top: auto;
+
+  // Logo sizing
+  .footer-logo {
+    height: auto;
+    max-height: 2rem;
+  }
+
+  .footer-logo-mobile {
+    height: auto;
+    max-height: 2.5rem;
+  }
+
+  // Navigation links styling
+  .footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // Copyright text styling
+  .footer-copyright {
+    color: #ffffff;
+    font-size: 0.75rem;
+  }
+
+  .footer-copyright-mobile {
+    color: #ffffff;
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  // Mobile responsive adjustments
+  @media (max-width: 768px) {
+    padding: 2.5rem 0;
+  }
+
+  @media (max-width: 480px) {
+    .footer-logo-mobile {
+      max-height: 2rem;
+    }
+
+    .footer-link {
+      font-size: 0.8rem;
+    }
+
+    .footer-copyright-mobile {
+      font-size: 0.7rem;
+    }
+  }
+}
