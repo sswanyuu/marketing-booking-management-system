@@ -43,7 +43,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import '../../scss/components/_features-section.scss';
+import '../../../scss/components/_features-section.scss';
 
 // Import icons
 import uxIcon from '../assets/icons/ux.svg';

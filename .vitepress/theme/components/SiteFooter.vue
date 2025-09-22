@@ -52,5 +52,5 @@
 </script>
 
 <style lang="scss">
-@import '../../scss/components/_footer';
+@import '../../../scss/components/_footer';
 </style>

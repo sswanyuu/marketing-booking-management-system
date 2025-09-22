@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import '../../scss/components/_button.scss';
+import '../../../scss/components/_button.scss';
 import { computed } from 'vue';
 
 const props = defineProps({

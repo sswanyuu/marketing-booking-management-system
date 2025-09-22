@@ -3,3 +3,4 @@ build/
 .vitepress/cache/
 # .vitepress/dist/
 # .vitepress/public/
+.DS_Store

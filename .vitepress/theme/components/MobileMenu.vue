@@ -109,7 +109,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue';
-import '../../scss/components/_mobile-menu.scss';
+import '../../../scss/components/_mobile-menu.scss';
 
 // Import icons
 import chevronDownIcon from '../assets/icons/chevron-down.svg';

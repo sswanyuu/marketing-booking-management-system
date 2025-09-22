@@ -66,7 +66,8 @@ import MobileMenu from './MobileMenu.vue';
 import closeIcon from '../assets/icons/close.svg';
 import menuIcon from '../assets/icons/menu.svg';
 import chevronUpIcon from '../assets/icons/chevron-up.svg';
-import '../../scss/components/_header.scss';
+// import logo from '../assets/images/logo.png';
+import '../../../scss/components/_header.scss';
 
 // Reactive state
 const isMenuOpen = ref(false);

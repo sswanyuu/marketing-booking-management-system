@@ -27,7 +27,7 @@
 
 <script setup>
 import { ref, computed, nextTick } from 'vue';
-import '../../scss/components/_input.scss';
+import '../../../scss/components/_input.scss';
 
 const props = defineProps({
   modelValue: {
