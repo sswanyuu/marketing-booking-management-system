@@ -3,6 +3,7 @@
 
 // Mobile Navigation
 .mobile-nav {
+  padding: 24px 12px;
   top: 0;
   left: 0;
   right: 0;
@@ -10,7 +11,7 @@
   z-index: $zindex-modal;
 
   .mobile-nav-content {
-    padding: 24px 12px;
+    padding: 0 8px;
     gap: 13px;
 
     .mobile-nav-divider {
@@ -43,6 +44,8 @@
       }
       .mobile-features-dropdown {
         gap: 12px;
+        max-height: 0;
+        overflow: hidden;
 
         &.show {
           max-height: 500px;
@@ -51,10 +54,8 @@
         .mobile-feature-item {
           gap: 16px;
 
-          .mobile-feature-icon {
-            width: 40px;
-            height: 40px;
-            flex-shrink: 0;
+          .mobile-arrow-icon {
+            padding: 12px 10px;
           }
 
           .mobile-feature-content {

@@ -1,0 +1,47 @@
+@import "../variables";
+@import "../base/typography";
+
+.features-section {
+  padding: 56px 0px;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: $zindex-modal;
+    gap: 32px;
+  }
+  .info-container {
+    gap: 12px;
+    width: 281px;
+  }
+  .divider {
+    height: 236px;
+    width: 1px;
+    background-color: #d7d7d7;
+  }
+
+  .features-grid {
+    gap: 20px;
+
+    .feature-card {
+      border-radius: 16px;
+      width: 302px;
+      padding: 36px;
+      gap: 32px;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        border: 2px solid $primary;
+      }
+
+      .feature-icon-img {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+      }
+      .feature-content {
+        gap: 8px;
+      }
+    }
+  }
+}
