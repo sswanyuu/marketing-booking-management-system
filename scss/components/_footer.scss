@@ -1,67 +1,74 @@
+@import '../_variables';
+
 // Site Footer Component Styles
 // Using Bootstrap utilities first, custom styles only where needed
 
-.site-footer {
-  // Custom background and spacing
-  background: #1a1a1a;
-  color: #ffffff;
-  padding: 2rem 0;
-  margin-top: auto;
-
+.footer {
+  .footer-container {
+  }
   // Logo sizing
   .footer-logo {
-    height: auto;
-    max-height: 2rem;
+    width: 164px;
   }
-
-  .footer-logo-mobile {
-    height: auto;
-    max-height: 2.5rem;
+  .footer-hero {
+    height: 632px;
+    padding: 78px 0px 414px 0px;
+    position: relative;
+    @include media-breakpoint-down(md) {
+      height: 500px;
+      padding: 48px 0px 420px 0px;
+    }
   }
-
-  // Navigation links styling
-  .footer-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.8;
+  .footer-slogan {
+    max-width: 1290px;
+    @include media-breakpoint-down(md) {
+      width: 80%;
+    }
+  }
+  .footer-cta {
+    border-radius: 20px;
+    background-image: url('../assets/images/footer-cta-bg.png');
+    background-size: cover;
+    width: 100%;
+    max-width: 1290px;
+    height: 448px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 60px 84px 0 rgba(0, 0, 0, 0.25);
+    @include media-breakpoint-down(md) {
+      background-image: url('../assets/images/footer-bg-mobile.png');
+      width: 100%;
+      height: 448px;
+      top: 180px;
     }
   }
 
-  // Copyright text styling
-  .footer-copyright {
-    color: #ffffff;
-    font-size: 0.75rem;
-  }
-
-  .footer-copyright-mobile {
-    color: #ffffff;
-    font-size: 0.75rem;
-    line-height: 1.4;
-  }
-
-  // Mobile responsive adjustments
-  @media (max-width: 768px) {
-    padding: 2.5rem 0;
-  }
-
-  @media (max-width: 480px) {
-    .footer-logo-mobile {
-      max-height: 2rem;
+  .footer-navigation {
+    padding: 274px 0 118px 0;
+    @include media-breakpoint-down(xl) {
+      padding: 274px 16px 118px 16px;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 178px 0 57px 0;
     }
 
-    .footer-link {
-      font-size: 0.8rem;
+    .footer-content {
+      max-width: 1290px;
+      gap: 20px;
+      flex-shrink: 0;
+      @include media-breakpoint-down(md) {
+        gap: 32px;
+      }
     }
-
-    .footer-copyright-mobile {
-      font-size: 0.7rem;
+    .footer-links {
+      gap: 20px;
     }
   }
 }
+
+// Navigation links styling
+
+// Copyright text styling

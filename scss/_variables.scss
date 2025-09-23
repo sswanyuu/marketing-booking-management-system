@@ -13,8 +13,18 @@ $neutral-1: #909090; // Gray01
 $neutral-2: #f7f7f7; // Gray02
 
 @import 'bootstrap/scss/functions';
+
+// Custom breakpoints - override Bootstrap defaults
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  // Custom lg breakpoint
+  xl: 1290px,
+);
+
 @import 'bootstrap/scss/variables';
-@import 'bootstrap/scss/variables-dark';
 @import 'bootstrap/scss/mixins';
 
 // Override Bootstrap's danger color
