@@ -3,6 +3,10 @@
 // Button Variables
 $button-border-radius: 200px;
 $button-border-radius-mobile: 100px;
+$button-padding-x: 48px;
+$button-padding-y: 24px;
+$button-padding-x-mobile: 16px;
+$button-padding-y-mobile: 16px;
 $button-transition: all 0.2s ease-in-out;
 
 // Button Base Styles
@@ -26,7 +30,7 @@ $button-transition: all 0.2s ease-in-out;
   background-color: $brand-main-1;
   color: $brand-white;
   border-radius: $button-border-radius;
-
+  padding: $button-padding-y $button-padding-x;
   &:hover:not(:disabled),
   &:active:not(:disabled) {
     background-color: $brand-main-2;
@@ -44,7 +48,7 @@ $button-transition: all 0.2s ease-in-out;
   background-color: $brand-white;
   color: $brand-main-1;
   border-radius: $button-border-radius;
-
+  padding: $button-padding-y $button-padding-x;
   &:hover:not(:disabled),
   &active:not(:disabled) {
     background-color: $brand-black;
