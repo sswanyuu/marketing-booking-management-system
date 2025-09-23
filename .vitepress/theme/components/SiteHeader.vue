@@ -22,6 +22,10 @@
       <!-- Desktop Navigation -->
       <div class="d-flex align-items-center">
         <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <!-- Design System 🕹️ Remove if not needed -->
+            <a href="/design-system" class="nav-link">DESIGN SYSTEM</a>
+          </li>
           <li class="nav-item d-flex align-items-center features">
             <a href="#features" class="nav-link" @click="toggleDesktopFeatures">
               FEATURES
