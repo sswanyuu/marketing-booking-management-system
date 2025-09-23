@@ -4,13 +4,13 @@
 // Using Bootstrap utilities first, custom styles only where needed
 
 .footer {
-  .footer-container {
+  &__container {
   }
   // Logo sizing
-  .footer-logo {
+  &__logo {
     width: 164px;
   }
-  .footer-hero {
+  &__hero {
     height: 632px;
     padding: 78px 0px 414px 0px;
     position: relative;
@@ -19,13 +19,13 @@
       padding: 48px 0px 420px 0px;
     }
   }
-  .footer-slogan {
+  &__slogan {
     max-width: 1290px;
     @include media-breakpoint-down(md) {
       width: 80%;
     }
   }
-  .footer-cta {
+  &__cta {
     border-radius: 20px;
     background-image: url('../assets/images/footer-cta-bg.png');
     background-size: cover;
@@ -46,7 +46,7 @@
     }
   }
 
-  .footer-navigation {
+  &__navigation {
     padding: 274px 0 118px 0;
     @include media-breakpoint-down(xl) {
       padding: 274px 16px 118px 16px;
@@ -55,16 +55,16 @@
       padding: 178px 0 57px 0;
     }
 
-    .footer-content {
+    &__content {
       max-width: 1290px;
-      gap: 20px;
+      // gap: $spacers-5;
       flex-shrink: 0;
       @include media-breakpoint-down(md) {
-        gap: 32px;
+        // gap: $spacers-7;
       }
     }
-    .footer-links {
-      gap: 20px;
+    &__links {
+      // gap: $gap-lg;
     }
   }
 }

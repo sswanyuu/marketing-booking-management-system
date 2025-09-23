@@ -5,14 +5,14 @@
 $input-padding: 16px;
 $input-transition: all 0.2s ease-in-out;
 
-// Input Container
-.input-container {
+// Input Block
+.input {
   display: flex;
   flex-direction: column;
 }
 
-// Input Label
-.input-label {
+// Input Label Element
+.input__label {
   color: $brand-black;
   // Mobile: H7 (headline-7-bold = 16px, bold)
   // Desktop: H5 (headline-5-bold = 24px, bold)
@@ -21,8 +21,8 @@ $input-transition: all 0.2s ease-in-out;
   }
 }
 
-// Input Field Base
-.input-field {
+// Input Field Element
+.input__field {
   width: 100%;
   padding: $input-padding;
   margin: 8px 0;
@@ -60,7 +60,7 @@ $input-transition: all 0.2s ease-in-out;
     color: $neutral-1;
     cursor: not-allowed;
   }
-  &.error {
+  &--error {
     border-color: $danger;
     color: $danger;
 
@@ -75,8 +75,8 @@ $input-transition: all 0.2s ease-in-out;
   }
 }
 
-// Error Message
-.input-error {
+// Error Message Element
+.input__error {
   font-family: $font-family-base;
   font-size: 12px;
   font-weight: 400;

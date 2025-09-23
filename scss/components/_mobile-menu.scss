@@ -1,8 +1,8 @@
 @import '../variables';
 @import '../base/typography';
 
-// Mobile Navigation
-.mobile-nav {
+// Menu Block
+.menu {
   padding: 24px 12px;
   top: 0;
   left: 0;
@@ -10,63 +10,76 @@
   bottom: 0;
   z-index: $zindex-modal;
 
-  .mobile-nav-content {
+  &__content {
     padding: 0 8px;
     gap: 13px;
+  }
 
-    .mobile-nav-divider {
-      height: 1px;
-      width: 100%;
-    }
+  &__divider {
+    height: 1px;
+    width: 100%;
+  }
 
-    .mobile-nav-section {
-      .mobile-section-title {
-        margin: 0 0 16px 0;
-      }
-      .mobile-nav-header {
-        cursor: pointer;
+  &__section {
+    .menu__header {
+      cursor: pointer;
 
-        .mobile-nav-title {
-          padding: 16px 0;
-        }
-
-        .mobile-chevron {
-          transition: transform 0.3s ease;
-          color: $brand-black;
-
-          &.rotated {
-            transform: rotate(180deg);
-          }
-        }
-      }
-      .mobile-nav-title {
+      .menu__title {
         padding: 16px 0;
       }
-      .mobile-features-dropdown {
-        gap: 12px;
-        max-height: 0;
-        overflow: hidden;
 
-        &.show {
-          max-height: 500px;
-        }
+      .menu__chevron {
+        transition: transform 0.3s ease;
+        color: $brand-black;
 
-        .mobile-feature-item {
-          gap: 16px;
-
-          .mobile-arrow-icon {
-            padding: 12px 10px;
-          }
-
-          .mobile-feature-content {
-            gap: 8px;
-
-            .mobile-feature-description {
-              margin: 0;
-            }
-          }
+        &--rotated {
+          transform: rotate(180deg);
         }
       }
     }
+
+    .menu__title {
+      padding: 16px 0;
+    }
+  }
+}
+
+// Feature Block (新的獨立 Block)
+.feature {
+  &__dropdown {
+    gap: 12px;
+    max-height: 0;
+    overflow: hidden;
+
+    &--show {
+      max-height: 500px;
+    }
+  }
+
+  &__item {
+    gap: 16px;
+  }
+
+  &__icon {
+  }
+
+  &__content {
+    gap: 8px;
+  }
+
+  &__title {
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__arrow {
+    padding: 12px 10px;
+  }
+
+  &__divider {
+    height: 1px;
+    width: 100%;
   }
 }

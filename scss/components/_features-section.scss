@@ -1,47 +1,52 @@
 @import '../variables';
 @import '../base/typography';
 
-.features-section {
+.features {
   padding: 56px 0px;
   position: relative;
 
-  .container {
+  &__container {
     position: relative;
     z-index: $zindex-modal;
     gap: 32px;
   }
-  .info-container {
+
+  &__info {
     gap: 12px;
     width: 281px;
   }
-  .divider {
+
+  &__divider {
     height: 236px;
     width: 1px;
     background-color: #d7d7d7;
   }
 
-  .features-grid {
+  &__grid {
     gap: 20px;
+  }
+}
 
-    .feature-card {
-      border-radius: 16px;
-      width: 302px;
-      padding: 36px;
-      gap: 32px;
-      cursor: pointer;
-      &:hover,
-      &:focus {
-        border: 2px solid $primary;
-      }
+// Card Block (新的獨立 Block)
+.card {
+  border-radius: 16px;
+  width: 302px;
+  padding: 36px;
+  gap: 32px;
+  cursor: pointer;
 
-      .feature-icon-img {
-        width: 80px;
-        height: 80px;
-        flex-shrink: 0;
-      }
-      .feature-content {
-        gap: 8px;
-      }
-    }
+  &:hover,
+  &:focus {
+    border: 2px solid $primary;
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    gap: 8px;
   }
 }

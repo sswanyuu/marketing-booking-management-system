@@ -1,12 +1,8 @@
 <template>
-  <div
-    v-if="isOpen"
-    ref="mobileNavRef"
-    class="mobile-nav position-fixed bg-white"
-  >
-    <div class="d-flex flex-column start mobile-nav-content">
+  <div v-if="isOpen" ref="mobileNavRef" class="menu position-fixed bg-white">
+    <div class="d-flex flex-column start menu__content">
       <!-- Why fullkeep Section -->
-      <div class="mobile-nav-section">
+      <div class="menu__section">
         <h2 class="headline-6-bold text-primary">Why fullkeep?</h2>
         <p class="body-3 text-black mb-0">
           Fullkeep
@@ -15,93 +11,89 @@
       </div>
 
       <!-- Features Section -->
-      <div class="mobile-nav-section">
+      <div class="menu__section">
         <div
-          class="d-flex align-items-center mobile-nav-header"
+          class="d-flex align-items-center menu__header"
           @click="toggleFeatures"
         >
-          <div class="headline-8-bold mobile-nav-title">FEATURES</div>
+          <div class="headline-8-bold menu__title">FEATURES</div>
           <img
             :src="chevronDownIcon"
             alt="Chevron down"
-            class="mobile-chevron"
-            :class="{ rotated: isFeaturesOpen }"
+            class="menu__chevron"
+            :class="{ 'menu__chevron--rotated': isFeaturesOpen }"
           />
         </div>
         <div
-          class="mobile-features-dropdown d-flex flex-column"
-          :class="{ show: isFeaturesOpen }"
+          class="feature__dropdown d-flex flex-column"
+          :class="{ 'feature__dropdown--show': isFeaturesOpen }"
         >
-          <div class="d-flex mobile-feature-item">
-            <img
-              src="../assets/icons/ux.svg"
-              alt="UX"
-              class="mobile-feature-icon"
-            />
-            <div class="d-flex flex-column mobile-feature-content flex-grow-1">
-              <div class="mobile-feature-title headline-7-bold text-primary">
+          <div class="d-flex feature__item">
+            <img src="../assets/icons/ux.svg" alt="UX" class="feature__icon" />
+            <div class="d-flex flex-column feature__content flex-grow-1">
+              <div class="feature__title headline-7-bold text-primary">
                 優良使用體驗
               </div>
-              <p class="mobile-feature-description body-3 text-black">
+              <p class="feature__description body-3 text-black">
                 貼近使用者操作習慣,顧客與店家都能享受高效的數位訂位體驗。
               </p>
             </div>
             <img
               :src="arrowRightIcon"
               alt="Arrow right"
-              class="align-self-start mobile-arrow-icon"
+              class="align-self-start feature__arrow"
             />
           </div>
-          <div class="mobile-nav-divider bg-gray-light"></div>
-          <div class="d-flex mobile-feature-item">
+          <div class="feature__divider bg-gray-light"></div>
+          <div class="d-flex feature__item">
             <img
               src="../assets/icons/marketing.svg"
               alt="Marketing"
-              class="mobile-feature-icon"
+              class="feature__icon"
             />
-            <div class="d-flex flex-column mobile-feature-content flex-grow-1">
-              <div class="mobile-feature-title headline-7-bold text-primary">
+            <div class="d-flex flex-column feature__content flex-grow-1">
+              <div class="feature__title headline-7-bold text-primary">
                 行銷再接觸
               </div>
-              <p class="mobile-feature-description body-3 text-black">
+              <p class="feature__description body-3 text-black">
                 精準行銷與數據分析,深化與顧客的互動,提升品牌忠誠度與回購率。
               </p>
             </div>
             <img
               :src="arrowRightIcon"
               alt="Arrow right"
-              class="align-self-start mobile-arrow-icon"
+              class="align-self-start feature__arrow"
             />
           </div>
-          <div class="mobile-nav-divider bg-gray-light"></div>
-          <div class="d-flex mobile-feature-item">
+          <div class="feature__divider bg-gray-light"></div>
+          <div class="d-flex feature__item">
             <img src="../assets/icons/tourists.svg" alt="Tourist" />
-            <div class="d-flex flex-column mobile-feature-content flex-grow-1">
-              <div class="mobile-feature-title headline-7-bold text-primary">
+            <div class="d-flex flex-column feature__content flex-grow-1">
+              <div class="feature__title headline-7-bold text-primary">
                 觀光客友善
               </div>
-              <p class="mobile-feature-description body-3 text-black">
+              <p class="feature__description body-3 text-black">
                 無論語言、介面或聯繫工具,提供世界各地的顧客順暢的訂位流程與服務資訊。
               </p>
             </div>
             <img
               :src="arrowRightIcon"
               alt="Arrow right"
-              class="align-self-start mobile-arrow-icon"
+              class="align-self-start feature__arrow"
             />
           </div>
         </div>
       </div>
-      <div class="mobile-nav-divider bg-gray-light"></div>
+      <div class="menu__divider bg-gray-light"></div>
       <!-- Integration Section -->
-      <div class="mobile-nav-section">
-        <div class="headline-8-bold mobile-nav-title">INTEGRATION</div>
+      <div class="menu__section">
+        <div class="headline-8-bold menu__title">INTEGRATION</div>
       </div>
-      <div class="mobile-nav-divider bg-gray-light"></div>
+      <div class="menu__divider bg-gray-light"></div>
 
       <!-- Solutions Section -->
-      <div class="mobile-nav-section">
-        <div class="headline-8-bold mobile-nav-title">SOLUTIONS</div>
+      <div class="menu__section">
+        <div class="headline-8-bold menu__title">SOLUTIONS</div>
       </div>
     </div>
   </div>
@@ -137,7 +129,7 @@ const toggleFeatures = () => {
 // Dynamic header height calculation
 const updateMobileNavPosition = () => {
   if (mobileNavRef.value) {
-    const header = document.querySelector('.site-header');
+    const header = document.querySelector('.header');
     if (header) {
       const headerHeight = header.offsetHeight;
       mobileNavRef.value.style.top = `${headerHeight}px`;

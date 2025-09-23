@@ -1,34 +1,34 @@
 <template>
-  <section class="features-section bg-white">
-    <div class="container d-flex justify-content-center">
+  <section class="features bg-white">
+    <div class="features__container d-flex justify-content-center">
       <!-- Left: Why fullkeep -->
-      <div class="d-flex flex-column info-container">
+      <div class="d-flex flex-column features__info">
         <div class="text-primary headline-5-bold">Why fullkeep?</div>
         <div class="body-1 text-black">
           Fullkeep
           是專為精緻餐飲設計的訂位管理系統,支援多裝置與多平台整合。協助餐廳簡化營運流程、優化顧客服務,強化品牌專業形象與競爭力。
         </div>
       </div>
-      <div class="divider d"></div>
+      <div class="features__divider d"></div>
 
       <!-- Right: Features -->
       <div>
-        <div class="d-flex features-grid">
+        <div class="d-flex features__grid">
           <div
             v-for="(feature, index) in features"
             :key="index"
-            class="feature-card d-flex flex-column align-self-stretch"
+            class="card d-flex flex-column align-self-stretch"
           >
             <div class="d-flex justify-content-between">
               <img
                 :src="feature.icon"
                 :alt="feature.title"
-                class="feature-icon-img"
+                class="card__icon"
               />
               <img :src="arrowRightIcon" alt="Arrow right" class="arrow-icon" />
             </div>
 
-            <div class="d-flex flex-column feature-content">
+            <div class="d-flex flex-column card__content">
               <div class="headline-6-bold text-primary">
                 {{ feature.title }}
               </div>

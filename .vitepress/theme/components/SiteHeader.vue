@@ -1,15 +1,15 @@
 <template>
   <nav
-    class="d-flex justify-content-between align-items-center site-header navbar navbar-dark bg-primary"
+    class="d-flex justify-content-between align-items-center header navbar navbar-dark bg-primary"
   >
     <!-- Mobile Close Button -->
     <div
-      class="d-flex w-100 justify-content-between align-items-center header-container"
+      class="d-flex w-100 justify-content-between align-items-center header__container"
     >
       <!-- Logo -->
-      <div class="logo-container d-flex align-items-center">
+      <div class="header__logo d-flex align-items-center">
         <!-- Hamburger Menu -->
-        <div class="features-toggle-container">
+        <div class="header__features-toggle">
           <button v-if="isMenuOpen" @click="toggleMenu">
             <img :src="closeIcon" alt="Close menu" />
           </button>
@@ -17,31 +17,31 @@
             <img :src="menuIcon" alt="Open menu" />
           </button>
         </div>
-        <img class="logo-img" src="../assets/images/logo.png" alt="fullkeep" />
+        <img class="header__logo-img" src="../assets/images/logo.png" alt="fullkeep" />
       </div>
       <!-- Desktop Navigation -->
       <div class="d-flex align-items-center">
-        <ul class="navbar-nav flex-row">
-          <li class="nav-item">
+        <ul class="nav flex-row">
+          <li class="nav__item">
             <!-- Design System 🕹️ Remove if not needed -->
-            <a href="/design-system" class="nav-link">DESIGN SYSTEM</a>
+            <a href="/design-system" class="nav__link">DESIGN SYSTEM</a>
           </li>
-          <li class="nav-item d-flex align-items-center features">
-            <a href="#features" class="nav-link" @click="toggleDesktopFeatures">
+          <li class="nav__item d-flex align-items-center header__features">
+            <a href="#features" class="nav__link" @click="toggleDesktopFeatures">
               FEATURES
             </a>
             <img
               :src="chevronUpIcon"
               alt="Chevron up"
-              class="chevron-icon"
-              :class="{ rotated: isDesktopFeaturesOpen }"
+              class="header__chevron"
+              :class="{ 'header__chevron--rotated': isDesktopFeaturesOpen }"
             />
           </li>
-          <li class="nav-item">
-            <a href="#integration" class="nav-link">INTEGRATION</a>
+          <li class="nav__item">
+            <a href="#integration" class="nav__link">INTEGRATION</a>
           </li>
-          <li class="nav-item">
-            <a href="#solutions" class="nav-link">SOLUTIONS</a>
+          <li class="nav__item">
+            <a href="#solutions" class="nav__link">SOLUTIONS</a>
           </li>
         </ul>
         <!-- Demo Button -->
@@ -54,8 +54,8 @@
 
     <!-- Desktop Features Section -->
     <div
-      class="desktop-features-section"
-      :class="{ show: isDesktopFeaturesOpen }"
+      class="header__features-dropdown"
+      :class="{ 'header__features-dropdown--show': isDesktopFeaturesOpen }"
     >
       <FeaturesSection />
     </div>
@@ -87,7 +87,7 @@ const toggleDesktopFeatures = () => {
 
 // Click outside to close desktop features
 const handleClickOutside = event => {
-  const header = event.target.closest('.site-header');
+  const header = event.target.closest('.header');
   if (!header && isDesktopFeaturesOpen.value) {
     isDesktopFeaturesOpen.value = false;
   }

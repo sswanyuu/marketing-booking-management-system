@@ -1,31 +1,33 @@
 <template>
   <footer class="footer">
     <!-- Desktop Layout -->
-    <div class="footer-container d-md-flex flex-column">
+    <div class="footer__container d-md-flex flex-column">
       <div
-        class="footer-hero d-flex justify-content-center flex-column align-items-center"
+        class="footer__hero d-flex justify-content-center flex-column align-items-center"
       >
         <img
           src="../assets/images/footer-slogan.png"
-          class="footer-slogan"
-          alt="slogan"
+          class="footer__slogan"
+          alt="Fullkeep slogan - Fullkeep the Seats. Fulfill the Brand."
         />
-        <div class="footer-cta"></div>
+        <div class="footer__cta">
+          <Button variant="primary">預約 Demo</Button>
+        </div>
       </div>
       <div
-        class="footer-navigation text-white bg-black d-flex justify-content-center"
+        class="footer__navigation text-white bg-black d-flex justify-content-center"
       >
         <div
-          class="footer-content d-flex align-items-center w-100 flex-md-row flex-column"
+          class="footer__content d-flex align-items-center w-100 flex-md-row flex-column gap-5 gap-xl-7"
         >
           <!-- <div class="d-flex align-items-center gap-4 "> -->
           <img
             src="../assets/images/logo-footer.png"
             alt="fullkeep"
-            class="footer-logo"
+            class="footer__logo"
           />
           <div
-            class="d-flex footer-links flex-column flex-md-row justify-content-center align-items-center"
+            class="d-flex footer__links flex-column flex-md-row justify-content-center align-items-center"
           >
             <a
               href="#why-fullkeep"
@@ -58,7 +60,7 @@
 </template>
 
 <script setup>
-// Site footer component logic
+import Button from './Button.vue';
 </script>
 
 <style lang="scss">

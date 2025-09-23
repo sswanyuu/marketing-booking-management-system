@@ -3,39 +3,38 @@
 
 $header-padding: 12.5px 20%;
 $header-padding-mobile: 12px 8px;
-// Site Header
-.site-header {
+// Header Block
+.header {
   position: relative;
   padding: $header-padding;
 }
-.logo-container {
+
+// Header Logo Element
+.header__logo {
   gap: 12px;
-  .features-toggle-container {
+  .header__features-toggle {
     display: none;
   }
-  .logo-img {
+  .header__logo-img {
     width: 172px;
     height: 48px;
     flex-shrink: 0;
   }
 }
-.nav-link {
+
+// Header Nav Link Element
+.header__nav-link {
   color: $brand-white;
   @include headline-bold(14px, 0%);
 }
-.navbar-nav {
-  display: flex;
-}
-.nav-item {
-  margin-right: 20px;
-}
 
-.features {
+// Header Features Element
+.header__features {
   gap: 4px;
 }
 
-// Desktop Features Section
-.desktop-features-section {
+// Header Features Dropdown Element
+.header__features-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -46,41 +45,55 @@ $header-padding-mobile: 12px 8px;
   visibility: hidden;
   transform: translateY(-20px);
 
-  &.show {
+  &--show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
 }
 
-// Chevron Icon Animation
-.chevron-icon {
+// Header Chevron Element
+.header__chevron {
   transition: transform 0.3s ease;
   margin-left: 8px;
 
-  &.rotated {
+  &--rotated {
     transform: rotate(180deg);
   }
 }
 
+// Nav Block (新的獨立 Block)
+.nav {
+  display: flex;
+
+  &__item {
+    margin-right: 20px;
+  }
+
+  &__link {
+    color: $brand-white;
+    @include headline-bold(14px, 0%);
+  }
+}
+
 @include media-breakpoint-down(xl) {
-  .site-header {
+  .header {
     padding: $header-padding-mobile;
   }
-  .navbar-nav {
+  .nav {
     display: none;
   }
-  .logo-container {
-    .features-toggle-container {
+  .header__logo {
+    .header__features-toggle {
       display: block;
     }
-    .logo-img {
+    .header__logo-img {
       width: 112px;
       height: 31px;
     }
   }
 
-  .desktop-features-section {
+  .header__features-dropdown {
     display: none;
   }
 }
