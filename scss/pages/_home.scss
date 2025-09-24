@@ -56,7 +56,7 @@
   }
 }
 
-.pain-points {
+.painpoints {
   height: 1014px;
   width: 100%;
   padding: 48px 0 0 0;
@@ -65,6 +65,38 @@
   @include media-breakpoint-down(md) {
     height: 954px;
     width: 100%;
+  }
+  &__list {
+    // height: 840px;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 276px;
+    left: 50%;
+    max-width: 1290px;
+    width: 85%;
+    //first child with special height
+    & > :first-child {
+      height: 340px;
+    }
+    //other children with special height
+    & > :not(:first-child) {
+      height: 508px;
+    }
+    .info {
+      width: 340px;
+      @include media-breakpoint-down(md) {
+        width: 288px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      & > :first-child {
+        height: 280px;
+      }
+      & > :not(:first-child) {
+        height: 280px;
+      }
+    }
   }
 }
 .solutions {
@@ -107,6 +139,7 @@
     height: 280px;
   }
 }
+
 .info {
   &__title {
     @include headline-bold(28px, 0%);

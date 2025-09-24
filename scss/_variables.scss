@@ -11,6 +11,7 @@ $brand-danger: #f00;
 /* Neutral */
 $neutral-1: #909090; // Gray01
 $neutral-2: #f7f7f7; // Gray02
+$neutral-3: #9ca4b2; // Gray03
 
 $spacers: (
   0: 0,
@@ -22,6 +23,7 @@ $spacers: (
   6: 24px,
   7: 32px,
   8: 36px,
+  9: 40px,
 );
 
 @import 'bootstrap/scss/functions';
@@ -49,6 +51,7 @@ $light: $brand-white;
 $dark: $brand-black;
 $gray: $neutral-1;
 $gray-light: $neutral-2;
+$gray-dark: $neutral-3;
 $danger: $brand-danger;
 
 $theme-colors: map-merge(
@@ -63,7 +66,9 @@ $theme-colors: map-merge(
     'dark': $brand-black,
     'gray': $neutral-1,
     'gray-light': $neutral-2,
+    'gray-dark': $neutral-3,
     'danger': $brand-danger,
   )
 );
+
 @import 'bootstrap/scss/maps';
