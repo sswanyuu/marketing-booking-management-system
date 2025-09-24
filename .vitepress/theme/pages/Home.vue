@@ -47,7 +47,10 @@
         </div>
       </div>
     </section>
-    <section class="pain-points bg-tertiary d-flex justify-content-center">
+    <section
+      ref="painPointsSection"
+      class="pain-points d-flex align-items-center flex-column"
+    >
       <div
         class="header-container d-flex flex-column align-items-center gap-4 gap-md-6"
       >
@@ -174,6 +177,38 @@ const solutions = [
     solutionClass: ['col-md-12', 'flex-md-row'],
   },
 ];
+
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const painPointsSection = ref(null);
+
+const handleScroll = () => {
+  if (!painPointsSection.value) return;
+
+  const listElement =
+    painPointsSection.value.querySelector('.pain-points__list');
+  if (!listElement) return;
+
+  const rect = listElement.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  const scrollProgress = Math.max(
+    0,
+    Math.min(1, (windowHeight - rect.bottom) / windowHeight)
+  );
+
+  const opacity = Math.max(0, 1 - scrollProgress);
+  painPointsSection.value.style.opacity = opacity;
+};
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style lang="scss">
