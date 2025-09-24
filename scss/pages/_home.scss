@@ -97,15 +97,12 @@
     }
   }
 }
+
 .solution {
   height: 500px;
   overflow: hidden;
   @include media-breakpoint-down(md) {
     height: 280px;
-  }
-  img {
-    width: fit-content;
-    height: 70%;
   }
 }
 .info {

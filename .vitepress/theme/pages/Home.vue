@@ -72,16 +72,26 @@
         <div
           v-for="solution in solutions"
           :key="solution.title"
-          class="solution d-flex justify-content-between align-items-center flex-column col-md-6 bg-gray-light rounded-4 pt-md-9 px-md-9 pt-7 px-7 mx-0"
-          :class="solution.class"
+          class="col-md-6"
+          :class="solution.containerClass"
         >
-          <div class="info d-flex flex-column gap-3 gap-md-4">
-            <div class="info__title">{{ solution.title }}</div>
-            <div class="info__description text-gray">
-              {{ solution.description }}
+          <div
+            :key="solution.title"
+            class="solution d-flex justify-content-between align-items-center flex-column bg-gray-light rounded-4 pt-md-9 px-md-9 pt-7 px-7 mx-0"
+            :class="solution.solutionClass"
+          >
+            <div class="info d-flex flex-column gap-3 gap-md-4">
+              <div class="info__title">{{ solution.title }}</div>
+              <div class="info__description text-gray">
+                {{ solution.description }}
+              </div>
+            </div>
+            <div
+              class="solution__image-container h-20 d-flex flex-column-reverse"
+            >
+              <img :src="solution.image" alt="solution-image" />
             </div>
           </div>
-          <img :src="solution.image" alt="solution-image" />
         </div>
       </div>
     </section>
@@ -160,7 +170,8 @@ const solutions = [
     description:
       '記錄每位顧客的付款紀錄與訂位偏好，不論哪家分店，一次輸入即可通用，讓回訪體驗更加順暢，服務更有溫度。',
     image: Solution5,
-    class: ['col-md-12', 'flex-md-row'],
+    containerClass: ['col-md-12'],
+    solutionClass: ['col-md-12', 'flex-md-row'],
   },
 ];
 </script>
