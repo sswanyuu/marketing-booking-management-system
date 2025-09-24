@@ -67,48 +67,22 @@
     width: 100%;
   }
   &__list {
-    // height: 840px;
-    position: absolute;
-    transform: translateX(-50%);
-    top: 276px;
-    left: 50%;
-    max-width: 1290px;
-    width: 85%;
-    //first child with special height
-    & > :first-child {
-      height: 340px;
-    }
-    //other children with special height
-    & > :not(:first-child) {
-      height: 508px;
-    }
-    .info {
-      width: 340px;
-      @include media-breakpoint-down(md) {
-        width: 288px;
-      }
-    }
-    @include media-breakpoint-down(md) {
-      width: 100%;
-      & > :first-child {
-        height: 280px;
-      }
-      & > :not(:first-child) {
-        height: 280px;
-      }
-    }
+    padding: 0 12px;
   }
-}
-.solutions {
-  height: 1596px;
-  width: 100%;
-  margin-bottom: 86px;
-  @include media-breakpoint-down(md) {
-    height: 1200px;
+  .painpoints_item1 {
     width: 100%;
-    margin-bottom: 42px;
+    aspect-ratio: 1290/340;
+  }
+  .painpoints_item2 {
+    width: 38%;
+    aspect-ratio: 483/508;
+  }
+  .painpoints_item3 {
+    width: 62%;
+    aspect-ratio: 786/508;
   }
 }
+
 .background-image {
   padding-bottom: 58px;
   @include media-breakpoint-down(md) {
@@ -118,12 +92,13 @@
 
 .solutions {
   gap: 64px;
-  height: 100%;
-  width: 85%;
+  height: 1596px;
   max-width: 1290px;
+  padding: 0 12px;
+  margin-bottom: 86px;
   @include media-breakpoint-down(md) {
     gap: 42px;
-    width: 95%;
+    margin-bottom: 42px;
   }
   &__list {
     @include media-breakpoint-down(md) {

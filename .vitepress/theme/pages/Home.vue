@@ -53,7 +53,7 @@
     <!-- pain points -->
     <section
       ref="painPointsSection"
-      class="painpoints d-flex align-items-center flex-column position-relative"
+      class="painpoints d-flex align-items-center flex-column position-relative gap-8"
     >
       <div
         class="header-container d-flex flex-column align-items-center gap-4 gap-md-6"
@@ -63,39 +63,22 @@
           不是只能習慣混亂，我們提供更好的選擇，讓餐廳管理回到你能掌握的節奏，痛點不再是日常。
         </div>
       </div>
-      <div class="painpoints__list row position-absolute g-4 overflow-hidden">
-        <div
-          v-for="painPoint in painPoints"
-          :key="painPoint.title"
-          :class="painPoint.containerClass"
-        >
-          <div
-            class="painpoint d-flex align-items-center rounded-4 h-md-100"
-            :class="painPoint.painPointClass"
-          >
-            <div
-              class="info text-white d-flex flex-column gap-4"
-              :class="painPoint.infoClass"
-            >
-              <div class="info__title">
-                {{ painPoint.title }}
-              </div>
-              <div class="info__description">
-                {{ painPoint.description }}
-              </div>
-            </div>
-            <div
-              class="painpoint__image-container overflow-hidden"
-              :class="painPoint.imageClass"
-            >
-              <img
-                class="rounded-4 overflow-hidden"
-                :src="painPoint.image"
-                alt="painpoint-image"
-              />
-            </div>
-          </div>
-        </div>
+      <div class="painpoints__list row g-5">
+        <img
+          src="../assets/images/pages/home/painpoint-1.png"
+          alt="painpoint-1"
+          class="painpoints_item1 col-12"
+        />
+        <img
+          src="../assets/images/pages/home/painpoint-2.png"
+          alt="painpoint-2"
+          class="painpoints_item2 col-auto"
+        />
+        <img
+          src="../assets/images/pages/home/painpoint-3.png"
+          alt="painpoint-3"
+          class="painpoints_item3 col-auto"
+        />
       </div>
     </section>
     <!-- background image -->
@@ -166,39 +149,6 @@ const features = [
     image: '../assets/images/pages/home/feature-3.png',
   },
 ];
-const painPoints = [
-  {
-    title: '想改人數只能取消重訂?',
-    description:
-      'Fullkeep 支援即時調整人數、時間與備註，可直接編輯預約內容，流程更順暢，服務更彈性。',
-    image: PainPoint1,
-    containerClass: 'col-12 col-md-12',
-    painPointClass:
-      'bg-secondary d-flex px-8 align-items-center justify-content-between h-100 flex-column flex-md-row',
-    infoClass: 'pt-md-0 pt-8',
-    imageClass: '',
-  },
-  {
-    title: '外籍旅客訂位困難?',
-    description:
-      'Fullkeep 支援多語介面、Email/國際電話驗證與線上付款，跨國顧客輕鬆完成預約，不再流失訂單。',
-    image: PainPoint2,
-    containerClass: 'col-12 col-md-5',
-    painPointClass: 'bg-gray-dark d-flex flex-column justify-content-between',
-    infoClass: 'align-items-center text-center pt-md-9 pt-8',
-    imageClass: 'w-100',
-  },
-  {
-    title: '無法由品牌網站直接訂位?',
-    description:
-      'Fullkeep 提供嵌入式API，快速整合進品牌網站，無需跳轉頁面，維持品牌一致性，客戶體驗不中斷。',
-    image: PainPoint3,
-    containerClass: 'col-12 col-md-7',
-    painPointClass: 'bg-primary d-flex flex-column justify-content-between',
-    infoClass: 'align-items-center text-center pt-md-9 pt-8',
-    imageClass: 'w-75',
-  },
-];
 const solutions = [
   {
     title: 'LINE 訊息整合',
@@ -253,7 +203,9 @@ const handleScroll = () => {
     Math.min(1, (windowHeight - rect.bottom) / windowHeight)
   );
 
-  const opacity = Math.max(0, 1 - scrollProgress);
+  // Keep opacity at 1 when scrollProgress is 0-0.5, then fade from 0.5-1
+  const opacity =
+    scrollProgress <= 0.5 ? 1 : Math.max(0, 2 - 2 * scrollProgress);
   painPointsSection.value.style.opacity = opacity;
 };
 
