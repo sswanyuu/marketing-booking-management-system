@@ -1,0 +1,124 @@
+@import '../_variables';
+@import '../base/typography';
+
+.home {
+  .hero {
+    height: 780px;
+  }
+}
+.brands {
+  max-width: 1290px;
+  margin: 56px 0px 98px 0px;
+  @include media-breakpoint-down(md) {
+    margin: 42px 0px;
+  }
+  &__title {
+    @include headline-regular(24px, 140%, 0%);
+    @include media-breakpoint-down(md) {
+      @include headline-regular(20px, auto, 0%);
+    }
+  }
+  .brand__logo {
+    height: 64px;
+    @include media-breakpoint-down(md) {
+      height: 28px;
+    }
+  }
+}
+.features {
+  height: 512px;
+  width: 90%;
+  padding: 58px 0px 300px 0px;
+  margin: 0 0 400px 0px;
+  @include media-breakpoint-down(md) {
+    width: 95%;
+    height: 388px;
+    margin: 0 0 214px 0px;
+  }
+}
+.header-container {
+  width: 560px;
+  @include media-breakpoint-down(md) {
+    width: 312px;
+  }
+  &__title {
+    text-align: center;
+    @include headline-bold(48px, 0%);
+    @include media-breakpoint-down(md) {
+      @include headline-bold(28px, 0%);
+    }
+  }
+  &__description {
+    @include headline-regular(24px, 140%, 0%);
+    @include media-breakpoint-down(md) {
+      @include body-text(16px, 140%, 0%);
+    }
+  }
+}
+
+.pain-points {
+  height: 1014px;
+  width: 100%;
+  padding: 48px 0 0 0;
+  @include media-breakpoint-down(md) {
+    height: 954px;
+    width: 100%;
+  }
+}
+.solutions {
+  height: 1596px;
+  width: 100%;
+  margin-bottom: 86px;
+  @include media-breakpoint-down(md) {
+    height: 1200px;
+    width: 100%;
+    margin-bottom: 42px;
+  }
+}
+.background-image {
+  padding-bottom: 58px;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 42px;
+  }
+}
+
+.solutions {
+  gap: 64px;
+  height: 100%;
+  width: 85%;
+  max-width: 1290px;
+  @include media-breakpoint-down(md) {
+    gap: 42px;
+    width: 95%;
+  }
+  &__list {
+    @include media-breakpoint-down(md) {
+      gap: 24px;
+    }
+  }
+}
+.solution {
+  height: 500px;
+  overflow: hidden;
+  @include media-breakpoint-down(md) {
+    height: 280px;
+  }
+  img {
+    width: fit-content;
+    height: 70%;
+  }
+}
+.info {
+  &__title {
+    @include headline-bold(28px, 0%);
+    @include media-breakpoint-down(md) {
+      @include headline-regular(20px, auto, 0%);
+    }
+  }
+  &__description {
+    @include body-text(16px, 140%, 0%);
+    @include media-breakpoint-down(md) {
+      @include body-text(12px, auto, 0%);
+    }
+  }
+}
