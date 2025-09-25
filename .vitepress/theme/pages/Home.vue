@@ -53,8 +53,9 @@
     <!-- pain points -->
     <section
       ref="painPointsSection"
-      class="painpoints d-flex align-items-center flex-column position-relative gap-8"
+      class="painpoints d-flex align-items-center flex-column gap-8"
     >
+      <div class="painpoints-background" />
       <div
         class="header-container d-flex flex-column align-items-center gap-4 gap-md-6"
       >
@@ -63,7 +64,7 @@
           不是只能習慣混亂，我們提供更好的選擇，讓餐廳管理回到你能掌握的節奏，痛點不再是日常。
         </div>
       </div>
-      <div class="painpoints__list row g-5">
+      <div class="painpoints__list row g-5 d-none d-md-flex">
         <img
           src="../assets/images/pages/home/painpoint-1.png"
           alt="painpoint-1"
@@ -78,6 +79,25 @@
           src="../assets/images/pages/home/painpoint-3.png"
           alt="painpoint-3"
           class="painpoints_item3 col-auto"
+        />
+      </div>
+      <div
+        class="painpoints__list gap-5 d-flex d-md-none flex-column align-items-stretch"
+      >
+        <img
+          src="../assets/images/pages/home/painpoint-1-mobile.png"
+          alt="painpoint-1"
+          class="painpoints_item1"
+        />
+        <img
+          src="../assets/images/pages/home/painpoint-2-mobile.png"
+          alt="painpoint-2"
+          class="painpoints_item2"
+        />
+        <img
+          src="../assets/images/pages/home/painpoint-3-mobile.png"
+          alt="painpoint-3"
+          class="painpoints_item3"
         />
       </div>
     </section>
@@ -129,9 +149,6 @@ import Solution2 from '../assets/images/pages/home/solution-2.png';
 import Solution3 from '../assets/images/pages/home/solution-3.png';
 import Solution4 from '../assets/images/pages/home/solution-4.png';
 import Solution5 from '../assets/images/pages/home/solution-5.png';
-import PainPoint1 from '../assets/images/pages/home/painpoint-1.png';
-import PainPoint2 from '../assets/images/pages/home/painpoint-2.png';
-import PainPoint3 from '../assets/images/pages/home/painpoint-3.png';
 
 // import FeatureCard from './components/FeatureCard.vue';
 
@@ -191,11 +208,10 @@ const painPointsSection = ref(null);
 const handleScroll = () => {
   if (!painPointsSection.value) return;
 
-  const listElement =
-    painPointsSection.value.querySelector('.painpoints__list');
-  if (!listElement) return;
+  const painpointsElement = painPointsSection.value;
+  if (!painpointsElement) return;
 
-  const rect = listElement.getBoundingClientRect();
+  const rect = painpointsElement.getBoundingClientRect();
   const windowHeight = window.innerHeight;
 
   const scrollProgress = Math.max(
@@ -211,6 +227,7 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
+  console.log('🚀 ~ window:', window);
   handleScroll();
 });
 

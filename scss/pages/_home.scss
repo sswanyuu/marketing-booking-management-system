@@ -57,29 +57,50 @@
 }
 
 .painpoints {
-  height: 1014px;
   width: 100%;
-  padding: 48px 0 0 0;
-  background-color: $brand-main-3;
+  max-width: 1314px;
   transition: opacity 0.1s ease-out;
+  position: relative;
+  margin-top: 72px;
   @include media-breakpoint-down(md) {
-    height: 954px;
-    width: 100%;
+    top: -48px;
   }
   &__list {
     padding: 0 12px;
   }
+  &-background {
+    background-color: $brand-main-3;
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
+    top: -72px;
+    bottom: 130px;
+    @include media-breakpoint-down(md) {
+      top: -48px;
+    }
+  }
   .painpoints_item1 {
     width: 100%;
     aspect-ratio: 1290/340;
+    @include media-breakpoint-down(md) {
+      aspect-ratio: 350/280;
+    }
   }
   .painpoints_item2 {
     width: 38%;
     aspect-ratio: 483/508;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      aspect-ratio: 350/280;
+    }
   }
   .painpoints_item3 {
     width: 62%;
     aspect-ratio: 786/508;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      aspect-ratio: 350/280;
+    }
   }
 }
 
