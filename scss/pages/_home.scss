@@ -3,7 +3,41 @@
 
 .home {
   .hero {
+    position: relative;
     height: 780px;
+    width: 100%;
+    background-color: $banner-black;
+    @include media-breakpoint-down(md) {
+      height: 424px;
+    }
+
+    .background-image__desktop {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      object-fit: cover;
+    }
+    .background-image__mobile {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__content {
+      z-index: 1;
+      margin-left: 314px;
+      @include media-breakpoint-down(md) {
+        margin: 84px 32px 0 32px;
+      }
+    }
+    &__slogan {
+      object-fit: contain;
+    }
+    &__slogan-mobile {
+      object-fit: contain;
+    }
   }
 }
 .brands {
@@ -26,14 +60,39 @@
   }
 }
 .features {
-  height: 512px;
-  width: 90%;
-  padding: 58px 0px 300px 0px;
+  width: 100%;
+  position: relative;
+  padding-top: 58px;
   margin: 0 0 400px 0px;
+
   @include media-breakpoint-down(md) {
     width: 95%;
     height: 388px;
     margin: 0 0 214px 0px;
+  }
+  &__background {
+    width: 100%;
+    background-color: $brand-main-1;
+
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 270px;
+    @include media-breakpoint-down(md) {
+      bottom: 150px;
+    }
+  }
+  &__list {
+    padding: 0 12px;
+    margin-top: 54px;
+    max-width: 1314px;
+    @include media-breakpoint-down(md) {
+      margin-top: 30px;
+    }
+    .features_item {
+      width: 33.33%;
+      aspect-ratio: 400/522;
+    }
   }
 }
 .header-container {
@@ -68,7 +127,7 @@
   &__list {
     padding: 0 12px;
   }
-  &-background {
+  &__background {
     background-color: $brand-main-3;
     width: 100vw;
     z-index: -1;
@@ -113,7 +172,7 @@
 
 .solutions {
   gap: 64px;
-  max-width: 1290px;
+  max-width: 1314px;
   padding: 0 12px;
   margin-bottom: 86px;
   @include media-breakpoint-down(md) {

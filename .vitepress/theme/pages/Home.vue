@@ -1,8 +1,39 @@
 <template>
   <div class="home d-flex flex-column align-items-center">
     <!-- hero -->
-    <section class="hero">
-      <Button variant="primary">預約 Demo</Button>
+    <section
+      class="hero d-flex align-items-start align-items-md-center justify-content-center justify-content-md-start"
+    >
+      <img
+        src="../assets/images/pages/home/hero-bg.png"
+        alt="hero"
+        class="background-image__desktop d-none d-md-block"
+      />
+      <img
+        src="../assets/images/pages/home/hero-bg-mobile.png"
+        alt="hero"
+        class="background-image__mobile d-block d-md-none"
+      />
+      <div
+        class="hero__content d-md-flex d-none flex-column w-50 gap-9 justify-content-center"
+      >
+        <img
+          src="../assets/images/pages/home/hero-slogan.png"
+          alt="hero"
+          class="d-none d-md-block hero__slogan"
+        />
+        <Button variant="primary" class="align-self-start">預約 Demo</Button>
+      </div>
+      <div
+        class="hero__content d-flex d-md-none flex-column w-50 gap-9 justify-content-center"
+      >
+        <img
+          src="../assets/images/pages/home/hero-slogan-mobile.png"
+          alt="hero"
+          class="d-block d-md-none hero__slogan-mobile"
+        />
+        <Button variant="mobileFull">預約 Demo</Button>
+      </div>
     </section>
     <!-- brands -->
     <section
@@ -39,8 +70,9 @@
     </section>
     <!-- features -->
     <section
-      class="features rounded-4 bg-primary text-white d-flex justify-content-center"
+      class="features text-white d-flex justify-content-center flex-column align-items-center"
     >
+      <div class="features__background rounded-4" />
       <div
         class="header-container d-flex flex-column align-items-center gap-4 gap-md-6"
       >
@@ -49,13 +81,49 @@
           全方位解決方案，零門檻上手，桌位管理、拓展客源，一套搞定。領先品牌率先採用
         </div>
       </div>
+      <!-- features desktop -->
+      <div class="features__list d-none d-md-flex gap-9 align-items-center">
+        <img
+          src="../assets/images/pages/home/feature-1.png"
+          alt="feature-1"
+          class="features_item"
+        />
+        <img
+          src="../assets/images/pages/home/feature-2.png"
+          alt="feature-2"
+          class="features_item"
+        />
+        <img
+          src="../assets/images/pages/home/feature-3.png"
+          alt="feature-3"
+          class="features_item"
+        />
+      </div>
+      <!-- features mobile -->
+      <div class="features__list d-flex d-md-none gap-2">
+        <img
+          src="../assets/images/pages/home/feature-1-mobile.png"
+          alt="feature-1"
+          class="features_item"
+        />
+        <img
+          src="../assets/images/pages/home/feature-2-mobile.png"
+          alt="feature-2"
+          class="features_item"
+        />
+        <img
+          src="../assets/images/pages/home/feature-3-mobile.png"
+          alt="feature-3"
+          class="features_item"
+        />
+      </div>
     </section>
     <!-- pain points -->
     <section
       ref="painPointsSection"
       class="painpoints d-flex align-items-center flex-column gap-8"
     >
-      <div class="painpoints-background" />
+      <div class="painpoints__background" />
       <div
         class="header-container d-flex flex-column align-items-center gap-4 gap-md-6"
       >
@@ -186,6 +254,8 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const painPointsSection = ref(null);
+
+//create a variable which is responsive to the current screen size
 
 const handleScroll = () => {
   if (!painPointsSection.value) return;

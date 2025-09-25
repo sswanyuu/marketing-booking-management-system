@@ -17,17 +17,25 @@
             <img :src="menuIcon" alt="Open menu" />
           </button>
         </div>
-        <img class="header__logo-img" src="../assets/images/logo.png" alt="fullkeep" />
+        <img
+          class="header__logo-img"
+          src="../assets/images/logo.png"
+          alt="fullkeep"
+        />
       </div>
       <!-- Desktop Navigation -->
       <div class="d-flex align-items-center">
-        <ul class="nav flex-row">
+        <ul class="nav flex-row align-items-baseline">
           <li class="nav__item">
             <!-- Design System 🕹️ Remove if not needed -->
             <a href="/design-system" class="nav__link">DESIGN SYSTEM</a>
           </li>
           <li class="nav__item d-flex align-items-center header__features">
-            <a href="#features" class="nav__link" @click="toggleDesktopFeatures">
+            <a
+              href="#features"
+              class="nav__link"
+              @click="toggleDesktopFeatures"
+            >
               FEATURES
             </a>
             <img

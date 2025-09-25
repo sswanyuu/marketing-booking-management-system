@@ -7,6 +7,7 @@ $header-padding-mobile: 12px 8px;
 .header {
   position: relative;
   padding: $header-padding;
+  z-index: $zindex-fixed;
 }
 
 // Header Logo Element

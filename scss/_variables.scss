@@ -7,6 +7,7 @@ $brand-main-3: #f2f0f6; // Main03
 $brand-black: #252525;
 $brand-white: #ffffff;
 $brand-danger: #f00;
+$banner-black: #161616;
 
 /* Neutral */
 $neutral-1: #909090; // Gray01
@@ -25,7 +26,6 @@ $spacers: (
   8: 36px,
   9: 40px,
 );
-
 @import 'bootstrap/scss/functions';
 
 // Custom breakpoints - override Bootstrap defaults
@@ -40,6 +40,15 @@ $grid-breakpoints: (
 
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
+
+// Override z-index levels after Bootstrap variables are loaded
+// $zindex-levels: (
+//   n1: -1,
+//   0: 0,
+//   1: 1,
+//   2: 2,
+//   3: 3,
+// );
 
 // Override Bootstrap's danger color
 $primary: $brand-main-1;
@@ -70,5 +79,10 @@ $theme-colors: map-merge(
     'danger': $brand-danger,
   )
 );
-
+$colors: map-merge(
+  $colors,
+  (
+    'banner-black': $banner-black,
+  )
+);
 @import 'bootstrap/scss/maps';
