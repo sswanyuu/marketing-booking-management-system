@@ -113,40 +113,11 @@
 
 .solutions {
   gap: 64px;
-  height: 1596px;
   max-width: 1290px;
   padding: 0 12px;
   margin-bottom: 86px;
   @include media-breakpoint-down(md) {
     gap: 42px;
     margin-bottom: 42px;
-  }
-  &__list {
-    @include media-breakpoint-down(md) {
-      gap: 24px;
-    }
-  }
-}
-
-.solution {
-  height: 500px;
-  overflow: hidden;
-  @include media-breakpoint-down(md) {
-    height: 280px;
-  }
-}
-
-.info {
-  &__title {
-    @include headline-bold(28px, 0%);
-    @include media-breakpoint-down(md) {
-      @include headline-regular(20px, auto, 0%);
-    }
-  }
-  &__description {
-    @include body-text(16px, 140%, 0%);
-    @include media-breakpoint-down(md) {
-      @include body-text(12px, auto, 0%);
-    }
   }
 }
