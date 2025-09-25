@@ -44,7 +44,7 @@
   }
 }
 
-// Feature Block (新的獨立 Block)
+// Feature Block
 .feature {
   &__dropdown {
     gap: 12px;
@@ -61,6 +61,7 @@
   }
 
   &__icon {
+    width: 40px;
   }
 
   &__content {

@@ -12,7 +12,7 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build --outDir dist",
-    "build": "vitepress build --outDir dist",
+    "build": "vitepress build",
     "docs:preview": "vitepress preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

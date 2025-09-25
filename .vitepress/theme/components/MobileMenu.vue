@@ -67,7 +67,11 @@
           </div>
           <div class="feature__divider bg-gray-light"></div>
           <div class="d-flex feature__item">
-            <img src="../assets/icons/tourists.svg" alt="Tourist" />
+            <img
+              src="../assets/icons/tourists.svg"
+              class="feature__icon"
+              alt="Tourist"
+            />
             <div class="d-flex flex-column feature__content flex-grow-1">
               <div class="feature__title headline-7-bold text-primary">
                 觀光客友善
