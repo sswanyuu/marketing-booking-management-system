@@ -82,21 +82,21 @@
         </div>
       </div>
       <!-- features desktop -->
-      <div class="features__list d-none d-md-flex gap-9 align-items-center">
+      <div class="features__list d-none d-md-flex align-items-center row">
         <img
           src="../assets/images/pages/home/feature-1.png"
           alt="feature-1"
-          class="features_item"
+          class="features_item col-4"
         />
         <img
           src="../assets/images/pages/home/feature-2.png"
           alt="feature-2"
-          class="features_item"
+          class="features_item col-4"
         />
         <img
           src="../assets/images/pages/home/feature-3.png"
           alt="feature-3"
-          class="features_item"
+          class="features_item col-4"
         />
       </div>
       <!-- features mobile -->
@@ -123,9 +123,6 @@
             class="features_item w-100 swiper-slide"
           />
         </swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide>
-        <swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide>
       </swiper>
     </section>
     <!-- pain points -->
@@ -266,8 +263,6 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 
 const painPointsSection = ref(null);
-
-//create a variable which is responsive to the current screen size
 
 const handleScroll = () => {
   if (!painPointsSection.value) return;
