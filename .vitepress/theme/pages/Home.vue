@@ -100,23 +100,33 @@
         />
       </div>
       <!-- features mobile -->
-      <div class="features__list d-flex d-md-none gap-2">
-        <img
-          src="../assets/images/pages/home/feature-1-mobile.png"
-          alt="feature-1"
-          class="features_item"
-        />
-        <img
-          src="../assets/images/pages/home/feature-2-mobile.png"
-          alt="feature-2"
-          class="features_item"
-        />
-        <img
-          src="../assets/images/pages/home/feature-3-mobile.png"
-          alt="feature-3"
-          class="features_item"
-        />
-      </div>
+
+      <swiper class="features__list d-flex d-md-none gap-2 flex-nowrap swiper">
+        <swiper-slide>
+          <img
+            src="../assets/images/pages/home/feature-1-mobile.png"
+            alt="feature-1"
+            class="features_item w-100 swiper-slide"
+          />
+        </swiper-slide>
+        <swiper-slide>
+          <img
+            src="../assets/images/pages/home/feature-2-mobile.png"
+            alt="feature-2"
+            class="features_item w-100 swiper-slide"
+          />
+        </swiper-slide>
+        <swiper-slide>
+          <img
+            src="../assets/images/pages/home/feature-3-mobile.png"
+            alt="feature-3"
+            class="features_item w-100 swiper-slide"
+          />
+        </swiper-slide>
+        <swiper-slide>Slide 4</swiper-slide>
+        <swiper-slide>Slide 5</swiper-slide>
+        <swiper-slide>Slide 6</swiper-slide>
+      </swiper>
     </section>
     <!-- pain points -->
     <section
@@ -252,6 +262,8 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
 
 const painPointsSection = ref(null);
 
@@ -279,7 +291,6 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
-  console.log('🚀 ~ window:', window);
   handleScroll();
 });
 
