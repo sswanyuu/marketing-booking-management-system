@@ -41,15 +41,6 @@ $grid-breakpoints: (
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 
-// Override z-index levels after Bootstrap variables are loaded
-// $zindex-levels: (
-//   n1: -1,
-//   0: 0,
-//   1: 1,
-//   2: 2,
-//   3: 3,
-// );
-
 // Override Bootstrap's danger color
 $primary: $brand-main-1;
 $secondary: $brand-main-2;

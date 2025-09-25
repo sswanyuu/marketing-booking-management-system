@@ -4,45 +4,54 @@
 // Using Bootstrap utilities first, custom styles only where needed
 
 .footer {
-  &__container {
-  }
-  // Logo sizing
   &__logo {
     width: 164px;
   }
-  &__hero {
-    height: 632px;
-    padding: 78px 0px 414px 0px;
+  &__slogan {
+    width: 40%;
+  }
+
+  &__banner {
     position: relative;
+    z-index: $zindex-modal;
+    height: 448px;
+    max-width: 1314px;
+    background-color: $banner-black;
+    padding-left: 142px;
+    margin-bottom: -186px;
     @include media-breakpoint-down(md) {
       height: 500px;
       padding: 48px 0px 420px 0px;
+      margin: 0 12px -186px 12px;
     }
-  }
-  &__slogan {
-    max-width: 1290px;
-    @include media-breakpoint-down(md) {
-      width: 80%;
+
+    .background-image__desktop {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      object-fit: cover;
     }
-  }
-  &__cta {
-    border-radius: 20px;
-    background-image: url('../assets/images/footer-cta-bg.png');
-    background-size: cover;
-    width: 100%;
-    max-width: 1290px;
-    height: 448px;
-    flex-shrink: 0;
-    position: absolute;
-    top: 370px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 60px 84px 0 rgba(0, 0, 0, 0.25);
-    @include media-breakpoint-down(md) {
-      background-image: url('../assets/images/footer-bg-mobile.png');
+    .background-image__mobile {
       width: 100%;
-      height: 448px;
-      top: 180px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__content {
+      padding-left: 142px;
+      z-index: 1;
+      margin-left: 314px;
+      @include media-breakpoint-down(md) {
+        margin: 84px 32px 0 32px;
+      }
+    }
+    &__slogan {
+      object-fit: contain;
+    }
+    &__slogan-mobile {
+      object-fit: contain;
     }
   }
 
@@ -56,7 +65,7 @@
     }
 
     &__content {
-      max-width: 1290px;
+      max-width: 1314px;
       // gap: $spacers-5;
       flex-shrink: 0;
       @include media-breakpoint-down(md) {
@@ -68,7 +77,3 @@
     }
   }
 }
-
-// Navigation links styling
-
-// Copyright text styling
