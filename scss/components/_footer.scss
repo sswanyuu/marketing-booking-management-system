@@ -11,18 +11,17 @@
     width: 40%;
   }
 
-  &__banner {
+  .banner {
     position: relative;
     z-index: $zindex-modal;
     height: 448px;
     max-width: 1314px;
     background-color: $banner-black;
-    padding-left: 142px;
     margin-bottom: -186px;
     @include media-breakpoint-down(md) {
       height: 500px;
-      padding: 48px 0px 420px 0px;
-      margin: 0 12px -186px 12px;
+      padding: 56px 20px 122px 20px;
+      margin: 0 12px -122px 12px;
     }
 
     .background-image__desktop {
@@ -40,11 +39,10 @@
       bottom: 0;
     }
     &__content {
-      padding-left: 142px;
       z-index: 1;
-      margin-left: 314px;
+      margin-left: 10%;
       @include media-breakpoint-down(md) {
-        margin: 84px 32px 0 32px;
+        margin: 0px;
       }
     }
     &__slogan {
@@ -55,15 +53,12 @@
     }
   }
 
-  &__navigation {
+  .navigation {
     padding: 274px 0 118px 0;
-    @include media-breakpoint-down(xl) {
-      padding: 274px 16px 118px 16px;
-    }
+
     @include media-breakpoint-down(md) {
       padding: 178px 0 57px 0;
     }
-
     &__content {
       max-width: 1314px;
       // gap: $spacers-5;
@@ -71,9 +66,6 @@
       @include media-breakpoint-down(md) {
         // gap: $spacers-7;
       }
-    }
-    &__links {
-      // gap: $gap-lg;
     }
   }
 }

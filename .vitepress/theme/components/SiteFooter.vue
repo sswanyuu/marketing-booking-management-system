@@ -1,9 +1,9 @@
 <template>
   <footer class="footer">
     <!-- Desktop Layout -->
-    <div class="footer__container d-md-flex flex-column align-items-center">
+    <div class="d-md-flex flex-column align-items-center">
       <!-- banner -->
-      <div class="footer__banner-container bg-white">
+      <div class="banner-container bg-white">
         <img
           src="../assets/images/footer-slogan.png"
           alt="hero"
@@ -12,37 +12,37 @@
       </div>
 
       <section
-        class="footer__banner d-flex align-items-start align-items-md-center justify-content-center justify-content-md-start bg-primary rounded-4"
+        class="banner d-flex align-items-start align-items-md-center justify-content-center justify-content-md-start bg-primary rounded-4"
       >
         <img
           src="../assets/images/layout/footer/bg.png"
-          alt="hero"
+          alt="footer-background"
           class="background-image__desktop d-none d-md-block rounded-4"
         />
         <img
           src="../assets/images/layout/footer/bg-mobile.png"
-          alt="hero"
+          alt="footer-background"
           class="background-image__mobile d-block d-md-none rounded-4"
         />
         <div
-          class="hero__content d-md-flex d-none flex-column w-50 gap-9 justify-content-center"
+          class="banner__content d-md-flex d-none flex-column w-50 gap-9 justify-content-center"
         >
           <img
             src="../assets/images/layout/footer/bg-slogan.png"
             alt="hero"
-            class="d-none d-md-block hero__slogan"
+            class="d-none d-md-block banner__slogan"
           />
           <Button variant="secondary" class="align-self-start">
             預約 Demo
           </Button>
         </div>
         <div
-          class="hero__content d-flex d-md-none flex-column w-50 gap-9 justify-content-center"
+          class="banner__content d-flex d-md-none flex-column w-100 gap-9 justify-content-center"
         >
           <img
             src="../assets/images/layout/footer/bg-slogan-mobile.png"
             alt="hero"
-            class="d-block d-md-none hero__slogan-mobile"
+            class="d-block d-md-none banner__slogan-mobile"
           />
           <Button variant="mobileFull">預約 Demo</Button>
         </div>
@@ -50,10 +50,10 @@
     </div>
 
     <div
-      class="footer__navigation text-white bg-black d-flex justify-content-center w-100"
+      class="navigation text-white bg-black d-flex justify-content-center w-100"
     >
       <div
-        class="footer__content d-flex align-items-center w-100 flex-md-row flex-column gap-5 gap-xl-7"
+        class="navigation__content d-flex align-items-center w-100 flex-md-row flex-column gap-5 gap-xl-7"
       >
         <!-- <div class="d-flex align-items-center gap-4 "> -->
         <img
@@ -62,7 +62,7 @@
           class="logo"
         />
         <div
-          class="d-flex footer__links flex-column flex-md-row justify-content-center align-items-center"
+          class="d-flex navigation__links flex-column flex-md-row justify-content-center align-items-center gap-5"
         >
           <a
             href="#why-fullkeep"
