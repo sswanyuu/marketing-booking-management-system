@@ -60,19 +60,31 @@
               </div>
             </div>
             <div class="item__list gap-2 gap-md-3 flex-column d-flex">
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   顧客線上訂位、店員也能代客填寫
                 </div>
               </div>
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   支援手機、平板與桌機操作
                 </div>
               </div>
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   店員可代客快速建檔訂位
@@ -106,19 +118,31 @@
               </div>
             </div>
             <div class="item__list gap-2 gap-md-3 flex-column d-flex">
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   VIP包廂、吧台區域都能納入排位邏輯
                 </div>
               </div>
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   自動避開重疊、按桌型優先建議配置
                 </div>
               </div>
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   提升翻桌率與現場動線效率
@@ -153,19 +177,31 @@
               </div>
             </div>
             <div class="item__list gap-2 gap-md-3 flex-column d-flex">
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   現場人數變動，店員也能即時更新預約資訊
                 </div>
               </div>
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   調整人數、時間、餐點，無需重新預約
                 </div>
               </div>
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   前台與後台同時掌握最新資訊
@@ -199,19 +235,31 @@
               </div>
             </div>
             <div class="item__list gap-2 gap-md-3 flex-column d-flex">
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   自由設定不同日子的營運規則
                 </div>
               </div>
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   自動對應營業時段與人力排程
                 </div>
               </div>
-              <div class="list-point-container d-flex gap-2">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
                 <div class="list-point body-2 md-headline-2-regular">
                   特別營業日、臨時公休一鍵調整
@@ -224,6 +272,27 @@
     </section>
   </div>
 </template>
+
+<script>
+import { onMounted } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+export default {
+  name: 'EasyUse',
+  setup() {
+    onMounted(() => {
+      // 初始化 AOS
+      AOS.init({
+        duration: 600,
+        easing: 'ease-out',
+        once: false,
+        offset: 12,
+      });
+    });
+  },
+};
+</script>
 
 <style lang="scss">
 @import '../../../scss/pages/_easy-use.scss';
