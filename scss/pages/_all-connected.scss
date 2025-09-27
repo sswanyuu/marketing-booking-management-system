@@ -1,0 +1,35 @@
+@import '../_variables';
+.all-connected {
+  .hero {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    background-color: $banner-black;
+    @include media-breakpoint-down(md) {
+      height: 360px;
+      padding: 96px 12px 0px 12px;
+    }
+
+    .background-image__desktop {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      object-fit: cover;
+    }
+    .background-image__mobile {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__content {
+      z-index: 1;
+      margin-left: 10%;
+      @include media-breakpoint-down(md) {
+        margin: 0;
+      }
+    }
+  }
+}
