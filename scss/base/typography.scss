@@ -66,7 +66,27 @@ $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
 .headline-8-bold {
   @include headline-bold(14px, 0%);
 }
+// Regular Headlines
+.headline-1-regular {
+  @include headline-regular(24px, 140%, 0%);
+}
 
+.headline-2-regular {
+  @include headline-regular(20px, auto, 0%);
+}
+
+// Body Text
+.body-1 {
+  @include body-text(16px, 140%, 0%);
+}
+
+.body-2 {
+  @include body-text(14px, 140%, 0%);
+}
+
+.body-3 {
+  @include body-text(12px, auto, 0%);
+}
 // Responsive Typography Classes
 // Generate responsive variants for all headline classes
 @each $breakpoint, $value in $grid-breakpoints {
@@ -125,26 +145,4 @@ $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
       }
     }
   }
-}
-
-// Regular Headlines
-.headline-1-regular {
-  @include headline-regular(24px, 140%, 0%);
-}
-
-.headline-2-regular {
-  @include headline-regular(20px, auto, 0%);
-}
-
-// Body Text
-.body-1 {
-  @include body-text(16px, 140%, 0%);
-}
-
-.body-2 {
-  @include body-text(14px, 140%, 0%);
-}
-
-.body-3 {
-  @include body-text(12px, auto, 0%);
 }

@@ -180,7 +180,7 @@
     </section>
     <!-- background image -->
     <section class="background-image w-100 d-flex justify-content-end">
-      <img src="../assets/images/pages/home/bg.png" alt="background-image" />
+      <img src="../assets/images/bg.png" alt="background-image" />
     </section>
     <!-- solutions -->
     <section class="solutions d-flex flex-column align-items-center">
