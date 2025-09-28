@@ -31,9 +31,175 @@
         </Button>
       </div>
     </section>
+    <section class="globe-container d-flex flex-column align-items-center">
+      <div
+        class="title-content d-flex flex-column gap-3 gap-md-6 align-items-center"
+      >
+        <div class="title-content__title md-headline-1-bold headline-4-bold">
+          專為精緻餐飲需求打造，與國際無縫接軌
+        </div>
+        <div
+          class="title-content__description text-gray body-2 md-headline-1-regular"
+        >
+          無論語言、介面或聯繫工具，提供世界各地的顧客順暢的訂位流程與服務資訊。
+        </div>
+      </div>
+      <img
+        src="../assets/images/pages/tourist-ready/globe.png"
+        alt="globe"
+        class="globe-image d-md-block d-none"
+      />
+      <img
+        src="../assets/images/pages/tourist-ready/globe-mobile.png"
+        alt="globe"
+        class="globe-image d-md-none d-block"
+      />
+    </section>
+    <section
+      class="items w-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="items__list d-flex flex-column">
+        <div class="item-container d-flex">
+          <img
+            class="item__image d-md-block d-none"
+            src="../assets/images/pages/tourist-ready/item-1.png"
+            alt="item-1"
+          />
+          <img
+            class="item__image d-md-none d-block"
+            src="../assets/images/pages/tourist-ready/item-1-mobile.png"
+            alt="item-1"
+          />
+          <div class="item__content d-flex flex-column">
+            <div
+              class="item__title-container d-flex flex-column gap-3 gap-md-6"
+            >
+              <div class="item__title md-headline-1-bold headline-4-bold">
+                多國語言支援
+              </div>
+              <div
+                class="item__description text-gray body-2 md-headline-1-regular"
+              >
+                無論來自哪個國家，都能以熟悉的語言瀏覽、預約與溝通，打造真正國際化的用餐體驗。
+              </div>
+            </div>
+            <div class="item__list gap-2 gap-md-3 flex-column d-flex">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
+                <img src="../assets/icons/check.svg" alt="check-icon" />
+                <div class="list-point body-2 md-headline-2-regular">
+                  多語介面，流程簡單易懂
+                </div>
+              </div>
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <img src="../assets/icons/check.svg" alt="check-icon" />
+                <div class="list-point body-2 md-headline-2-regular">
+                  自動偵測地區語言，也可手動切換
+                </div>
+              </div>
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <img src="../assets/icons/check.svg" alt="check-icon" />
+                <div class="list-point body-2 md-headline-2-regular">
+                  菜單與通知信件自動翻譯
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item-container d-flex">
+          <img
+            class="item__image d-md-block d-none"
+            src="../assets/images/pages/tourist-ready/item-2.png"
+            alt="item-2"
+          />
+          <img
+            class="item__image d-md-none d-block"
+            src="../assets/images/pages/tourist-ready/item-2-mobile.png"
+            alt="item-2"
+          />
+          <div class="item__content d-flex flex-column">
+            <div
+              class="item__title-container d-flex flex-column gap-3 gap-md-6"
+            >
+              <div class="item__title md-headline-1-bold headline-4-bold">
+                自動切換貨幣
+              </div>
+              <div
+                class="item__description text-gray body-2 md-headline-1-regular"
+              >
+                旅客在出發前就能掌握餐廳菜單與價格，安心預訂、從容用餐。
+              </div>
+            </div>
+            <div class="item__list gap-2 gap-md-3 flex-column d-flex">
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="0"
+              >
+                <img src="../assets/icons/check.svg" alt="check-icon" />
+                <div class="list-point body-2 md-headline-2-regular">
+                  根據用戶所在位置，自動顯示對應幣別
+                </div>
+              </div>
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <img src="../assets/icons/check.svg" alt="check-icon" />
+                <div class="list-point body-2 md-headline-2-regular">
+                  價格資訊清楚透明，預約更安心
+                </div>
+              </div>
+              <div
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <img src="../assets/icons/check.svg" alt="check-icon" />
+                <div class="list-point body-2 md-headline-2-regular">
+                  提升旅客滿意度與轉單率
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
+<script>
+import { onMounted } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+export default {
+  name: 'EasyUse',
+  setup() {
+    onMounted(() => {
+      // 初始化 AOS
+      AOS.init({
+        duration: 600,
+        easing: 'ease-out',
+        once: false,
+        offset: 12,
+      });
+    });
+  },
+};
+</script>
 <style lang="scss">
 @import '../../../scss/pages/_tourist-ready.scss';
 </style>
