@@ -11,13 +11,23 @@
     width: 40%;
   }
 
+  .top-image {
+    .background-image__desktop {
+      width: 100%;
+    }
+    .background-image__mobile {
+      width: 80%;
+      object-fit: cover;
+    }
+  }
+
   .banner {
     position: relative;
     z-index: $zindex-modal;
     height: 448px;
     max-width: 1314px;
     background-color: $banner-black;
-    margin-bottom: -186px;
+    margin: 0 12px -186px 12px;
     @include media-breakpoint-down(md) {
       height: 500px;
       padding: 56px 20px 122px 20px;

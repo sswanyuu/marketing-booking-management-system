@@ -3,13 +3,20 @@
     <!-- Desktop Layout -->
     <div class="d-md-flex flex-column align-items-center">
       <!-- banner -->
-      <div class="banner-container bg-white">
+      <section
+        class="top-image d-flex align-items-center justify-content-center"
+      >
         <img
           src="../assets/images/footer-slogan.png"
           alt="hero"
-          class="background-image__desktop d-none d-md-block rounded-4 mb-4 mb-md-5"
+          class="background-image__desktop d-none d-md-block mb-md-5"
         />
-      </div>
+        <img
+          src="../assets/images/footer-slogan-mobile.png"
+          alt="hero"
+          class="background-image__mobile d-flex d-md-none mb-4"
+        />
+      </section>
 
       <section
         class="banner d-flex align-items-start align-items-md-center justify-content-center justify-content-md-start bg-primary rounded-4"
