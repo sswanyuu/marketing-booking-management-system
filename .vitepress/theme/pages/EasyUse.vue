@@ -270,6 +270,48 @@
         </div>
       </div>
     </section>
+    <!-- bottom banner -->
+    <section class="bottom-banner-container d-flex justify-content-center">
+      <div
+        class="bottom-banner d-flex align-items-start align-items-md-center justify-content-center justify-content-md-start bg-primary rounded-4"
+      >
+        <img
+          src="../assets/images/pages/easy-use/bottom-banner-bg.png"
+          alt="hero"
+          class="background-image__desktop d-none d-md-block rounded-4"
+        />
+        <img
+          src="../assets/images/pages/easy-use/bottom-banner-bg-mobile.png"
+          alt="hero"
+          class="background-image__mobile d-block d-md-none rounded-4"
+        />
+        <div
+          class="bottom-banner__content flex-column gap-md-3 gap-2 justify-content-center text-white d-flex align-items-center align-items-md-start"
+        >
+          <div class="md-headline-1-bold headline-4-bold">
+            經營不必將就，你值得更好的系統
+          </div>
+          <div class="md-headline-1-regular body-2">
+            從預約到現場管理，Fullkeep
+            貼近餐廳的每一個日常操作。我們打造的是一套真正符合店家需求的數位工具。高效、好用，讓經營更順手，省時又省力。
+          </div>
+        </div>
+        <img
+          src="../assets/images/pages/easy-use/bottom-banner-tree.png"
+          alt="tree"
+          class="bottom-banner__tree d-none d-md-block"
+        />
+        <img
+          src="../assets/images/pages/easy-use/bottom-banner-tree-mobile.png"
+          alt="tree"
+          class="bottom-banner__tree d-block d-md-none"
+        />
+      </div>
+
+      <div
+        class="bottom-banner-container__background-image bg-tertiary w-100 z-n1"
+      />
+    </section>
   </div>
 </template>
 

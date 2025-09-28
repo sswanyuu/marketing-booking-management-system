@@ -25,8 +25,9 @@
       bottom: 0;
     }
     &__content {
-      z-index: 1;
+      z-index: 2; // 確保文字在樹的圖片之上
       margin-left: 10%;
+      position: relative; // 確保 z-index 生效
       @include media-breakpoint-down(md) {
         margin: 0;
       }
@@ -81,6 +82,79 @@
             gap: 20px;
           }
         }
+      }
+    }
+  }
+  .bottom-banner {
+    position: relative;
+    height: 700px;
+    margin: 0 12px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+      height: 616px;
+      padding: 32px 20px 0px 20px;
+    }
+
+    .background-image__desktop {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      object-fit: cover;
+    }
+    .background-image__mobile {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__content {
+      z-index: 1;
+      margin-left: 5%;
+      width: 40%;
+      @include media-breakpoint-down(md) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+    &__tree {
+      max-width: 50%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      max-height: 900px;
+      z-index: 1;
+
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+        max-height: 60%;
+        //grow from bottom
+        top: auto;
+        bottom: 40px;
+        transform: translateX(-50%) translateY(0);
+        left: 50%;
+        max-width: 100%;
+      }
+    }
+  }
+  .bottom-banner-container {
+    width: 100%;
+    margin-top: 172px;
+    position: relative;
+    margin-bottom: 160px;
+    @include media-breakpoint-down(md) {
+      margin-top: 68px;
+      margin-bottom: 36px;
+    }
+    &__background-image {
+      position: absolute;
+      top: -172px;
+      bottom: 232px;
+      @include media-breakpoint-down(md) {
+        top: -68px;
+        bottom: 348px;
       }
     }
   }
