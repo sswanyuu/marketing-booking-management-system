@@ -324,7 +324,6 @@ export default {
   name: 'EasyUse',
   setup() {
     onMounted(() => {
-      // 初始化 AOS
       AOS.init({
         duration: 600,
         easing: 'ease-out',
