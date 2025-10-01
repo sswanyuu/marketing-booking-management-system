@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="btn"
+    class="custom-button"
     :class="buttonClasses"
     :disabled="disabled"
     @click="handleClick"
@@ -47,11 +47,11 @@ const props = defineProps({
 
 const emit = defineEmits(['click']);
 const classesMap = {
-  primary: 'btn-primary headline-5-bold',
-  secondary: 'btn-secondary headline-5-bold',
-  mobile: 'btn--mobile headline-6-bold',
-  mobileFull: 'btn--mobile-full headline-6-bold',
-  arrow: 'btn--arrow',
+  primary: 'custom-button-primary headline-5-bold',
+  secondary: 'custom-button-secondary headline-5-bold',
+  mobile: 'custom-button-mobile headline-6-bold',
+  mobileFull: 'custom-button-mobile-full headline-6-bold',
+  arrow: 'custom-button-arrow',
 };
 
 const buttonClasses = computed(() => {

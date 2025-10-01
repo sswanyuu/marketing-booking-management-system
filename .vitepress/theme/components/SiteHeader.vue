@@ -1,15 +1,12 @@
 <template>
-  <nav
-    class="d-flex justify-content-between align-items-center header navbar navbar-dark bg-primary"
+  <section
+    class="header d-flex justify-content-center align-items-center navbar navbar-dark bg-primary"
   >
-    <!-- Mobile Close Button -->
     <div
-      class="d-flex w-100 justify-content-between align-items-center header__container"
+      class="header__container d-flex w-100 justify-content-between align-items-center"
     >
-      <!-- Logo -->
-      <div class="header__logo d-flex align-items-center">
-        <!-- Hamburger Menu -->
-        <div class="header__features-toggle">
+      <div class="gap-3 d-flex align-items-center">
+        <div class="header__features-toggle d-block d-md-none">
           <button v-if="isMenuOpen" @click="toggleMenu">
             <img :src="closeIcon" alt="Close menu" />
           </button>
@@ -18,22 +15,24 @@
           </button>
         </div>
         <img
-          class="header__logo-img"
+          class="flex-shrink-0"
           src="../assets/images/logo.png"
           alt="fullkeep"
         />
       </div>
       <!-- Desktop Navigation -->
-      <div class="d-flex align-items-center">
-        <ul class="nav flex-row align-items-baseline">
-          <li class="nav__item">
+      <div class="d-flex align-items-center gap-5">
+        <ul class="d-none d-md-flex align-items-baseline m-0 gap-5">
+          <li>
             <!-- Design System 🕹️ Remove if not needed -->
-            <a href="/design-system" class="nav__link">DESIGN SYSTEM</a>
+            <a href="/design-system" class="text-white headline-8-bold">
+              DESIGN SYSTEM
+            </a>
           </li>
-          <li class="nav__item d-flex align-items-center header__features">
+          <li class="d-flex align-items-center gap-1">
             <a
               href="#features"
-              class="nav__link"
+              class="text-white headline-8-bold"
               @click="toggleDesktopFeatures"
             >
               FEATURES
@@ -45,11 +44,15 @@
               :class="{ 'header__chevron--rotated': isDesktopFeaturesOpen }"
             />
           </li>
-          <li class="nav__item">
-            <a href="#integration" class="nav__link">INTEGRATION</a>
+          <li>
+            <a href="#integration" class="text-white headline-8-bold">
+              INTEGRATION
+            </a>
           </li>
-          <li class="nav__item">
-            <a href="#solutions" class="nav__link">SOLUTIONS</a>
+          <li>
+            <a href="#solutions" class="text-white headline-8-bold">
+              SOLUTIONS
+            </a>
           </li>
         </ul>
         <!-- Demo Button -->
@@ -58,20 +61,28 @@
     </div>
 
     <!-- Mobile Navigation Menu -->
-    <MobileMenu :is-open="isMenuOpen" @close="toggleMenu" />
+    <MobileMenu
+      :is-open="isMenuOpen"
+      data-aos="slide-down"
+      data-aos-duration="400"
+      data-aos-easing="ease-out"
+      @close="toggleMenu"
+    />
 
     <!-- Desktop Features Section -->
-    <div
-      class="header__features-dropdown"
-      :class="{ 'header__features-dropdown--show': isDesktopFeaturesOpen }"
-    >
-      <FeaturesSection />
-    </div>
-  </nav>
+    <FeaturesSection
+      :is-open="isDesktopFeaturesOpen"
+      data-aos="slide-down"
+      data-aos-duration="400"
+      data-aos-easing="ease-out"
+    />
+  </section>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Button from './Button.vue';
 import FeaturesSection from './FeaturesSection.vue';
 import MobileMenu from './MobileMenu.vue';
@@ -103,12 +114,32 @@ const handleClickOutside = event => {
 
 onMounted(() => {
   document.addEventListener('click', handleClickOutside);
+  AOS.init({
+    duration: 400,
+    easing: 'ease-out',
+    once: false,
+  });
 });
 
 onUnmounted(() => {
   document.removeEventListener('click', handleClickOutside);
+  AOS.refresh();
 });
 
+watch(isDesktopFeaturesOpen, newValue => {
+  if (newValue) {
+    nextTick(() => {
+      AOS.refresh();
+    });
+  }
+});
+watch(isMenuOpen, newValue => {
+  if (newValue) {
+    nextTick(() => {
+      AOS.refresh();
+    });
+  }
+});
 // Expose methods for parent components
 defineExpose({
   toggleMenu,

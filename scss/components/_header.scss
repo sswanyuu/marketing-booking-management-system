@@ -1,100 +1,28 @@
 @import '../variables';
 @import '../base/typography';
 
-$header-padding: 12.5px 20%;
+$header-padding: 12.5px 12px;
 $header-padding-mobile: 12px 8px;
 // Header Block
 .header {
   position: relative;
   padding: $header-padding;
-  z-index: $zindex-fixed;
-}
-
-// Header Logo Element
-.header__logo {
-  gap: 12px;
-  .header__features-toggle {
-    display: none;
+  z-index: $zindex-tooltip;
+  &__container {
+    max-width: 1314px;
   }
-  .header__logo-img {
-    width: 172px;
-    height: 48px;
-    flex-shrink: 0;
-  }
-}
+  &__chevron {
+    transition: transform 0.3s ease;
+    margin-left: 8px;
 
-// Header Nav Link Element
-.header__nav-link {
-  color: $brand-white;
-  @include headline-bold(14px, 0%);
-}
-
-// Header Features Element
-.header__features {
-  gap: 4px;
-}
-
-// Header Features Dropdown Element
-.header__features-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background-color: $brand-white;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-
-  &--show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-
-// Header Chevron Element
-.header__chevron {
-  transition: transform 0.3s ease;
-  margin-left: 8px;
-
-  &--rotated {
-    transform: rotate(180deg);
-  }
-}
-
-// Nav Block (新的獨立 Block)
-.nav {
-  display: flex;
-
-  &__item {
-    margin-right: 20px;
-  }
-
-  &__link {
-    color: $brand-white;
-    @include headline-bold(14px, 0%);
+    &--rotated {
+      transform: rotate(180deg);
+    }
   }
 }
 
 @include media-breakpoint-down(xl) {
   .header {
     padding: $header-padding-mobile;
-  }
-  .nav {
-    display: none;
-  }
-  .header__logo {
-    .header__features-toggle {
-      display: block;
-    }
-    .header__logo-img {
-      width: 112px;
-      height: 31px;
-    }
-  }
-
-  .header__features-dropdown {
-    display: none;
   }
 }

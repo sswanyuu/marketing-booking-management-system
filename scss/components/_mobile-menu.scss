@@ -8,38 +8,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: $zindex-modal;
-
-  &__content {
-    padding: 0 8px;
-    gap: 13px;
-  }
+  z-index: $zindex-tooltip;
 
   &__divider {
     height: 1px;
     width: 100%;
   }
 
-  &__section {
-    .menu__header {
+  &__list {
+    .header {
       cursor: pointer;
-
-      .menu__title {
-        padding: 16px 0;
-      }
-
-      .menu__chevron {
+      .chevron {
         transition: transform 0.3s ease;
-        color: $brand-black;
-
         &--rotated {
           transform: rotate(180deg);
         }
       }
-    }
-
-    .menu__title {
-      padding: 16px 0;
     }
   }
 }
@@ -47,32 +31,15 @@
 // Feature Block
 .feature {
   &__dropdown {
-    gap: 12px;
     max-height: 0;
-    overflow: hidden;
 
     &--show {
       max-height: 500px;
     }
   }
 
-  &__item {
-    gap: 16px;
-  }
-
   &__icon {
     width: 40px;
-  }
-
-  &__content {
-    gap: 8px;
-  }
-
-  &__title {
-  }
-
-  &__description {
-    margin: 0;
   }
 
   &__arrow {
@@ -81,6 +48,5 @@
 
   &__divider {
     height: 1px;
-    width: 100%;
   }
 }

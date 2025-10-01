@@ -12,6 +12,9 @@ import Button from './components/Button.vue';
 import Input from './components/Input.vue';
 import MobileMenu from './components/MobileMenu.vue';
 
+// Import Bootstrap JS
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 export default {
   ...DefaultTheme,
   Layout: DefaultLayout,
