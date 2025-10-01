@@ -7,51 +7,58 @@
         class="top-image d-flex align-items-center justify-content-center"
       >
         <img
-          src="../assets/images/footer-slogan.png"
+          src="../assets/images/layout/footer/slogan.png"
           alt="hero"
           class="background-image__desktop d-none d-md-block mb-md-5"
         />
         <img
-          src="../assets/images/footer-slogan-mobile.png"
+          src="../assets/images/layout/footer/slogan-mobile.png"
           alt="hero"
           class="background-image__mobile d-flex d-md-none mb-4"
         />
       </section>
-
-      <section
-        class="banner d-flex align-items-start align-items-md-center justify-content-center justify-content-md-start bg-primary rounded-4"
-      >
-        <img
-          src="../assets/images/layout/footer/bg.png"
-          alt="footer-background"
-          class="background-image__desktop d-none d-md-block rounded-4"
-        />
-        <img
-          src="../assets/images/layout/footer/bg-mobile.png"
-          alt="footer-background"
-          class="background-image__mobile d-block d-md-none rounded-4"
-        />
+      <section class="w-100 d-flex justify-content-center">
         <div
-          class="banner__content d-md-flex d-none flex-column w-50 gap-9 justify-content-center"
+          class="banner d-flex align-items-start align-items-md-center justify-content-center justify-content-md-start bg-primary rounded-4 border border-white"
         >
           <img
-            src="../assets/images/layout/footer/bg-slogan.png"
-            alt="hero"
-            class="d-none d-md-block banner__slogan"
+            src="../assets/images/layout/footer/bg.png"
+            alt="footer-background"
+            class="background-image__desktop d-none d-md-block rounded-4"
           />
-          <Button variant="secondary" class="align-self-start">
-            預約 Demo
-          </Button>
-        </div>
-        <div
-          class="banner__content d-flex d-md-none flex-column w-100 gap-9 justify-content-center"
-        >
           <img
-            src="../assets/images/layout/footer/bg-slogan-mobile.png"
-            alt="hero"
-            class="d-block d-md-none banner__slogan-mobile"
+            src="../assets/images/layout/footer/bg-mobile.png"
+            alt="footer-background"
+            class="background-image__mobile d-block d-md-none rounded-4"
           />
-          <Button variant="mobileFull">預約 Demo</Button>
+          <div
+            class="banner__content d-flex flex-column w-md-50 w-100 gap-9 justify-content-center"
+          >
+            <div
+              class="md-headline-3-bold md-headline-4-bold headline-3-bold text-white"
+            >
+              Fullkeep the Seats. Fulfill the Brand.
+            </div>
+            <div
+              class="md-headline-2-bold headline-4-bold text-white position-relative align-self-start"
+            >
+              高朋滿座，富譽盈門
+              <img
+                src="../assets/images/layout/footer/slogan-decoration.png"
+                alt="slogan-decoration"
+                class="footer__slogan-decoration position-absolute"
+              />
+            </div>
+            <Button
+              variant="secondary"
+              class="align-self-start d-none d-md-block"
+            >
+              預約 Demo
+            </Button>
+            <Button variant="mobileFull" class="d-block d-md-none">
+              預約Demo
+            </Button>
+          </div>
         </div>
       </section>
     </div>
@@ -64,7 +71,7 @@
       >
         <!-- <div class="d-flex align-items-center gap-4 "> -->
         <img
-          src="../assets/images/logo-footer.png"
+          src="../assets/images/layout/footer/logo.png"
           alt="fullkeep"
           class="logo"
         />

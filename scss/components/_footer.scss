@@ -7,9 +7,6 @@
   &__logo {
     width: 164px;
   }
-  &__slogan {
-    width: 40%;
-  }
 
   .top-image {
     margin-top: 76px;
@@ -28,14 +25,15 @@
   .banner {
     position: relative;
     z-index: $zindex-modal;
+    margin: 152px 12px -186px 12px;
     height: 448px;
     max-width: 1314px;
     background-color: $banner-black;
-    margin: 0 12px -186px 12px;
+    width: 100%;
     @include media-breakpoint-down(md) {
       height: 500px;
       padding: 56px 20px 122px 20px;
-      margin: 0 12px -122px 12px;
+      margin: 84px 12px -122px 12px;
     }
 
     .background-image__desktop {
@@ -59,27 +57,28 @@
         margin: 0px;
       }
     }
-    &__slogan {
-      object-fit: contain;
-    }
-    &__slogan-mobile {
-      object-fit: contain;
+  }
+
+  &__slogan-decoration {
+    bottom: -6px;
+    left: 0;
+    height: auto;
+
+    @include media-breakpoint-down(md) {
+      bottom: -8px;
+      left: 14px;
     }
   }
 
   .navigation {
-    padding: 274px 0 118px 0;
+    padding: 274px 12px 118px 12px;
 
     @include media-breakpoint-down(md) {
       padding: 178px 0 57px 0;
     }
     &__content {
       max-width: 1314px;
-      // gap: $spacers-5;
       flex-shrink: 0;
-      @include media-breakpoint-down(md) {
-        // gap: $spacers-7;
-      }
     }
   }
 }
