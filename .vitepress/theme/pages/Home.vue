@@ -101,26 +101,32 @@
       </div>
       <!-- features mobile -->
 
-      <swiper class="features__list d-flex d-md-none gap-2 flex-nowrap swiper">
+      <swiper
+        class="features__list d-flex d-md-none gap-2 flex-nowrap swiper"
+        :slides-per-view="1.2"
+        :space-between="12"
+        :centered-slides="false"
+        :grab-cursor="true"
+      >
         <swiper-slide>
           <img
             src="../assets/images/pages/home/feature-1-mobile.png"
             alt="feature-1"
-            class="features_item w-100 swiper-slide"
+            class="item w-100 swiper-slide"
           />
         </swiper-slide>
         <swiper-slide>
           <img
             src="../assets/images/pages/home/feature-2-mobile.png"
             alt="feature-2"
-            class="features_item w-100 swiper-slide"
+            class="item w-100 swiper-slide"
           />
         </swiper-slide>
         <swiper-slide>
           <img
             src="../assets/images/pages/home/feature-3-mobile.png"
             alt="feature-3"
-            class="features_item w-100 swiper-slide"
+            class="item w-100 swiper-slide"
           />
         </swiper-slide>
       </swiper>

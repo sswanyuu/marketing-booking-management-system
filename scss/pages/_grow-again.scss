@@ -1,5 +1,18 @@
 @import '../_variables';
 .grow-again {
+  .top-banner {
+    margin: 100px 12px 160px 12px;
+    @include media-breakpoint-down(md) {
+      margin: 98px 12px 154px 12px;
+    }
+    &__banner-container {
+      max-width: 1314px;
+      height: 358px;
+      @include media-breakpoint-down(md) {
+        height: 226px;
+      }
+    }
+  }
   .hero {
     position: relative;
     height: 500px;
@@ -29,6 +42,72 @@
       margin-left: 10%;
       @include media-breakpoint-down(md) {
         margin: 0;
+      }
+    }
+  }
+  .client {
+    gap: 64px;
+    @include media-breakpoint-down(md) {
+      gap: 32px;
+    }
+
+    &__list {
+      width: 100%;
+      @include media-breakpoint-down(md) {
+        padding: 0 12px;
+      }
+    }
+  }
+  .services {
+    z-index: 1;
+    max-width: 1314px;
+    padding: 190px 12px 0px 12px;
+    margin-bottom: -404px;
+    gap: 168px;
+    @include media-breakpoint-down(md) {
+      padding: 80px 12px 0px 12px;
+      gap: 80px;
+      margin-bottom: -370px;
+    }
+    &__banner-1 {
+      height: 480px;
+      @include media-breakpoint-down(md) {
+        height: auto;
+      }
+    }
+    &__banner-2 {
+      height: 544px;
+      padding: 32px 64px;
+      @include media-breakpoint-down(md) {
+        height: auto;
+        padding: 32px 12px;
+      }
+    }
+  }
+  .bottom-banner {
+    width: 100%;
+    padding-top: 827px;
+    margin-bottom: 20%;
+
+    @include media-breakpoint-down(md) {
+      padding: 432px 12px 12px 0px;
+    }
+    &__slogan-decoration {
+      bottom: 160px;
+      left: 0;
+    }
+    &__slogan {
+      width: 60%;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+    &__photo {
+      width: 100%;
+      margin-top: -126px;
+      margin-bottom: -20%;
+      @include media-breakpoint-down(md) {
+        margin-top: 40px;
       }
     }
   }
