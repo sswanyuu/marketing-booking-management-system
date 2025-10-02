@@ -33,9 +33,44 @@
     </section>
     <!--top-banner-->
     <section
-      class="top-banner d-flex flex-column justify-content-center align-items-center w-100"
+      class="top-banner d-flex flex-column justify-content-center align-items-center w-100 position-relative"
     >
-      <div class="banner-container bg-primary"></div>
+      <div
+        class="top-banner__container bg-primary w-100 rounded-4 d-flex flex-column justify-content-center align-items-center"
+      >
+        <div
+          class="lg-headline-1-bold headline-4-bold text-white text-center w-100 position-relative"
+        >
+          跨越時空留客於心，
+          <br />
+          延續美好的用餐體驗
+          <img
+            src="../assets/images/pages/grow-again/top-slogan-decoration.png"
+            alt="slogan-decoration"
+            class="top-banner__slogan-decoration d-none d-md-flex position-absolute"
+          />
+        </div>
+      </div>
+      <img
+        src="../assets/images/pages/grow-again/top-banner-photo-left.png"
+        alt="top-banner-photo"
+        class="top-banner__left-photo d-none d-md-flex object-fit-contain position-absolute"
+      />
+      <img
+        src="../assets/images/pages/grow-again/top-banner-photo-right.png"
+        alt="top-banner-photo"
+        class="top-banner__right-photo d-none d-md-flex object-fit-contain position-absolute"
+      />
+      <img
+        src="../assets/images/pages/grow-again/top-banner-photo-left-mobile.png"
+        alt="top-banner-photo"
+        class="top-banner__left-photo d-block d-md-none object-fit-contain position-absolute"
+      />
+      <img
+        src="../assets/images/pages/grow-again/top-banner-photo-right-mobile.png"
+        alt="top-banner-photo"
+        class="top-banner__right-photo d-block d-md-none object-fit-contain position-absolute"
+      />
     </section>
     <!--top-banner-->
     <!-- awareness -->
@@ -155,11 +190,9 @@
           alt="services-1-banner"
           class="d-block d-md-none object-fit-contain"
         />
-        <div class="d-flex flex-column gap-3 gap-md-9">
-          <div class="item__title md-headline-1-bold headline-4-bold">
-            資料報告與分析
-          </div>
-          <div class="item__description text-gray body-2 md-headline-1-regular">
+        <div class="d-flex flex-column gap-3 gap-md-9 w-100 align-self-center">
+          <div class="md-headline-1-bold headline-4-bold">資料報告與分析</div>
+          <div class="text-gray body-2 md-headline-1-regular">
             提供視覺化報表與關鍵指標追蹤，協助餐廳了解營運狀況與行銷效益，快速調整策略
           </div>
         </div>
@@ -168,9 +201,7 @@
         class="services__banner-2 d-flex flex-column flex-md-row gap-6 gap-md-5 bg-white rounded-4 border border-gray-light"
       >
         <div class="d-flex flex-column gap-3 gap-md-9 w-100 align-self-center">
-          <div class="item__title md-headline-1-bold headline-4-bold">
-            多元促銷與優惠券
-          </div>
+          <div class="md-headline-1-bold headline-4-bold">多元促銷與優惠券</div>
           <div
             class="d-flex flex-column gap-2 gap-md-3 text-gray body-2 md-headline-2-regular"
           >
@@ -178,7 +209,7 @@
               <img
                 src="../assets/icons/megaphone.svg"
                 alt="megaphone-icon"
-                class="align-self-start"
+                class="services__banner-2__icon align-self-start"
               />
               <div>
                 利用多元通路主動觸達顧客，推送專屬優惠與活動訊息，強化顧客回流與品牌黏著度。
@@ -188,7 +219,7 @@
               <img
                 src="../assets/icons/gift.svg"
                 alt="gift-icon"
-                class="align-self-start"
+                class="services__banner-2__icon align-self-start"
               />
               <div>
                 彈性設定多樣化優惠方案與電子優惠券，吸引新客同時激勵舊客回訪，促進銷售成長。
