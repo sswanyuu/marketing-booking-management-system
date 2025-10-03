@@ -70,6 +70,127 @@
       }
     }
   }
+  .awareness {
+    width: 100%;
+    padding: 80px 12px;
+    @include media-breakpoint-down(md) {
+      padding: 60px 12px;
+    }
+
+    &__logo-container {
+      max-width: 1700px;
+      position: relative;
+      height: 420px; // 6 rows * 70px height + 5 gaps * 24px = 420px + 120px = 540px, but we need to show 6 rows so 420px
+      overflow: hidden;
+      margin-top: 40px;
+      @include media-breakpoint-down(md) {
+        height: 280px; // 4 rows * 60px height + 3 gaps * 24px = 240px + 72px = 312px, but we need to show 4 rows so 280px
+        margin-top: 30px;
+      }
+    }
+
+    &__logo-track {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      @include media-breakpoint-down(md) {
+        gap: 20px;
+      }
+      will-change: transform;
+      padding: 0 8px;
+
+      &--1 {
+        animation: scroll-vertical-1 8s linear infinite;
+        @include media-breakpoint-down(md) {
+          animation-name: scroll-vertical-1-mobile;
+        }
+      }
+
+      &--2 {
+        animation: scroll-vertical-2 10s linear infinite;
+        @include media-breakpoint-down(md) {
+          animation-name: scroll-vertical-2-mobile;
+        }
+      }
+
+      &--3 {
+        animation: scroll-vertical-3 12s linear infinite;
+      }
+    }
+
+    &__logo-item {
+      width: 140px;
+      @include media-breakpoint-down(md) {
+        width: 80px;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+  }
+
+  // Desktop: 4 brand(140px) + 4 gap(28px) = 672px
+  @keyframes scroll-vertical-1 {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-672px);
+    }
+  }
+
+  // Mobile: 4 brand(80px) + 4 gap(20px) = 400px
+  @keyframes scroll-vertical-1-mobile {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
+
+  // Track 2: Reverse direction (upward)
+  @keyframes scroll-vertical-2 {
+    0% {
+      transform: translateY(-672px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scroll-vertical-2-mobile {
+    0% {
+      transform: translateY(-400px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scroll-vertical-3 {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-672px);
+    }
+  }
+
+  @keyframes scroll-vertical-3-mobile {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-400px);
+    }
+  }
   .client {
     gap: 64px;
     @include media-breakpoint-down(md) {
