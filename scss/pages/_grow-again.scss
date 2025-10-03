@@ -93,28 +93,23 @@
       display: flex;
       flex-direction: column;
       gap: 28px;
-      @include media-breakpoint-down(md) {
-        gap: 20px;
-      }
       will-change: transform;
-      padding: 0 8px;
+      padding: 0 30px;
 
-      &--1 {
-        animation: scroll-vertical-1 8s linear infinite;
-        @include media-breakpoint-down(md) {
-          animation-name: scroll-vertical-1-mobile;
-        }
+      @include media-breakpoint-down(xl) {
+        gap: 20px;
+        padding: 0 16px;
       }
 
-      &--2 {
-        animation: scroll-vertical-2 10s linear infinite;
-        @include media-breakpoint-down(md) {
-          animation-name: scroll-vertical-2-mobile;
-        }
-      }
+      @for $i from 1 through 6 {
+        $duration: 8s + ($i - 1) * 2s;
 
-      &--3 {
-        animation: scroll-vertical-3 12s linear infinite;
+        &--#{$i} {
+          animation: if($i % 2 == 1, scroll-down, scroll-up)
+            $duration
+            linear
+            infinite;
+        }
       }
     }
 
@@ -135,60 +130,44 @@
     }
   }
 
-  // Desktop: 4 brand(140px) + 4 gap(28px) = 672px
-  @keyframes scroll-vertical-1 {
+  $move-distance: calc(4 * (140px + 28px)); // 4 brand + 4 gap = 672px
+  $move-distance-mobile: calc(4 * (80px + 20px)); // 4 brand + 4 gap = 400px
+
+  @keyframes scroll-down {
     0% {
       transform: translateY(0);
     }
     100% {
-      transform: translateY(-672px);
+      transform: translateY(-$move-distance);
     }
   }
 
-  // Mobile: 4 brand(80px) + 4 gap(20px) = 400px
-  @keyframes scroll-vertical-1-mobile {
+  @keyframes scroll-up {
     0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-400px);
-    }
-  }
-
-  // Track 2: Reverse direction (upward)
-  @keyframes scroll-vertical-2 {
-    0% {
-      transform: translateY(-672px);
+      transform: translateY(-$move-distance);
     }
     100% {
       transform: translateY(0);
     }
   }
 
-  @keyframes scroll-vertical-2-mobile {
-    0% {
-      transform: translateY(-400px);
+  @include media-breakpoint-down(md) {
+    @keyframes scroll-down {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-$move-distance-mobile);
+      }
     }
-    100% {
-      transform: translateY(0);
-    }
-  }
 
-  @keyframes scroll-vertical-3 {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-672px);
-    }
-  }
-
-  @keyframes scroll-vertical-3-mobile {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-400px);
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(-$move-distance-mobile);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
   }
   .client {

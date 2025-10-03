@@ -92,233 +92,18 @@
       <div
         class="awareness__logo-container d-flex w-100 justify-content-center bg-tertiary rounded-4"
       >
-        <div class="awareness__logo-track awareness__logo-track--1">
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
+        <template v-for="i in 6" :key="i">
+          <div :class="getTrackClasses(i)">
+            <template
+              v-for="(brand, index) in brandSequence"
+              :key="`${i}-${index}`"
+            >
+              <div class="awareness__logo-item">
+                <img :src="getBrandImage(brand)" :alt="getBrandName(brand)" />
+              </div>
+            </template>
           </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-        </div>
-
-        <div class="awareness__logo-track awareness__logo-track--2">
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
-          </div>
-        </div>
-
-        <div class="awareness__logo-track awareness__logo-track--3">
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-3.png"
-              alt="初海"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-4.png"
-              alt="LeDD 樂多多集團"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-1.png"
-              alt="明水然‧樂"
-            />
-          </div>
-          <div class="awareness__logo-item">
-            <img
-              src="../assets/images/pages/grow-again/brand-2.png"
-              alt="辣國際餐飲集團"
-            />
-          </div>
-        </div>
+        </template>
       </div>
     </section>
     <!-- client -->
@@ -505,8 +290,35 @@
 </template>
 
 <script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import 'swiper/css';
+import Brand1 from '../assets/images/pages/grow-again/brand-1.png';
+import Brand2 from '../assets/images/pages/grow-again/brand-2.png';
+import Brand3 from '../assets/images/pages/grow-again/brand-3.png';
+import Brand4 from '../assets/images/pages/grow-again/brand-4.png';
+
+const brandData = {
+  1: { name: '明水然‧樂', image: Brand1 },
+  2: { name: '辣國際餐飲集團', image: Brand2 },
+  3: { name: '初海', image: Brand3 },
+  4: { name: 'LeDD 樂多多集團', image: Brand4 },
+};
+
+const brandSequence = [1, 2, 3, 4, 1, 2, 3, 4];
+
+const getBrandName = brand => brandData[brand].name;
+
+const getBrandImage = brand => brandData[brand].image;
+
+const getTrackClasses = trackIndex => {
+  return [
+    'awareness__logo-track',
+    `awareness__logo-track--${trackIndex}`,
+    trackIndex <= 3
+      ? 'd-flex'
+      : trackIndex <= 4
+        ? 'd-none d-md-flex'
+        : 'd-none d-xl-flex',
+  ];
+};
 </script>
 <style lang="scss">
 @import '../../../scss/pages/_grow-again.scss';
