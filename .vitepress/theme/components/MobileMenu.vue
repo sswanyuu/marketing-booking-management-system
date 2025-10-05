@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isOpen" ref="mobileNavRef" class="menu position-fixed bg-white">
+  <div v-if="isOpen" ref="menuRef" class="menu position-fixed bg-white">
     <div class="d-flex flex-column start px-2 gap-3">
       <!-- Why fullkeep Section -->
       <div class="d-flex flex-column gap-2">
@@ -13,7 +13,7 @@
       <!-- Features Section -->
       <div class="menu__list">
         <div
-          class="d-flex align-items-center header py-4"
+          class="d-flex align-items-center menu__list__header py-4 gap-2"
           @click="toggleFeatures"
         >
           <div class="headline-8-bold">FEATURES</div>
@@ -98,7 +98,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, watch, nextTick } from 'vue';
+import { ref } from 'vue';
 import '../../../scss/components/_mobile-menu.scss';
 
 // Import icons
@@ -116,51 +116,12 @@ const props = defineProps({
 const emit = defineEmits(['close']);
 
 // Local state
-const isFeaturesOpen = ref(false);
-const mobileNavRef = ref(null);
+import { useMobileMenu } from '../composables/useMobileMenu';
 
-// Methods
+const isFeaturesOpen = ref(false);
+const { menuRef } = useMobileMenu(() => props.isOpen);
+
 const toggleFeatures = () => {
   isFeaturesOpen.value = !isFeaturesOpen.value;
 };
-
-// Dynamic header height calculation
-const updateMobileNavPosition = () => {
-  if (mobileNavRef.value) {
-    const header = document.querySelector('.header');
-    if (header) {
-      const headerHeight = header.offsetHeight;
-      mobileNavRef.value.style.top = `${headerHeight}px`;
-    }
-  }
-};
-
-// Watch for menu open/close to update position
-watch(
-  () => props.isOpen,
-  async newValue => {
-    if (newValue) {
-      await nextTick();
-      updateMobileNavPosition();
-    }
-  }
-);
-
-// Update position on window resize
-const handleResize = () => {
-  if (props.isOpen) {
-    updateMobileNavPosition();
-  }
-};
-
-onMounted(() => {
-  window.addEventListener('resize', handleResize);
-  if (props.isOpen) {
-    updateMobileNavPosition();
-  }
-});
-
-onUnmounted(() => {
-  window.removeEventListener('resize', handleResize);
-});
 </script>

@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="custom-button"
+    class="btn"
     :class="buttonClasses"
     :disabled="disabled"
     @click="handleClick"

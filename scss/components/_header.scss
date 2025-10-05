@@ -4,12 +4,25 @@
 $header-padding: 12.5px 12px;
 $header-padding-mobile: 12px 8px;
 // Header Block
-.header {
+.header-wrapper {
   position: relative;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: $header-padding;
   z-index: $zindex-tooltip;
   &__container {
     max-width: 1314px;
+  }
+  &__logo {
+    width: 172px;
+    @include media-breakpoint-down(xl) {
+      width: 112px;
+    }
   }
   &__chevron {
     transition: transform 0.3s ease;
@@ -19,10 +32,12 @@ $header-padding-mobile: 12px 8px;
       transform: rotate(180deg);
     }
   }
-}
-
-@include media-breakpoint-down(xl) {
-  .header {
+  &__demo-button {
+    @include media-breakpoint-down(md) {
+      font-size: 14px !important;
+    }
+  }
+  @include media-breakpoint-down(xl) {
     padding: $header-padding-mobile;
   }
 }

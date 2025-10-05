@@ -34,20 +34,22 @@
           <div
             class="banner__content d-flex flex-column w-md-50 w-100 gap-9 justify-content-center"
           >
-            <div
-              class="md-headline-3-bold md-headline-4-bold headline-3-bold text-white"
-            >
-              Fullkeep the Seats. Fulfill the Brand.
-            </div>
-            <div
-              class="md-headline-2-bold headline-4-bold text-white position-relative align-self-start"
-            >
-              高朋滿座，富譽盈門
-              <img
-                src="../assets/images/layout/footer/slogan-decoration.png"
-                alt="slogan-decoration"
-                class="footer__slogan-decoration position-absolute"
-              />
+            <div class="d-flex flex-column gap-2 gap-md-4">
+              <div
+                class="md-headline-footer-en-bold headline-3-bold text-white"
+              >
+                Fullkeep the Seats. Fulfill the Brand.
+              </div>
+              <div
+                class="md-headline-2-bold headline-4-bold text-white position-relative align-self-start"
+              >
+                高朋滿座，富譽盈門
+                <img
+                  src="../assets/images/layout/footer/slogan-decoration.png"
+                  alt="slogan-decoration"
+                  class="footer__slogan-decoration position-absolute"
+                />
+              </div>
             </div>
             <Button
               variant="secondary"
@@ -69,7 +71,6 @@
       <div
         class="navigation__content d-flex align-items-center w-100 flex-md-row flex-column gap-5 gap-xl-7"
       >
-        <!-- <div class="d-flex align-items-center gap-4 "> -->
         <img
           src="../assets/images/layout/footer/logo.png"
           alt="fullkeep"

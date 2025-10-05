@@ -47,7 +47,9 @@ $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
 .headline-3-bold {
   @include headline-bold(32px, 0%);
 }
-
+.headline-footer-en-bold {
+  @include headline-bold(40px, 0%);
+}
 .headline-4-bold {
   @include headline-bold(28px, 0%);
 }
@@ -98,6 +100,9 @@ $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
 
       .#{$breakpoint}-headline-2-bold {
         @include headline-bold(44px, 4%);
+      }
+      .#{$breakpoint}-headline-footer-en-bold {
+        @include headline-bold(40px, 0%);
       }
 
       .#{$breakpoint}-headline-3-bold {

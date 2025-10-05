@@ -16,7 +16,7 @@
   }
 
   &__list {
-    .header {
+    &__header {
       cursor: pointer;
       .chevron {
         transition: transform 0.3s ease;

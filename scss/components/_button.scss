@@ -10,7 +10,8 @@ $button-padding-y-mobile: 16px;
 $button-transition: all 0.2s ease-in-out;
 
 // Button Base Styles
-.custom-button {
+.btn {
+  border-radius: $button-border-radius;
   display: inline-flex;
   align-items: center;
   justify-content: center;

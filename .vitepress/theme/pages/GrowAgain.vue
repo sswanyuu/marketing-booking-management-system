@@ -294,6 +294,8 @@ import Brand1 from '../assets/images/pages/grow-again/brand-1.png';
 import Brand2 from '../assets/images/pages/grow-again/brand-2.png';
 import Brand3 from '../assets/images/pages/grow-again/brand-3.png';
 import Brand4 from '../assets/images/pages/grow-again/brand-4.png';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
 
 const brandData = {
   1: { name: '明水然‧樂', image: Brand1 },
