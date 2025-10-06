@@ -185,31 +185,25 @@
   }
 
   .solutions {
-    gap: 64px;
-    max-width: 1314px;
     padding: 0 12px;
     margin-bottom: 86px;
+
+    &__container {
+      max-width: 1314px;
+      gap: 64px;
+      @include media-breakpoint-down(md) {
+        gap: 40px;
+      }
+    }
+
     @include media-breakpoint-down(md) {
-      gap: 42px;
       margin-bottom: 42px;
     }
-    .header-container {
-      width: 560px;
+
+    .solution-card {
+      height: 508px;
       @include media-breakpoint-down(md) {
-        width: 312px;
-      }
-      &__title {
-        text-align: center;
-        @include headline-bold(48px, 0%);
-        @include media-breakpoint-down(md) {
-          @include headline-bold(28px, 0%);
-        }
-      }
-      &__description {
-        @include headline-regular(24px, 140%, 0%);
-        @include media-breakpoint-down(md) {
-          @include body-text(16px, 140%, 0%);
-        }
+        height: 280px;
       }
     }
   }
