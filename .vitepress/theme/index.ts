@@ -1,7 +1,13 @@
 import DefaultTheme from 'vitepress/theme';
-import { h } from 'vue';
 
 import './styles/custom.scss';
+
+// Add Google Fonts
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href =
+  'https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao:wght@400;700&display=swap';
+document.head.appendChild(link);
 import DefaultLayout from './layouts/DefaultLayout.vue';
 
 // Import components

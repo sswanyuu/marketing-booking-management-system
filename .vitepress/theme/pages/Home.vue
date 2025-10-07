@@ -15,57 +15,46 @@
         class="background-image__mobile d-block d-md-none"
       />
       <div
-        class="hero__content d-md-flex d-none flex-column w-50 gap-9 justify-content-center"
+        class="hero__content d-flex flex-column gap-9 justify-content-center"
       >
-        <img
-          src="../assets/images/pages/home/hero-slogan.png"
-          alt="hero"
-          class="d-none d-md-block hero__slogan"
-        />
-        <Button variant="primary" class="align-self-start">預約 Demo</Button>
-      </div>
-      <div
-        class="hero__content d-flex d-md-none flex-column w-50 gap-9 justify-content-center"
-      >
-        <img
-          src="../assets/images/pages/home/hero-slogan-mobile.png"
-          alt="hero"
-          class="d-block d-md-none hero__slogan-mobile"
-        />
-        <Button variant="mobileFull">預約 Demo</Button>
+        <div class="d-flex flex-column headline-3-bold md-headline-2-bold">
+          <div class="d-flex">
+            <div class="text-white align-self-end">THE</div>
+            <div class="position-relative">
+              <div class="hero__smartest ps-4 pe-2 pb-4 pe-md-0">
+                SMARTEST WAY
+              </div>
+              <img
+                src="../assets/images/pages/home/hero-slogan-decoration.png"
+                alt="smartest-way"
+                class="hero__smartest-decoration position-absolute end-0 bottom-2"
+              />
+            </div>
+          </div>
+          <div class="text-white">TO GROW YOUR RESTAURANT.</div>
+
+          <div class="text-white">讓餐廳管理更輕鬆</div>
+        </div>
+        <div class="d-flex flex-column gap-2">
+          <Button variant="primary" class="align-self-start">預約 Demo</Button>
+        </div>
       </div>
     </section>
     <!-- brands -->
     <section
       class="brands d-flex flex-column align-items-center gap-4 gap-md-8"
     >
-      <div class="brands__title text-gray">領先品牌率先採用</div>
-      <div class="brands__list row justify-content-center">
-        <img
-          src="../assets/images/pages/home/brand-1.png"
-          class="col-auto brand__logo"
-          alt="brand-1"
-        />
-        <img
-          src="../assets/images/pages/home/brand-2.png"
-          class="col-auto brand__logo"
-          alt="brand-2"
-        />
-        <img
-          src="../assets/images/pages/home/brand-3.png"
-          class="col-auto brand__logo"
-          alt="brand-3"
-        />
-        <img
-          src="../assets/images/pages/home/brand-4.png"
-          class="col-auto brand__logo"
-          alt="brand-4"
-        />
-        <img
-          src="../assets/images/pages/home/brand-5.png"
-          class="col-auto brand__logo"
-          alt="brand-5"
-        />
+      <div class="headline-2-regular md-headline-1-regular text-gray">
+        領先品牌率先採用
+      </div>
+      <div class="row justify-content-center gy-1">
+        <div
+          v-for="brand in brands"
+          :key="brand.title"
+          class="col-auto brand__logo d-flex align-items-center justify-content-center"
+        >
+          <img :src="brand.image" class="" alt="brand-image" />
+        </div>
       </div>
     </section>
     <!-- features -->
@@ -264,6 +253,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import Brand1 from '../assets/images/pages/home/brand-1.png';
+import Brand2 from '../assets/images/pages/home/brand-2.png';
+import Brand3 from '../assets/images/pages/home/brand-3.png';
+import Brand4 from '../assets/images/pages/home/brand-4.png';
+import Brand5 from '../assets/images/pages/home/brand-5.png';
 import Feature1 from '../assets/images/pages/home/feature-1.png';
 import Feature2 from '../assets/images/pages/home/feature-2.png';
 import Feature3 from '../assets/images/pages/home/feature-3.png';
@@ -309,6 +303,28 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
+const brands = [
+  {
+    title: 'brand-1',
+    image: Brand1,
+  },
+  {
+    title: 'brand-2',
+    image: Brand2,
+  },
+  {
+    title: 'brand-3',
+    image: Brand3,
+  },
+  {
+    title: 'brand-4',
+    image: Brand4,
+  },
+  {
+    title: 'brand-5',
+    image: Brand5,
+  },
+];
 const features = [
   {
     title: '一鍵預約‧輕鬆回訪',

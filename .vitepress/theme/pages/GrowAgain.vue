@@ -23,12 +23,7 @@
           <div class="md-headline-2-bold headline-3-bold">Grow Again</div>
           <div class="md-headline-2-bold headline-3-bold">行銷與再接觸</div>
         </div>
-        <Button variant="primary" class="align-self-start d-none d-md-block">
-          預約 Demo
-        </Button>
-        <Button variant="mobileFull" class="d-block d-md-none">
-          預約 Demo
-        </Button>
+        <Button variant="primary" class="align-self-start">預約 Demo</Button>
       </div>
     </section>
     <!--top-banner-->

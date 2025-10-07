@@ -32,7 +32,7 @@ const props = defineProps({
     type: String,
     default: 'primary',
     validator: value =>
-      ['primary', 'secondary', 'mobile', 'arrow', 'mobileFull'].includes(value),
+      ['primary', 'secondary', 'mobile', 'arrow'].includes(value),
   },
 
   disabled: {
@@ -47,10 +47,9 @@ const props = defineProps({
 
 const emit = defineEmits(['click']);
 const classesMap = {
-  primary: 'custom-button-primary headline-5-bold',
-  secondary: 'custom-button-secondary headline-5-bold',
+  primary: 'custom-button-primary md-headline-5-bold headline-6-bold',
+  secondary: 'custom-button-secondary md-headline-5-bold headline-6-bold',
   mobile: 'custom-button-mobile headline-6-bold',
-  mobileFull: 'custom-button-mobile-full headline-6-bold',
   arrow: 'custom-button-arrow',
 };
 

@@ -51,14 +51,8 @@
                 />
               </div>
             </div>
-            <Button
-              variant="secondary"
-              class="align-self-start d-none d-md-block"
-            >
+            <Button variant="secondary" class="align-self-start">
               預約 Demo
-            </Button>
-            <Button variant="mobileFull" class="d-block d-md-none">
-              預約Demo
             </Button>
           </div>
         </div>

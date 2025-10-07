@@ -23,12 +23,7 @@
           <div class="md-headline-2-bold headline-3-bold">Easy Use</div>
           <div class="md-headline-2-bold headline-3-bold">優良使用體驗</div>
         </div>
-        <Button variant="primary" class="align-self-start d-none d-md-block">
-          預約 Demo
-        </Button>
-        <Button variant="mobileFull" class="d-block d-md-none">
-          預約 Demo
-        </Button>
+        <Button variant="primary" class="align-self-start">預約 Demo</Button>
       </div>
     </section>
     <section

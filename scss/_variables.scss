@@ -26,6 +26,7 @@ $spacers: (
   8: 36px,
   9: 40px,
 );
+
 @import 'bootstrap/scss/functions';
 
 // Custom breakpoints - override Bootstrap defaults
@@ -53,6 +54,18 @@ $gray: $neutral-1;
 $gray-light: $neutral-2;
 $gray-dark: $neutral-3;
 $danger: $brand-danger;
+
+$position-values: map-merge(
+  $position-values,
+  (
+    1: 4px,
+    2: 8px,
+    3: 12px,
+    4: 16px,
+    5: 20px,
+    6: 24px,
+  )
+);
 
 $theme-colors: map-merge(
   $theme-colors,
