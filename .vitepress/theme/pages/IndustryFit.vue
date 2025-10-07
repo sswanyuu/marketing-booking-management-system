@@ -107,6 +107,25 @@
         </div>
       </div>
     </section>
+    <!--best solutions-->
+    <section
+      class="best-solutions w-100 d-flex justify-content-center align-items-center flex-column"
+    >
+      <div class="headline-4-bold md-headline-1-bold text-center">
+        最佳解決方案，適用更多餐飲型態
+      </div>
+      <div class="row gx-9 gy-9">
+        <div
+          v-for="solution in solutions"
+          :key="solution.title"
+          class="col-6 col-md-3 d-flex flex-column align-items-center justify-content-center gap-3"
+        >
+          <img :src="solution.image" :alt="solution.title" />
+
+          <div class="icon-title body-2 md-body-1">{{ solution.title }}</div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>
@@ -117,6 +136,14 @@ import SuccessfulCasesIcon4 from '../assets/images/pages/industry-fit/successful
 import Feature1 from '../assets/images/pages/industry-fit/feature-1.png';
 import Feature2 from '../assets/images/pages/industry-fit/feature-2.png';
 import Feature3 from '../assets/images/pages/industry-fit/feature-3.png';
+import Solution1 from '../assets/images/pages/industry-fit/solution-1.png';
+import Solution2 from '../assets/images/pages/industry-fit/solution-2.png';
+import Solution3 from '../assets/images/pages/industry-fit/solution-3.png';
+import Solution4 from '../assets/images/pages/industry-fit/solution-4.png';
+import Solution5 from '../assets/images/pages/industry-fit/solution-5.png';
+import Solution6 from '../assets/images/pages/industry-fit/solution-6.png';
+import Solution7 from '../assets/images/pages/industry-fit/solution-7.png';
+import Solution8 from '../assets/images/pages/industry-fit/solution-8.png';
 
 export default {
   name: 'IndustryFit',
@@ -176,9 +203,45 @@ export default {
       },
     ];
 
+    const solutions = [
+      {
+        title: '酒莊',
+        image: Solution1,
+      },
+      {
+        title: '公路餐廳',
+        image: Solution2,
+      },
+      {
+        title: '無菜單料理',
+        image: Solution3,
+      },
+      {
+        title: '主題餐廳',
+        image: Solution4,
+      },
+      {
+        title: '米其林餐廳',
+        image: Solution5,
+      },
+      {
+        title: '日式料理',
+        image: Solution6,
+      },
+      {
+        title: '景觀餐廳',
+        image: Solution7,
+      },
+      {
+        title: '度假村',
+        image: Solution8,
+      },
+    ];
+
     return {
       successfulCasesIcons,
       industryFeatures,
+      solutions,
     };
   },
 };

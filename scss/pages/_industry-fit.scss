@@ -134,4 +134,19 @@
       }
     }
   }
+  .best-solutions {
+    padding: 164px 12px 64px 12px;
+    max-width: 1314px;
+    gap: 50px;
+    @include media-breakpoint-down(md) {
+      gap: 40px;
+    }
+    img {
+      width: 100%;
+      max-width: 240px;
+      @include media-breakpoint-down(md) {
+        width: 120px;
+      }
+    }
+  }
 }
