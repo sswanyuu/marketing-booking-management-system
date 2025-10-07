@@ -32,4 +32,102 @@
       }
     }
   }
+  .connected-brands {
+    padding: 120px 12px 274px 12px;
+    @include media-breakpoint-down(md) {
+      padding: 64px 12px 198px 12px;
+    }
+    .content-container {
+      max-width: 560px;
+    }
+    .connected-brands-image {
+      max-width: 1144px;
+      object-fit: contain;
+      margin-top: 64px;
+      @include media-breakpoint-down(md) {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+  }
+  .items-first-section,
+  .items-second-section {
+    .section-container {
+      padding: 0px 12px;
+      @include media-breakpoint-down(md) {
+        padding: 0px 12px;
+      }
+    }
+    &__title {
+      margin-bottom: 56px;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 40px;
+      }
+    }
+    &__list {
+      max-width: 1314px;
+      gap: 192px;
+      > :nth-child(1),
+      > :nth-child(3) {
+        flex-direction: row;
+      }
+      > :nth-child(2) {
+        flex-direction: row-reverse;
+      }
+      @include media-breakpoint-down(md) {
+        > :nth-child(1),
+        > :nth-child(2),
+        > :nth-child(3) {
+          flex-direction: column;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        gap: 80px;
+      }
+      .item-container {
+        gap: 64px;
+
+        @include media-breakpoint-down(md) {
+          gap: 24px;
+        }
+      }
+      .item {
+        &__image {
+          object-fit: contain;
+          width: 50%;
+          @include media-breakpoint-down(md) {
+            width: 100%;
+          }
+        }
+        &__content {
+          gap: 72px;
+          @include media-breakpoint-down(md) {
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+  .items-first-section {
+    .section-container {
+      margin: -56px 0 -86px 0;
+      @include media-breakpoint-down(md) {
+        margin: 0px 0 -8px 0;
+      }
+    }
+    &__title {
+      @include media-breakpoint-down(md) {
+        margin-top: -118px;
+      }
+    }
+  }
+  .items-second-section {
+    .section-container {
+      margin: 286px 0 152px 0;
+      @include media-breakpoint-down(md) {
+        margin: 68px 0 64px 0;
+      }
+    }
+  }
 }

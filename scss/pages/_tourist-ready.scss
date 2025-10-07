@@ -34,10 +34,6 @@
   }
   .globe {
     padding-top: 120px;
-    .title-content {
-      margin: 0 32px;
-      padding: 20px 0;
-    }
     .globe-image {
       margin-top: -40px;
       width: 100%;
@@ -49,9 +45,6 @@
 
     @include media-breakpoint-down(md) {
       padding-top: 64px;
-      .title-content {
-        margin: 0 12px;
-      }
     }
   }
   .items {
@@ -116,16 +109,15 @@
       gap: 40px;
       margin-bottom: -600px;
     }
+    .content-container {
+      max-width: 560px;
+    }
     .integration-phone {
       max-width: 1144px;
       object-fit: contain;
       @include media-breakpoint-down(md) {
         max-width: 100%;
       }
-    }
-    .title-content {
-      margin: 0 32px;
-      padding: 20px 0;
     }
   }
 }

@@ -29,20 +29,16 @@
     <!-- globe -->
     <section class="globe d-flex flex-column align-items-center">
       <div
-        class="title-content d-flex flex-column gap-3 gap-md-6 align-items-center text-center"
+        class="d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-md-7 mx-3 py-5"
       >
-        <div class="title-content__title md-headline-1-bold headline-4-bold">
+        <div class="md-headline-1-bold headline-4-bold">
           專為精緻餐飲需求打造，與國際無縫接軌
         </div>
         <div class="d-flex flex-column align-items-center">
-          <div
-            class="title-content__description text-gray body-2 md-headline-1-regular"
-          >
+          <div class="text-gray body-2 md-headline-1-regular">
             無論語言、介面或聯繫工具，
           </div>
-          <div
-            class="title-content__description text-gray body-2 md-headline-1-regular"
-          >
+          <div class="text-gray body-2 md-headline-1-regular">
             提供世界各地的顧客順暢的訂位流程與服務資訊。
           </div>
         </div>
@@ -181,22 +177,18 @@
         </div>
       </div>
     </section>
-    <section class="integration d-flex justify-content-center flex-column">
+    <section
+      class="integration d-flex justify-content-center flex-column align-items-center"
+    >
       <div
-        class="title-content d-flex flex-column gap-3 gap-md-6 align-items-center text-center"
+        class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-md-7 py-5"
       >
-        <div class="title-content__title md-headline-1-bold headline-4-bold">
-          各國系統整合
-        </div>
+        <div class="md-headline-1-bold headline-4-bold">各國系統整合</div>
         <div class="d-flex flex-column align-items-center">
-          <div
-            class="title-content__description text-gray body-2 md-headline-1-regular"
-          >
+          <div class="text-gray body-2 md-headline-1-regular">
             支援 LINE、WhatsApp 等常見通訊軟體，
           </div>
-          <div
-            class="title-content__description text-gray body-2 md-headline-1-regular"
-          >
+          <div class="text-gray body-2 md-headline-1-regular">
             來自不同地區的顧客也能即時接收提醒與行銷訊息。
           </div>
         </div>

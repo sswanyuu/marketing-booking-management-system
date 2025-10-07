@@ -68,17 +68,13 @@
       />
     </section>
     <!-- awareness -->
-    <section class="awareness">
+    <section class="awareness d-flex flex-column align-items-center">
       <div
-        class="title-content d-flex flex-column gap-3 gap-md-6 align-items-center text-center"
+        class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center"
       >
-        <div class="title-content__title md-headline-1-bold headline-4-bold">
-          同產業餐飲曝光
-        </div>
+        <div class="md-headline-1-bold headline-4-bold">同產業餐飲曝光</div>
 
-        <div
-          class="title-content__description text-gray body-2 md-headline-1-regular"
-        >
+        <div class="text-gray body-2 md-headline-1-regular">
           協助餐廳透過合作夥伴及平台推薦，增加品牌曝光機會，拓展客源，創造共贏生態圈
         </div>
       </div>
@@ -102,24 +98,14 @@
       </div>
     </section>
     <!-- client -->
-    <section class="client d-flex flex-column w-100">
+    <section class="client d-flex flex-column w-100 align-items-center">
       <div
-        class="title-content d-flex flex-column gap-3 gap-md-6 align-items-center text-center"
+        class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-3"
       >
-        <div class="title-content__title md-headline-1-bold headline-4-bold">
-          客戶 CRM
-        </div>
-        <div class="d-flex flex-column align-items-center">
-          <div
-            class="title-content__description text-gray body-2 md-headline-1-regular"
-          >
-            建立完整顧客資料庫，記錄訂位習慣與偏好，
-          </div>
-          <div
-            class="title-content__description text-gray body-2 md-headline-1-regular"
-          >
-            支援分眾行銷與個人化推薦，提升營銷精準度。
-          </div>
+        <div class="md-headline-1-bold headline-4-bold">客戶 CRM</div>
+        <div class="text-gray body-2 md-headline-1-regular">
+          建立完整顧客資料庫，記錄訂位習慣與偏好，
+          支援分眾行銷與個人化推薦，提升營銷精準度。
         </div>
       </div>
       <div
