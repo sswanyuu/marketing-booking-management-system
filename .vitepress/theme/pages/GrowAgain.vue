@@ -270,7 +270,7 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import Brand1 from '../assets/images/pages/grow-again/brand-1.png';
 import Brand2 from '../assets/images/pages/grow-again/brand-2.png';
 import Brand3 from '../assets/images/pages/grow-again/brand-3.png';
@@ -278,29 +278,41 @@ import Brand4 from '../assets/images/pages/grow-again/brand-4.png';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 
-const brandData = {
-  1: { name: '明水然‧樂', image: Brand1 },
-  2: { name: '辣國際餐飲集團', image: Brand2 },
-  3: { name: '初海', image: Brand3 },
-  4: { name: 'LeDD 樂多多集團', image: Brand4 },
-};
+export default {
+  name: 'GrowAgain',
+  setup() {
+    const brandData = {
+      1: { name: '明水然‧樂', image: Brand1 },
+      2: { name: '辣國際餐飲集團', image: Brand2 },
+      3: { name: '初海', image: Brand3 },
+      4: { name: 'LeDD 樂多多集團', image: Brand4 },
+    };
 
-const brandSequence = [1, 2, 3, 4, 1, 2, 3, 4];
+    const brandSequence = [1, 2, 3, 4, 1, 2, 3, 4];
 
-const getBrandName = brand => brandData[brand].name;
+    const getBrandName = brand => brandData[brand].name;
 
-const getBrandImage = brand => brandData[brand].image;
+    const getBrandImage = brand => brandData[brand].image;
 
-const getTrackClasses = trackIndex => {
-  return [
-    'awareness__logo-track',
-    `awareness__logo-track--${trackIndex}`,
-    trackIndex <= 3
-      ? 'd-flex'
-      : trackIndex <= 4
-        ? 'd-none d-md-flex'
-        : 'd-none d-xl-flex',
-  ];
+    const getTrackClasses = trackIndex => {
+      return [
+        'awareness__logo-track',
+        `awareness__logo-track--${trackIndex}`,
+        trackIndex <= 3
+          ? 'd-flex'
+          : trackIndex <= 4
+            ? 'd-none d-md-flex'
+            : 'd-none d-xl-flex',
+      ];
+    };
+    return {
+      brandData,
+      brandSequence,
+      getBrandName,
+      getBrandImage,
+      getTrackClasses,
+    };
+  },
 };
 </script>
 <style lang="scss">
