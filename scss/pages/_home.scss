@@ -68,19 +68,6 @@
       @include media-breakpoint-down(md) {
         width: 312px;
       }
-      &__title {
-        text-align: center;
-        @include headline-bold(48px, 0%);
-        @include media-breakpoint-down(md) {
-          @include headline-bold(28px, 0%);
-        }
-      }
-      &__description {
-        @include headline-regular(24px, 140%, 0%);
-        @include media-breakpoint-down(md) {
-          @include body-text(16px, 140%, 0%);
-        }
-      }
     }
     @include media-breakpoint-down(md) {
       width: 95%;
@@ -99,13 +86,18 @@
       }
     }
     &__list {
-      height: 100%;
       width: 100%;
       padding: 0 12px;
       margin-top: 54px;
       max-width: 1314px;
       @include media-breakpoint-down(md) {
         margin-top: 30px;
+      }
+      .feature-card {
+        aspect-ratio: 400/522;
+        @include media-breakpoint-down(md) {
+          aspect-ratio: 309/378;
+        }
       }
     }
   }

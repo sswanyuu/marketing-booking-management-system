@@ -70,37 +70,38 @@
     </section>
     <!-- features -->
     <section
-      class="features text-white d-flex justify-content-center flex-column align-items-center"
+      class="features d-flex justify-content-center flex-column align-items-center"
     >
       <div class="features__background rounded-4" />
       <div
-        class="header-container d-flex flex-column align-items-center gap-4 gap-md-6"
+        class="header-container text-white d-flex flex-column align-items-center gap-4 gap-md-6"
       >
-        <div class="header-container__title">不只是訂位這麼簡單</div>
-        <div class="header-container__description text-center">
+        <div class="headline-4-bold md-headline-1-bold">不只是訂位這麼簡單</div>
+        <div class="body-1 md-headline-1-regular text-center">
           全方位解決方案，零門檻上手，桌位管理、拓展客源，一套搞定。領先品牌率先採用
         </div>
       </div>
       <!-- features desktop -->
-      <div class="features__list d-none d-md-flex align-items-center row">
-        <img
-          src="../assets/images/pages/home/feature-1.png"
-          alt="feature-1"
-          class="features_item col-4"
-        />
-        <img
-          src="../assets/images/pages/home/feature-2.png"
-          alt="feature-2"
-          class="features_item col-4"
-        />
-        <img
-          src="../assets/images/pages/home/feature-3.png"
-          alt="feature-3"
-          class="features_item col-4"
-        />
+      <div class="features__list d-none d-md-flex">
+        <div class="row gx-7 gx-xl-9">
+          <div v-for="feature in features" :key="feature.title" class="col-4">
+            <div
+              class="feature-card d-flex flex-column gap-4 bg-gray-light rounded-4 pt-9 justify-content-between align-items-center"
+            >
+              <div class="headline-6-bold xl-headline-5-bold mx-3">
+                {{ feature.title }}
+              </div>
+              <img
+                :src="feature.image"
+                alt="feature-image"
+                class="object-fit-cover overflow-hidden"
+                :class="feature.class"
+              />
+            </div>
+          </div>
+        </div>
       </div>
       <!-- features mobile -->
-
       <swiper
         class="features__list d-flex d-md-none gap-2 flex-nowrap swiper"
         :slides-per-view="1.2"
@@ -108,26 +109,20 @@
         :centered-slides="false"
         :grab-cursor="true"
       >
-        <swiper-slide>
-          <img
-            src="../assets/images/pages/home/feature-1-mobile.png"
-            alt="feature-1"
-            class="item w-100 swiper-slide"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../assets/images/pages/home/feature-2-mobile.png"
-            alt="feature-2"
-            class="item w-100 swiper-slide"
-          />
-        </swiper-slide>
-        <swiper-slide>
-          <img
-            src="../assets/images/pages/home/feature-3-mobile.png"
-            alt="feature-3"
-            class="item w-100 swiper-slide"
-          />
+        <swiper-slide v-for="feature in features" :key="feature.title">
+          <div
+            class="feature-card d-flex flex-column gap-4 bg-gray-light rounded-4 pt-9 justify-content-between align-items-center"
+          >
+            <div class="headline-6-bold xl-headline-5-bold mx-3">
+              {{ feature.title }}
+            </div>
+            <img
+              :src="feature.image"
+              alt="feature-image"
+              class="object-fit-cover overflow-hidden"
+              :class="feature.class"
+            />
+          </div>
         </swiper-slide>
       </swiper>
     </section>
@@ -145,7 +140,6 @@
           不是只能習慣混亂，我們提供更好的選擇，讓餐廳管理回到你能掌握的節奏，痛點不再是日常。
         </div>
       </div>
-      <!-- painpoints desktop -->
       <div class="painpoints__list row gx-4 gy-4">
         <div class="col-12">
           <div
@@ -270,6 +264,9 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import Feature1 from '../assets/images/pages/home/feature-1.png';
+import Feature2 from '../assets/images/pages/home/feature-2.png';
+import Feature3 from '../assets/images/pages/home/feature-3.png';
 import Solution1 from '../assets/images/pages/home/solution-1.png';
 import Solution2 from '../assets/images/pages/home/solution-2.png';
 import Solution3 from '../assets/images/pages/home/solution-3.png';
@@ -315,15 +312,17 @@ onUnmounted(() => {
 const features = [
   {
     title: '一鍵預約‧輕鬆回訪',
-    image: '../assets/images/pages/home/feature-1.png',
+    image: Feature1,
+    class: ['w-50'],
   },
   {
     title: '從本地到國際',
-    image: '../assets/images/pages/home/feature-2.png',
+    image: Feature2,
   },
   {
     title: '客製系統‧輕鬆嵌入',
-    image: '../assets/images/pages/home/feature-3.png',
+    image: Feature3,
+    class: ['mb-9'],
   },
 ];
 const painPoints = [
