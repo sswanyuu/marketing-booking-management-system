@@ -26,6 +26,7 @@
         <Button variant="primary" class="align-self-start">預約 Demo</Button>
       </div>
     </section>
+    <!-- successful cases -->
     <section class="successful-cases w-100 bg-primary">
       <div
         class="successful-cases__container d-flex flex-column align-items-center"
@@ -72,6 +73,40 @@
         </div>
       </div>
     </section>
+    <!--items-->
+    <section
+      class="items w-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="items__list d-flex flex-column">
+        <div
+          v-for="item in industryFeatures"
+          :key="item.title"
+          class="item-container d-flex align-items-center"
+        >
+          <img class="item__image" :src="item.image" :alt="item.title" />
+
+          <div class="d-flex flex-column gap-3 gap-md-7">
+            <div class="item__title md-headline-3-bold headline-4-bold">
+              {{ item.title }}
+            </div>
+            <div class="item__list gap-2 gap-md-3 flex-column d-flex text-gray">
+              <div
+                v-for="(point, pointIndex) in item.points"
+                :key="point"
+                class="list-point-container d-flex gap-2"
+                data-aos="fade-up"
+                :data-aos-delay="pointIndex * 200"
+              >
+                <img src="../assets/icons/check.svg" alt="check-icon" />
+                <div class="list-point body-2 md-headline-2-regular">
+                  {{ point }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script>
@@ -79,6 +114,9 @@ import SuccessfulCasesIcon1 from '../assets/images/pages/industry-fit/successful
 import SuccessfulCasesIcon2 from '../assets/images/pages/industry-fit/successful-case-icon-2.png';
 import SuccessfulCasesIcon3 from '../assets/images/pages/industry-fit/successful-case-icon-3.png';
 import SuccessfulCasesIcon4 from '../assets/images/pages/industry-fit/successful-case-icon-4.png';
+import Feature1 from '../assets/images/pages/industry-fit/feature-1.png';
+import Feature2 from '../assets/images/pages/industry-fit/feature-2.png';
+import Feature3 from '../assets/images/pages/industry-fit/feature-3.png';
 
 export default {
   name: 'IndustryFit',
@@ -101,8 +139,46 @@ export default {
         image: SuccessfulCasesIcon4,
       },
     ];
+
+    const industryFeatures = [
+      {
+        title: '精準時段與座位控管',
+        description:
+          'Fullkeep 的桌型與時段預約規則可精準安排每個檯位座次，避免空檯與重複預約。',
+        image: Feature1,
+
+        points: [
+          'Fullkeep 的桌型與時段預約規則可精準安排每個檯位座次，避免空檯與重複預約。',
+          '支援「吧檯座位」與「包廂」區分，讓訂位分配更靈活。',
+        ],
+      },
+      {
+        title: '預付訂金機制',
+        description:
+          '自由設定每人訂金，確保高價食材（如和牛、龍蝦）備料充足，降低臨時取消的損失。',
+        image: Feature2,
+
+        points: [
+          '自由設定每人訂金，確保高價食材（如和牛、龍蝦）備料充足，降低臨時取消的損失。',
+          '可在訂位時讓顧客選擇餐點套餐（如主廚套餐、龍蝦套餐），可備註過敏、熟度偏好等資訊，廚房能提前準備',
+        ],
+      },
+      {
+        title: '行銷與再接觸',
+        description:
+          '記錄顧客消費金額、用餐日期與喜好，後續針對節慶（如情人節、週年慶）推送高端套餐優惠。',
+        image: Feature3,
+
+        points: [
+          '記錄顧客消費金額、用餐日期與喜好，後續針對節慶（如情人節、週年慶）推送高端套餐優惠。',
+          '用過餐的熟客轉化為回頭客，例如推送新菜單、主廚特別料理體驗。',
+        ],
+      },
+    ];
+
     return {
       successfulCasesIcons,
+      industryFeatures,
     };
   },
 };
