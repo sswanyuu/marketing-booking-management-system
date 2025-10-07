@@ -140,6 +140,26 @@
     }
     &__list {
       padding: 0 12px;
+      .painpoint-card {
+        height: 508px;
+
+        &--first {
+          @include media-breakpoint-up(md) {
+            height: 340px;
+          }
+        }
+
+        @include media-breakpoint-down(md) {
+          height: 280px;
+        }
+
+        &__tourists-content {
+          z-index: 1;
+        }
+        &__tourists-image {
+          margin-top: -100px;
+        }
+      }
     }
     &__background {
       background-color: $brand-main-3;
@@ -150,29 +170,6 @@
       bottom: 130px;
       @include media-breakpoint-down(md) {
         top: -48px;
-      }
-    }
-    .painpoints_item1 {
-      width: 100%;
-      aspect-ratio: 1290/340;
-      @include media-breakpoint-down(md) {
-        aspect-ratio: 350/280;
-      }
-    }
-    .painpoints_item2 {
-      width: 38%;
-      aspect-ratio: 483/508;
-      @include media-breakpoint-down(md) {
-        width: 100%;
-        aspect-ratio: 350/280;
-      }
-    }
-    .painpoints_item3 {
-      width: 62%;
-      aspect-ratio: 786/508;
-      @include media-breakpoint-down(md) {
-        width: 100%;
-        aspect-ratio: 350/280;
       }
     }
   }

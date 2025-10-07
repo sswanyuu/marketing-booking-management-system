@@ -25,9 +25,9 @@
       bottom: 0;
     }
     &__content {
-      z-index: 2; // 確保文字在樹的圖片之上
+      z-index: 2;
       margin-left: 10%;
-      position: relative; // 確保 z-index 生效
+      position: relative;
       @include media-breakpoint-down(md) {
         margin: 0;
       }

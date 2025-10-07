@@ -146,42 +146,73 @@
         </div>
       </div>
       <!-- painpoints desktop -->
-      <div class="painpoints__list row g-5 d-none d-md-flex">
-        <img
-          src="../assets/images/pages/home/painpoint-1.png"
-          alt="painpoint-1"
-          class="painpoints_item1 col-12"
-        />
-        <img
-          src="../assets/images/pages/home/painpoint-2.png"
-          alt="painpoint-2"
-          class="painpoints_item2 col-auto"
-        />
-        <img
-          src="../assets/images/pages/home/painpoint-3.png"
-          alt="painpoint-3"
-          class="painpoints_item3 col-auto"
-        />
-      </div>
-      <!-- painpoints mobile -->
-      <div
-        class="painpoints__list gap-4 d-flex d-md-none flex-column align-items-stretch"
-      >
-        <img
-          src="../assets/images/pages/home/painpoint-1-mobile.png"
-          alt="painpoint-1"
-          class="painpoints_item1"
-        />
-        <img
-          src="../assets/images/pages/home/painpoint-2-mobile.png"
-          alt="painpoint-2"
-          class="painpoints_item2"
-        />
-        <img
-          src="../assets/images/pages/home/painpoint-3-mobile.png"
-          alt="painpoint-3"
-          class="painpoints_item3"
-        />
+      <div class="painpoints__list row gx-4 gy-4">
+        <div class="col-12">
+          <div
+            class="painpoint-card painpoint-card--first d-flex flex-column flex-md-row gap-4 px-md-9 bg-secondary align-items-center rounded-4 justify-content-between"
+          >
+            <div
+              class="d-flex flex-column gap-2 text-white col-md-5 mt-7 mt-md-0 mx-7 mx-md-0"
+            >
+              <div class="headline-6-bold md-headline-5-bold">
+                {{ painPoints[0].title }}
+              </div>
+              <div class="body-3 md-body-1">
+                {{ painPoints[0].description }}
+              </div>
+            </div>
+            <div class="col-md-7 overflow-hidden mx-5 mx-md-0 align-self-end">
+              <img
+                :src="painPoints[0].image"
+                alt="painpoint-image"
+                class="object-fit-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-5">
+          <div
+            class="painpoint-card d-flex flex-column pt-7 gap-4 pt-md-9 bg-gray-dark align-items-center rounded-4 justify-content-between"
+          >
+            <div
+              class="painpoint-card__tourists-content d-flex flex-column gap-2 text-white w-75"
+            >
+              <div class="headline-6-bold md-headline-5-bold">
+                {{ painPoints[1].title }}
+              </div>
+              <div class="body-3 md-body-1">
+                {{ painPoints[1].description }}
+              </div>
+            </div>
+            <img
+              :src="painPoints[1].image"
+              alt="painpoint-image"
+              class="painpoint-card__tourists-image overflow-hidden w-100 object-fit-cover rounded-4"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-7">
+          <div
+            class="painpoint-card d-flex flex-column gap-4 pt-md-9 bg-primary align-items-center rounded-4 justify-content-between"
+          >
+            <div
+              class="d-flex flex-column gap-2 text-white w-75 mt-7 mt-md-0 mx-7 mx-md-0"
+            >
+              <div class="headline-6-bold md-headline-5-bold">
+                {{ painPoints[2].title }}
+              </div>
+              <div class="body-3 md-body-1">
+                {{ painPoints[2].description }}
+              </div>
+            </div>
+            <img
+              :src="painPoints[2].image"
+              alt="painpoint-image"
+              class="overflow-hidden"
+            />
+          </div>
+        </div>
       </div>
     </section>
     <!-- background image -->
@@ -244,6 +275,9 @@ import Solution2 from '../assets/images/pages/home/solution-2.png';
 import Solution3 from '../assets/images/pages/home/solution-3.png';
 import Solution4 from '../assets/images/pages/home/solution-4.png';
 import Solution5 from '../assets/images/pages/home/solution-5.png';
+import Painpoint1 from '../assets/images/pages/home/painpoint-1.png';
+import Painpoint2 from '../assets/images/pages/home/painpoint-2.png';
+import Painpoint3 from '../assets/images/pages/home/painpoint-3.png';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 
@@ -297,19 +331,19 @@ const painPoints = [
     title: '想改人數只能取消重訂?',
     description:
       'Fullkeep 支援即時調整人數、時間與備註，可直接編輯預約內容，流程更順暢，服務更彈性。',
-    image: '../assets/images/pages/home/painpoint-1.png',
+    image: Painpoint1,
   },
   {
     title: '外籍旅客訂位困難?',
     description:
       'Fullkeep 支援多語介面、Email/國際電話驗證與線上付款，跨國顧客輕鬆完成預約，不再流失訂單。',
-    image: '../assets/images/pages/home/painpoint-2.png',
+    image: Painpoint2,
   },
   {
     title: '無法由品牌網站直接訂位?',
     description:
       'Fullkeep 提供嵌入式API，快速整合進品牌網站，無需跳轉頁面，維持品牌一致性，客戶體驗不中斷。',
-    image: '../assets/images/pages/home/painpoint-3.png',
+    image: Painpoint3,
   },
 ];
 const solutions = [
