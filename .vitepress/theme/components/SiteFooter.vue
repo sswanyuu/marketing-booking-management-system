@@ -51,7 +51,11 @@
                 />
               </div>
             </div>
-            <Button variant="secondary" class="align-self-start">
+            <Button
+              variant="secondary"
+              class="align-self-start"
+              @click="handleDemoBooking"
+            >
               預約 Demo
             </Button>
           </div>
@@ -74,20 +78,20 @@
           class="d-flex navigation__links flex-column flex-md-row justify-content-center align-items-center gap-5"
         >
           <a
-            href="#why-fullkeep"
-            class="text-white text-decoration-none headline-7-bold"
+            class="text-white text-decoration-none headline-2-medium md-headline-1-medium"
+            @click="navigateTo(ROUTES.HOME)"
           >
             WHY FULLKEEP
           </a>
           <a
-            href="#who-we-serve"
-            class="text-white text-decoration-none headline-7-bold"
+            class="text-white text-decoration-none headline-2-medium md-headline-1-medium"
+            @click="navigateTo(ROUTES.INDUSTRY_FIT)"
           >
             WHO WE SERVE
           </a>
           <a
-            href="#integration"
-            class="text-white text-decoration-none headline-7-bold"
+            class="text-white text-decoration-none headline-2-medium md-headline-1-medium"
+            @click="navigateTo(ROUTES.ALL_CONNECTED)"
           >
             INTEGRATION
           </a>
@@ -104,6 +108,9 @@
 
 <script setup>
 import Button from './Button.vue';
+import { useNavigation } from '../composables/useNavigation.js';
+
+const { navigateTo, handleDemoBooking, ROUTES } = useNavigation();
 </script>
 
 <style lang="scss">

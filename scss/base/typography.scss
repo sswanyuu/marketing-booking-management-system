@@ -17,6 +17,13 @@ $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
   line-height: auto;
   letter-spacing: $letter-spacing;
 }
+@mixin headline-medium($size, $letter-spacing: 0%) {
+  font-family: $font-family-base;
+  font-weight: 500;
+  font-size: $size;
+  line-height: auto;
+  letter-spacing: $letter-spacing;
+}
 
 @mixin headline-regular($size, $line-height: auto, $letter-spacing: 0%) {
   font-family: $font-family-base;
@@ -67,6 +74,12 @@ $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
 }
 .headline-8-bold {
   @include headline-bold(14px, 0%);
+}
+.headline-1-medium {
+  @include headline-medium(16px, 0%);
+}
+.headline-2-medium {
+  @include headline-medium(14px, 0%);
 }
 // Regular Headlines
 .headline-1-regular {
@@ -127,6 +140,12 @@ $font-family-base: $font-family-foreign, $font-family-mandarin, sans-serif;
 
       .#{$breakpoint}-headline-8-bold {
         @include headline-bold(14px, 0%);
+      }
+      .#{$breakpoint}-headline-1-medium {
+        @include headline-medium(16px, 0%);
+      }
+      .#{$breakpoint}-headline-2-medium {
+        @include headline-medium(14px, 0%);
       }
 
       .#{$breakpoint}-headline-1-regular {

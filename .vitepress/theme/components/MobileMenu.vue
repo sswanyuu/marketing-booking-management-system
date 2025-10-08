@@ -28,10 +28,9 @@
           class="feature__dropdown d-flex flex-column gap-3 overflow-hidden"
           :class="{ 'feature__dropdown--show': isFeaturesOpen }"
         >
-          <a
-            href="/easy-use"
-            class="d-flex gap-4 text-decoration-none"
-            @click="handleNavigationClick"
+          <div
+            class="d-flex gap-4"
+            @click="handleFeaturesClick(ROUTES.EASY_USE)"
           >
             <img src="../assets/icons/ux.svg" alt="UX" class="feature__icon" />
             <div class="d-flex flex-column gap-2 flex-grow-1">
@@ -45,12 +44,11 @@
               alt="Arrow right"
               class="align-self-start feature__arrow"
             />
-          </a>
+          </div>
           <div class="feature__divider bg-gray-light w-100"></div>
-          <a
-            href="/grow-again"
-            class="d-flex gap-4 text-decoration-none"
-            @click="handleNavigationClick"
+          <div
+            class="d-flex gap-4"
+            @click="handleFeaturesClick(ROUTES.GROW_AGAIN)"
           >
             <img
               src="../assets/icons/marketing.svg"
@@ -68,12 +66,11 @@
               alt="Arrow right"
               class="align-self-start feature__arrow"
             />
-          </a>
+          </div>
           <div class="feature__divider bg-gray-light w-100"></div>
-          <a
-            href="/tourist-ready"
-            class="d-flex gap-4 text-decoration-none"
-            @click="handleNavigationClick"
+          <div
+            class="d-flex gap-4"
+            @click="handleFeaturesClick(ROUTES.TOURIST_READY)"
           >
             <img
               src="../assets/icons/tourists.svg"
@@ -91,18 +88,18 @@
               alt="Arrow right"
               class="align-self-start feature__arrow"
             />
-          </a>
+          </div>
         </div>
       </div>
       <div class="menu__divider bg-gray-light"></div>
       <!-- Integration Section -->
-      <div class="py-4">
+      <div class="py-4" @click="handleNavigationClick(ROUTES.ALL_CONNECTED)">
         <div class="headline-8-bold">INTEGRATION</div>
       </div>
       <div class="menu__divider bg-gray-light"></div>
 
       <!-- Solutions Section -->
-      <div class="py-4">
+      <div class="py-4" @click="handleNavigationClick(ROUTES.INDUSTRY_FIT)">
         <div class="headline-8-bold">SOLUTIONS</div>
       </div>
     </div>
@@ -112,6 +109,8 @@
 <script setup>
 import { ref } from 'vue';
 import '../../../scss/components/_mobile-menu.scss';
+import { useNavigation } from '../composables/useNavigation.js';
+const { navigateTo, ROUTES } = useNavigation();
 // Import icons
 import chevronDownIcon from '../assets/icons/chevron-down.svg';
 import arrowRightIcon from '../assets/icons/arrow-right-mobile.svg';
@@ -129,8 +128,13 @@ const emit = defineEmits(['close']);
 // Local state
 const isFeaturesOpen = ref(false);
 
-const handleNavigationClick = () => {
+const handleNavigationClick = route => {
+  navigateTo(route);
+  emit('close');
+};
+const handleFeaturesClick = route => {
   toggleFeatures();
+  navigateTo(route);
   emit('close');
 };
 

@@ -1,0 +1,20 @@
+@import '../_variables';
+
+.simple-footer {
+  .navigation {
+    padding: 156px 12px;
+
+    @media (max-width: 768px) {
+      padding: 48px 12px 56px 12px;
+    }
+  }
+
+  .navigation__content {
+    max-width: 1314px;
+  }
+
+  .logo {
+    height: 32px;
+    width: auto;
+  }
+}

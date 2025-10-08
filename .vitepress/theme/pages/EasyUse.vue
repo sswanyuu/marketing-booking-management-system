@@ -23,7 +23,13 @@
           <div class="md-headline-2-bold headline-3-bold">Easy Use</div>
           <div class="md-headline-2-bold headline-3-bold">優良使用體驗</div>
         </div>
-        <Button variant="primary" class="align-self-start">預約 Demo</Button>
+        <Button
+          variant="primary"
+          class="align-self-start"
+          @click="handleDemoBooking"
+        >
+          預約 Demo
+        </Button>
       </div>
     </section>
     <!-- items -->
@@ -116,6 +122,9 @@
 <script setup>
 import { onMounted } from 'vue';
 import AOS from 'aos';
+import { useNavigation } from '../composables/useNavigation.js';
+
+const { handleDemoBooking } = useNavigation();
 import Item1 from '../assets/images/pages/easy-use/item-1.png';
 import Item2 from '../assets/images/pages/easy-use/item-2.png';
 import Item3 from '../assets/images/pages/easy-use/item-3.png';

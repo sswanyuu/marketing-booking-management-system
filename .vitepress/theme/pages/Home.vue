@@ -36,7 +36,13 @@
           <div class="text-white">讓餐廳管理更輕鬆</div>
         </div>
         <div class="d-flex flex-column gap-2">
-          <Button variant="primary" class="align-self-start">預約 Demo</Button>
+          <Button
+            variant="primary"
+            class="align-self-start"
+            @click="handleDemoBooking"
+          >
+            預約 Demo
+          </Button>
         </div>
       </div>
     </section>
@@ -253,6 +259,10 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { useNavigation } from '../composables/useNavigation.js';
+
+const { handleDemoBooking } = useNavigation();
+
 import Brand1 from '../assets/images/pages/home/brand-1.png';
 import Brand2 from '../assets/images/pages/home/brand-2.png';
 import Brand3 from '../assets/images/pages/home/brand-3.png';

@@ -27,8 +27,8 @@
             <li>
               <!-- Design System 🕹️ Remove if not needed -->
               <a
-                href="/design-system"
                 class="text-white headline-8-bold text-decoration-none"
+                @click="navigateTo(ROUTES.DESIGN_SYSTEM)"
               >
                 DESIGN SYSTEM
               </a>
@@ -49,23 +49,27 @@
             </li>
             <li>
               <a
-                href="/all-connected"
                 class="text-white headline-8-bold text-decoration-none"
+                @click="navigateTo(ROUTES.ALL_CONNECTED)"
               >
                 INTEGRATION
               </a>
             </li>
             <li>
               <a
-                href="/industry-fit"
                 class="text-white headline-8-bold text-decoration-none"
+                @click="navigateTo(ROUTES.INDUSTRY_FIT)"
               >
                 SOLUTIONS
               </a>
             </li>
           </ul>
           <!-- Demo Button -->
-          <Button variant="mobile" class="header__demo-button">
+          <Button
+            variant="mobile"
+            class="header__demo-button"
+            @click="handleDemoBooking"
+          >
             預約 Demo
           </Button>
         </div>
@@ -102,6 +106,8 @@ import closeIcon from '../assets/icons/close.svg';
 import menuIcon from '../assets/icons/menu.svg';
 import chevronUpIcon from '../assets/icons/chevron-up.svg';
 import { useHeaderHeight } from '../composables/useHeaderHeight';
+import { useNavigation } from '../composables/useNavigation.js';
+const { navigateTo, handleDemoBooking, ROUTES } = useNavigation();
 import '../../../scss/components/_header.scss';
 
 // Reactive state

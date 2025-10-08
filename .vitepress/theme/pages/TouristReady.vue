@@ -23,7 +23,13 @@
           <div class="md-headline-2-bold headline-3-bold">Tourist Ready</div>
           <div class="md-headline-2-bold headline-3-bold">觀光客友善</div>
         </div>
-        <Button variant="primary" class="align-self-start">預約 Demo</Button>
+        <Button
+          variant="primary"
+          class="align-self-start"
+          @click="handleDemoBooking"
+        >
+          預約 Demo
+        </Button>
       </div>
     </section>
     <!-- globe -->
@@ -131,6 +137,9 @@
 import { onMounted } from 'vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useNavigation } from '../composables/useNavigation.js';
+
+const { handleDemoBooking } = useNavigation();
 import Item1 from '../assets/images/pages/tourist-ready/item-1.png';
 import Item2 from '../assets/images/pages/tourist-ready/item-2.png';
 const touristFeatures = [

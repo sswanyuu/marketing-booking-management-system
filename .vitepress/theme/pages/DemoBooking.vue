@@ -110,18 +110,12 @@ import Input from '../components/Input.vue';
 import Button from '../components/Button.vue';
 import { useFormValidation } from '../composables/useFormValidation.js';
 
-const {
-  formData,
-  errors,
-  validateForm,
-  validateSingleField,
-  hasError,
-  getError,
-} = useFormValidation({
-  name: '',
-  company: '',
-  email: '',
-});
+const { formData, validateForm, validateSingleField, hasError, getError } =
+  useFormValidation({
+    name: '',
+    company: '',
+    email: '',
+  });
 
 const isSubmitted = ref(false);
 

@@ -23,7 +23,13 @@
           <div class="md-headline-2-bold headline-3-bold">All Connected</div>
           <div class="md-headline-2-bold headline-3-bold">跨平台整合</div>
         </div>
-        <Button variant="primary" class="align-self-start">預約 Demo</Button>
+        <Button
+          variant="primary"
+          class="align-self-start"
+          @click="handleDemoBooking"
+        >
+          預約 Demo
+        </Button>
       </div>
     </section>
     <!-- connected brands -->
@@ -116,6 +122,10 @@
 </template>
 
 <script setup>
+import { useNavigation } from '../composables/useNavigation.js';
+
+const { handleDemoBooking } = useNavigation();
+
 import Item1 from '../assets/images/pages/all-connected/item-1.png';
 import Item2 from '../assets/images/pages/all-connected/item-2.png';
 import Item3 from '../assets/images/pages/all-connected/item-3.png';

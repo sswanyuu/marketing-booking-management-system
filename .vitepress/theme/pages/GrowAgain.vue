@@ -23,7 +23,13 @@
           <div class="md-headline-2-bold headline-3-bold">Grow Again</div>
           <div class="md-headline-2-bold headline-3-bold">行銷與再接觸</div>
         </div>
-        <Button variant="primary" class="align-self-start">預約 Demo</Button>
+        <Button
+          variant="primary"
+          class="align-self-start"
+          @click="handleDemoBooking"
+        >
+          預約 Demo
+        </Button>
       </div>
     </section>
     <!--top-banner-->
@@ -271,6 +277,10 @@
 </template>
 
 <script setup>
+import { useNavigation } from '../composables/useNavigation.js';
+
+const { handleDemoBooking } = useNavigation();
+
 import Brand1 from '../assets/images/pages/grow-again/brand-1.png';
 import Brand2 from '../assets/images/pages/grow-again/brand-2.png';
 import Brand3 from '../assets/images/pages/grow-again/brand-3.png';

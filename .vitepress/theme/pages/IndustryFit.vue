@@ -23,7 +23,13 @@
           <div class="md-headline-2-bold headline-3-bold">Industry Fit</div>
           <div class="md-headline-2-bold headline-3-bold">產業專屬方案</div>
         </div>
-        <Button variant="primary" class="align-self-start">預約 Demo</Button>
+        <Button
+          variant="primary"
+          class="align-self-start"
+          @click="handleDemoBooking"
+        >
+          預約 Demo
+        </Button>
       </div>
     </section>
     <!-- successful cases -->
@@ -230,6 +236,9 @@
 <script setup>
 import Button from '../components/Button.vue';
 import { useFeedbackCarousel } from '../composables/useFeedbackCarousel.js';
+import { useNavigation } from '../composables/useNavigation.js';
+
+const { handleDemoBooking } = useNavigation();
 import SuccessfulCasesIcon1 from '../assets/images/pages/industry-fit/successful-case-icon-1.png';
 import SuccessfulCasesIcon2 from '../assets/images/pages/industry-fit/successful-case-icon-2.png';
 import SuccessfulCasesIcon3 from '../assets/images/pages/industry-fit/successful-case-icon-3.png';
