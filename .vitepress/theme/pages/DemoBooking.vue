@@ -16,9 +16,9 @@
       class="form-section w-100 d-flex justify-content-center align-items-center px-3"
     >
       <div
-        class="form-card d-flex flex-column w-100 rounded-4 border border-primary align-items-center"
+        class="form-card d-flex flex-column w-100 rounded-4 border border-primary align-items-center justify-content-center"
       >
-        <div class="form-card__content d-flex flex-column">
+        <div v-if="!isSubmitted" class="form-card__content d-flex flex-column">
           <div
             class="text-center d-flex flex-column gap-4 gap-md-6 align-items-center"
           >
@@ -44,6 +44,10 @@
                 placeholder="輸入您的姓名"
                 type="text"
                 required
+                :state="hasError('name') ? 'error' : 'default'"
+                :error-message="getError('name')"
+                @blur="() => handleFieldValidation('name')"
+                @input="() => handleFieldValidation('name')"
               />
 
               <Input
@@ -52,6 +56,10 @@
                 placeholder="輸入您的單位名稱"
                 type="text"
                 required
+                :state="hasError('company') ? 'error' : 'default'"
+                :error-message="getError('company')"
+                @blur="() => handleFieldValidation('company')"
+                @input="() => handleFieldValidation('company')"
               />
 
               <Input
@@ -60,12 +68,36 @@
                 placeholder="輸入您的E-mail"
                 type="email"
                 required
+                :state="hasError('email') ? 'error' : 'default'"
+                :error-message="getError('email')"
+                @blur="() => handleFieldValidation('email')"
+                @input="() => handleFieldValidation('email')"
               />
             </div>
             <Button class="self-align-center" @click="handleSubmit">
               加入體驗名單
             </Button>
           </form>
+        </div>
+        <div
+          v-else
+          class="form-card__success d-flex flex-column align-items-center justify-content-center"
+        >
+          <img
+            src="../assets/icons/submit.svg"
+            alt="submit"
+            class="submit-icon"
+          />
+          <div
+            class="text-center d-flex flex-column gap-4 gap-md-6 align-items-center"
+          >
+            <div class="headline-4-bold md-headline-1-bold">收到您的資料</div>
+            <div
+              class="body-1 md-headline-1-regular text-gray d-flex flex-column align-items-center"
+            >
+              我們會盡快聯繫你
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -76,17 +108,36 @@
 import { ref } from 'vue';
 import Input from '../components/Input.vue';
 import Button from '../components/Button.vue';
+import { useFormValidation } from '../composables/useFormValidation.js';
 
-const formData = ref({
+const {
+  formData,
+  errors,
+  validateForm,
+  validateSingleField,
+  hasError,
+  getError,
+} = useFormValidation({
   name: '',
   company: '',
   email: '',
 });
 
+const isSubmitted = ref(false);
+
+const handleFieldValidation = field => {
+  validateSingleField(field);
+};
+
 const handleSubmit = () => {
-  //add backend logic here
-  console.log('Form submitted:', formData.value);
-  alert('感謝您的登記！我們會盡快與您聯繫。');
+  //validation
+  if (validateForm()) {
+    //add backend logic here
+
+    isSubmitted.value = true;
+  } else {
+    //error handling here
+  }
 };
 </script>
 

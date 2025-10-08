@@ -1,6 +1,6 @@
 <template>
-  <div class="input">
-    <label class="input__label headline-7-bold" :for="inputId">
+  <div class="input d-flex flex-column">
+    <label class="md-headline-7-bold headline-5-bold" :for="inputId">
       {{ label }}
     </label>
 
@@ -19,7 +19,7 @@
       @keydown="handleKeydown"
     />
 
-    <div v-if="errorMessage" class="input__error body-3">
+    <div v-if="errorMessage" class="body-3 text-danger mt-2">
       {{ errorMessage }}
     </div>
   </div>
@@ -88,7 +88,17 @@ const inputValue = computed({
 });
 
 const inputClasses = computed(() => {
-  const classes = ['input__field', 'body-3'];
+  const classes = [
+    'input__field',
+    'body-3',
+    'md-headline-2-regular',
+    'mt-2',
+    'w-100',
+    'bg-white',
+    'px-4',
+    'py-3',
+    'py-md-4',
+  ];
 
   if (props.state === 'error') {
     classes.push('input__field--error');
