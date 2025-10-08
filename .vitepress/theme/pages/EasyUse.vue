@@ -113,7 +113,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { onMounted } from 'vue';
 import AOS from 'aos';
 import Item1 from '../assets/images/pages/easy-use/item-1.png';
@@ -122,66 +122,57 @@ import Item3 from '../assets/images/pages/easy-use/item-3.png';
 import Item4 from '../assets/images/pages/easy-use/item-4.png';
 import 'aos/dist/aos.css';
 
-export default {
-  name: 'EasyUse',
-  setup() {
-    const easyUseItems = [
-      {
-        title: '直覺化介面',
-        description: '依桌型、時段彈性安排，優化現場動線與翻桌率。',
-        image: Item1,
-        points: [
-          '顧客線上訂位、店員也能代客填寫',
-          '支援手機、平板與桌機操作',
-          '店員可代客快速建檔訂位',
-        ],
-      },
-      {
-        title: '桌位管理',
-        description: '依桌型、時段彈性安排，優化現場動線與翻桌率。',
-        image: Item2,
-        points: [
-          'VIP包廂、吧台區域都能納入排位邏輯',
-          '自動避開重疊、按桌型優先建議配置',
-          '提升翻桌率與現場動線效率',
-        ],
-      },
-      {
-        title: '彈性調整機制',
-        description: '顧客可變更人數或餐點，無需取消重訂，彈性又省時。',
-        image: Item3,
-        points: [
-          '現場人數變動，店員也能即時更新預約資訊',
-          '調整人數、時間、餐點，無需重新預約',
-          '前台與後台同時掌握最新資訊',
-        ],
-      },
-      {
-        title: '平假日設定功能',
-        description: '自由設定不同日子的訂位規則與營運時間，彈性營運無負擔。',
-        image: Item4,
-        points: [
-          '自由設定不同日子的營運規則',
-          '自動對應營業時段與人力排程',
-          '特別營業日、臨時公休一鍵調整',
-        ],
-      },
-    ];
-
-    onMounted(() => {
-      AOS.init({
-        duration: 600,
-        easing: 'ease-out',
-        once: false,
-        offset: 12,
-      });
-    });
-
-    return {
-      easyUseItems,
-    };
+const easyUseItems = [
+  {
+    title: '直覺化介面',
+    description: '依桌型、時段彈性安排，優化現場動線與翻桌率。',
+    image: Item1,
+    points: [
+      '顧客線上訂位、店員也能代客填寫',
+      '支援手機、平板與桌機操作',
+      '店員可代客快速建檔訂位',
+    ],
   },
-};
+  {
+    title: '桌位管理',
+    description: '依桌型、時段彈性安排，優化現場動線與翻桌率。',
+    image: Item2,
+    points: [
+      'VIP包廂、吧台區域都能納入排位邏輯',
+      '自動避開重疊、按桌型優先建議配置',
+      '提升翻桌率與現場動線效率',
+    ],
+  },
+  {
+    title: '彈性調整機制',
+    description: '顧客可變更人數或餐點，無需取消重訂，彈性又省時。',
+    image: Item3,
+    points: [
+      '現場人數變動，店員也能即時更新預約資訊',
+      '調整人數、時間、餐點，無需重新預約',
+      '前台與後台同時掌握最新資訊',
+    ],
+  },
+  {
+    title: '平假日設定功能',
+    description: '自由設定不同日子的訂位規則與營運時間，彈性營運無負擔。',
+    image: Item4,
+    points: [
+      '自由設定不同日子的營運規則',
+      '自動對應營業時段與人力排程',
+      '特別營業日、臨時公休一鍵調整',
+    ],
+  },
+];
+
+onMounted(() => {
+  AOS.init({
+    duration: 600,
+    easing: 'ease-out',
+    once: false,
+    offset: 12,
+  });
+});
 </script>
 
 <style lang="scss">

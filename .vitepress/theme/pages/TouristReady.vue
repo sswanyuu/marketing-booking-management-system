@@ -127,54 +127,44 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { onMounted } from 'vue';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Item1 from '../assets/images/pages/tourist-ready/item-1.png';
 import Item2 from '../assets/images/pages/tourist-ready/item-2.png';
-
-export default {
-  name: 'TouristReady',
-  setup() {
-    const touristFeatures = [
-      {
-        title: '多國語言支援',
-        description:
-          '無論來自哪個國家，都能以熟悉的語言瀏覽、預約與溝通，打造真正國際化的用餐體驗。',
-        image: Item1,
-        points: [
-          '多語介面，流程簡單易懂',
-          '自動偵測地區語言，也可手動切換',
-          '菜單與通知信件自動翻譯',
-        ],
-      },
-      {
-        title: '自動切換貨幣',
-        description: '旅客在出發前就能掌握餐廳菜單與價格，安心預訂、從容用餐。',
-        image: Item2,
-        points: [
-          '根據用戶所在位置，自動顯示對應幣別',
-          '價格資訊清楚透明，預約更安心',
-          '提升旅客滿意度與轉單率',
-        ],
-      },
-    ];
-
-    onMounted(() => {
-      AOS.init({
-        duration: 600,
-        easing: 'ease-out',
-        once: false,
-        offset: 12,
-      });
-    });
-
-    return {
-      touristFeatures,
-    };
+const touristFeatures = [
+  {
+    title: '多國語言支援',
+    description:
+      '無論來自哪個國家，都能以熟悉的語言瀏覽、預約與溝通，打造真正國際化的用餐體驗。',
+    image: Item1,
+    points: [
+      '多語介面，流程簡單易懂',
+      '自動偵測地區語言，也可手動切換',
+      '菜單與通知信件自動翻譯',
+    ],
   },
-};
+  {
+    title: '自動切換貨幣',
+    description: '旅客在出發前就能掌握餐廳菜單與價格，安心預訂、從容用餐。',
+    image: Item2,
+    points: [
+      '根據用戶所在位置，自動顯示對應幣別',
+      '價格資訊清楚透明，預約更安心',
+      '提升旅客滿意度與轉單率',
+    ],
+  },
+];
+
+onMounted(() => {
+  AOS.init({
+    duration: 600,
+    easing: 'ease-out',
+    once: false,
+    offset: 12,
+  });
+});
 </script>
 <style lang="scss">
 @import '../../../scss/pages/_tourist-ready.scss';

@@ -227,7 +227,7 @@
     </section>
   </div>
 </template>
-<script>
+<script setup>
 import Button from '../components/Button.vue';
 import { useFeedbackCarousel } from '../composables/useFeedbackCarousel.js';
 import SuccessfulCasesIcon1 from '../assets/images/pages/industry-fit/successful-case-icon-1.png';
@@ -246,179 +246,157 @@ import Solution6 from '../assets/images/pages/industry-fit/solution-6.png';
 import Solution7 from '../assets/images/pages/industry-fit/solution-7.png';
 import Solution8 from '../assets/images/pages/industry-fit/solution-8.png';
 
-export default {
-  name: 'IndustryFit',
-  setup() {
-    const successfulCasesIcons = [
-      {
-        title: '翻桌率低',
-        image: SuccessfulCasesIcon1,
-      },
-      {
-        title: '桌位特殊',
-        image: SuccessfulCasesIcon2,
-      },
-      {
-        title: '套餐制',
-        image: SuccessfulCasesIcon3,
-      },
-      {
-        title: '食材高價',
-        image: SuccessfulCasesIcon4,
-      },
-    ];
-
-    const industryFeatures = [
-      {
-        title: '精準時段與座位控管',
-        description:
-          'Fullkeep 的桌型與時段預約規則可精準安排每個檯位座次，避免空檯與重複預約。',
-        image: Feature1,
-
-        points: [
-          'Fullkeep 的桌型與時段預約規則可精準安排每個檯位座次，避免空檯與重複預約。',
-          '支援「吧檯座位」與「包廂」區分，讓訂位分配更靈活。',
-        ],
-      },
-      {
-        title: '預付訂金機制',
-        description:
-          '自由設定每人訂金，確保高價食材（如和牛、龍蝦）備料充足，降低臨時取消的損失。',
-        image: Feature2,
-
-        points: [
-          '自由設定每人訂金，確保高價食材（如和牛、龍蝦）備料充足，降低臨時取消的損失。',
-          '可在訂位時讓顧客選擇餐點套餐（如主廚套餐、龍蝦套餐），可備註過敏、熟度偏好等資訊，廚房能提前準備',
-        ],
-      },
-      {
-        title: '行銷與再接觸',
-        description:
-          '記錄顧客消費金額、用餐日期與喜好，後續針對節慶（如情人節、週年慶）推送高端套餐優惠。',
-        image: Feature3,
-
-        points: [
-          '記錄顧客消費金額、用餐日期與喜好，後續針對節慶（如情人節、週年慶）推送高端套餐優惠。',
-          '用過餐的熟客轉化為回頭客，例如推送新菜單、主廚特別料理體驗。',
-        ],
-      },
-    ];
-
-    const solutions = [
-      {
-        title: '酒莊',
-        image: Solution1,
-      },
-      {
-        title: '公路餐廳',
-        image: Solution2,
-      },
-      {
-        title: '無菜單料理',
-        image: Solution3,
-      },
-      {
-        title: '主題餐廳',
-        image: Solution4,
-      },
-      {
-        title: '米其林餐廳',
-        image: Solution5,
-      },
-      {
-        title: '日式料理',
-        image: Solution6,
-      },
-      {
-        title: '景觀餐廳',
-        image: Solution7,
-      },
-      {
-        title: '度假村',
-        image: Solution8,
-      },
-    ];
-
-    const feedbackData = [
-      {
-        content:
-          '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
-        name: '王小明',
-        rating: '5.0',
-      },
-      {
-        content:
-          '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
-        name: '李美華',
-        rating: '5.0',
-      },
-      {
-        content:
-          '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
-        name: '張志明',
-        rating: '5.0',
-      },
-      {
-        content:
-          '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
-        name: '陳經理',
-        rating: '5.0',
-      },
-      {
-        content:
-          '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
-        name: '林主廚',
-        rating: '5.0',
-      },
-      {
-        content:
-          '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
-        name: '張老闆',
-        rating: '5.0',
-      },
-      {
-        content:
-          '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
-        name: '張老闆',
-        rating: '5.0',
-      },
-      {
-        content:
-          '我們鐵板營營每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
-        name: '張老闆',
-        rating: '5.0',
-      },
-    ];
-
-    // ===== FEEDBACK CAROUSEL =====
-    const {
-      trackRef,
-      nextFeedback,
-      prevFeedback,
-      handleMouseEnter,
-      handleMouseLeave,
-      handleButtonMouseEnter,
-      handleButtonMouseLeave,
-    } = useFeedbackCarousel(feedbackData);
-
-    return {
-      // Data
-      successfulCasesIcons,
-      industryFeatures,
-      solutions,
-      feedbackData,
-
-      // Feedback carousel
-      trackRef,
-      nextFeedback,
-      prevFeedback,
-      handleMouseEnter,
-      handleMouseLeave,
-      handleButtonMouseEnter,
-      handleButtonMouseLeave,
-    };
+const successfulCasesIcons = [
+  {
+    title: '翻桌率低',
+    image: SuccessfulCasesIcon1,
   },
-};
+  {
+    title: '桌位特殊',
+    image: SuccessfulCasesIcon2,
+  },
+  {
+    title: '套餐制',
+    image: SuccessfulCasesIcon3,
+  },
+  {
+    title: '食材高價',
+    image: SuccessfulCasesIcon4,
+  },
+];
+
+const industryFeatures = [
+  {
+    title: '精準時段與座位控管',
+    description:
+      'Fullkeep 的桌型與時段預約規則可精準安排每個檯位座次，避免空檯與重複預約。',
+    image: Feature1,
+
+    points: [
+      'Fullkeep 的桌型與時段預約規則可精準安排每個檯位座次，避免空檯與重複預約。',
+      '支援「吧檯座位」與「包廂」區分，讓訂位分配更靈活。',
+    ],
+  },
+  {
+    title: '預付訂金機制',
+    description:
+      '自由設定每人訂金，確保高價食材（如和牛、龍蝦）備料充足，降低臨時取消的損失。',
+    image: Feature2,
+
+    points: [
+      '自由設定每人訂金，確保高價食材（如和牛、龍蝦）備料充足，降低臨時取消的損失。',
+      '可在訂位時讓顧客選擇餐點套餐（如主廚套餐、龍蝦套餐），可備註過敏、熟度偏好等資訊，廚房能提前準備',
+    ],
+  },
+  {
+    title: '行銷與再接觸',
+    description:
+      '記錄顧客消費金額、用餐日期與喜好，後續針對節慶（如情人節、週年慶）推送高端套餐優惠。',
+    image: Feature3,
+
+    points: [
+      '記錄顧客消費金額、用餐日期與喜好，後續針對節慶（如情人節、週年慶）推送高端套餐優惠。',
+      '用過餐的熟客轉化為回頭客，例如推送新菜單、主廚特別料理體驗。',
+    ],
+  },
+];
+
+const solutions = [
+  {
+    title: '酒莊',
+    image: Solution1,
+  },
+  {
+    title: '公路餐廳',
+    image: Solution2,
+  },
+  {
+    title: '無菜單料理',
+    image: Solution3,
+  },
+  {
+    title: '主題餐廳',
+    image: Solution4,
+  },
+  {
+    title: '米其林餐廳',
+    image: Solution5,
+  },
+  {
+    title: '日式料理',
+    image: Solution6,
+  },
+  {
+    title: '景觀餐廳',
+    image: Solution7,
+  },
+  {
+    title: '度假村',
+    image: Solution8,
+  },
+];
+
+const feedbackData = [
+  {
+    content:
+      '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+    name: '王小明',
+    rating: '5.0',
+  },
+  {
+    content:
+      '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+    name: '李美華',
+    rating: '5.0',
+  },
+  {
+    content:
+      '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
+    name: '張志明',
+    rating: '5.0',
+  },
+  {
+    content:
+      '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+    name: '陳經理',
+    rating: '5.0',
+  },
+  {
+    content:
+      '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
+    name: '林主廚',
+    rating: '5.0',
+  },
+  {
+    content:
+      '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+    name: '張老闆',
+    rating: '5.0',
+  },
+  {
+    content:
+      '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
+    name: '張老闆',
+    rating: '5.0',
+  },
+  {
+    content:
+      '我們鐵板營營每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+    name: '張老闆',
+    rating: '5.0',
+  },
+];
+
+// ===== FEEDBACK CAROUSEL =====
+const {
+  trackRef,
+  nextFeedback,
+  prevFeedback,
+  handleMouseEnter,
+  handleMouseLeave,
+  handleButtonMouseEnter,
+  handleButtonMouseLeave,
+} = useFeedbackCarousel(feedbackData);
 </script>
 <style lang="scss">
 @import '../../../scss/pages/_industry-fit.scss';

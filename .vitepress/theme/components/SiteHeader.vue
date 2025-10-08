@@ -35,7 +35,6 @@
             </li>
             <li class="d-flex align-items-center gap-1">
               <a
-                href="#features"
                 class="text-white headline-8-bold text-decoration-none"
                 @click="toggleDesktopFeatures"
               >
@@ -50,7 +49,7 @@
             </li>
             <li>
               <a
-                href="#integration"
+                href="/all-connected"
                 class="text-white headline-8-bold text-decoration-none"
               >
                 INTEGRATION
@@ -58,7 +57,7 @@
             </li>
             <li>
               <a
-                href="#solutions"
+                href="/industry-fit"
                 class="text-white headline-8-bold text-decoration-none"
               >
                 SOLUTIONS

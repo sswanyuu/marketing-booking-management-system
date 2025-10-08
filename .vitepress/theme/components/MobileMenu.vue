@@ -28,7 +28,11 @@
           class="feature__dropdown d-flex flex-column gap-3 overflow-hidden"
           :class="{ 'feature__dropdown--show': isFeaturesOpen }"
         >
-          <div class="d-flex gap-4">
+          <a
+            href="/easy-use"
+            class="d-flex gap-4 text-decoration-none"
+            @click="handleNavigationClick"
+          >
             <img src="../assets/icons/ux.svg" alt="UX" class="feature__icon" />
             <div class="d-flex flex-column gap-2 flex-grow-1">
               <div class="headline-7-bold text-primary">優良使用體驗</div>
@@ -41,9 +45,13 @@
               alt="Arrow right"
               class="align-self-start feature__arrow"
             />
-          </div>
+          </a>
           <div class="feature__divider bg-gray-light w-100"></div>
-          <div class="d-flex gap-4">
+          <a
+            href="/grow-again"
+            class="d-flex gap-4 text-decoration-none"
+            @click="handleNavigationClick"
+          >
             <img
               src="../assets/icons/marketing.svg"
               alt="Marketing"
@@ -60,9 +68,13 @@
               alt="Arrow right"
               class="align-self-start feature__arrow"
             />
-          </div>
+          </a>
           <div class="feature__divider bg-gray-light w-100"></div>
-          <div class="d-flex gap-4">
+          <a
+            href="/tourist-ready"
+            class="d-flex gap-4 text-decoration-none"
+            @click="handleNavigationClick"
+          >
             <img
               src="../assets/icons/tourists.svg"
               class="feature__icon"
@@ -79,7 +91,7 @@
               alt="Arrow right"
               class="align-self-start feature__arrow"
             />
-          </div>
+          </a>
         </div>
       </div>
       <div class="menu__divider bg-gray-light"></div>
@@ -100,7 +112,6 @@
 <script setup>
 import { ref } from 'vue';
 import '../../../scss/components/_mobile-menu.scss';
-
 // Import icons
 import chevronDownIcon from '../assets/icons/chevron-down.svg';
 import arrowRightIcon from '../assets/icons/arrow-right-mobile.svg';
@@ -116,12 +127,17 @@ const props = defineProps({
 const emit = defineEmits(['close']);
 
 // Local state
-import { useMobileMenu } from '../composables/useMobileMenu';
-
 const isFeaturesOpen = ref(false);
-const { menuRef } = useMobileMenu(() => props.isOpen);
+
+const handleNavigationClick = () => {
+  toggleFeatures();
+  emit('close');
+};
 
 const toggleFeatures = () => {
   isFeaturesOpen.value = !isFeaturesOpen.value;
 };
+
+import { useMobileMenu } from '../composables/useMobileMenu';
+const { menuRef } = useMobileMenu(() => props.isOpen);
 </script>
