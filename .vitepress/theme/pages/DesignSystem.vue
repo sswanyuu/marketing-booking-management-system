@@ -25,8 +25,8 @@ const themeColors = [
         <Button variant="secondary" disabled>Secondary</Button>
         <Button variant="mobile">Mobile</Button>
         <Button variant="mobile" disabled>Mobile</Button>
-        <Button variant="arrow" />
-        <Button variant="arrow" disabled />
+        <Button variant="arrow-right" />
+        <Button variant="arrow-right" disabled />
       </div>
     </div>
     <div class="title row">
@@ -159,25 +159,25 @@ const themeColors = [
             aria-label="Basic checkbox toggle button group"
           >
             <input
+              id="btncheck1"
               type="checkbox"
               class="btn-check"
-              id="btncheck1"
               autocomplete="off"
             />
             <label class="btn btn-primary" for="btncheck1">Checkbox</label>
 
             <input
+              id="btncheck2"
               type="checkbox"
               class="btn-check"
-              id="btncheck2"
               autocomplete="off"
             />
             <label class="btn btn-primary" for="btncheck2">Checkbox2</label>
 
             <input
+              id="btncheck3"
               type="checkbox"
               class="btn-check"
-              id="btncheck3"
               autocomplete="off"
             />
             <label class="btn btn-primary" for="btncheck3">Checkbox3</label>
@@ -190,29 +190,29 @@ const themeColors = [
             aria-label="Basic radio toggle button group"
           >
             <input
+              id="btnradio1"
               type="radio"
               class="btn-check"
               name="btnradio"
-              id="btnradio1"
               autocomplete="off"
               checked
             />
             <label class="btn btn-primary" for="btnradio1">Radio 1</label>
 
             <input
+              id="btnradio2"
               type="radio"
               class="btn-check"
               name="btnradio"
-              id="btnradio2"
               autocomplete="off"
             />
             <label class="btn btn-primary" for="btnradio2">Radio 2</label>
 
             <input
+              id="btnradio3"
               type="radio"
               class="btn-check"
               name="btnradio"
-              id="btnradio3"
               autocomplete="off"
             />
             <label class="btn btn-primary" for="btnradio3">Radio 3</label>
@@ -268,7 +268,7 @@ const themeColors = [
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">
@@ -314,7 +314,7 @@ const themeColors = [
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">
@@ -363,7 +363,7 @@ const themeColors = [
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">
@@ -569,10 +569,10 @@ const themeColors = [
               </label>
               <div class="col-sm-10">
                 <input
+                  id="staticEmail"
                   type="text"
                   readonly
                   class="form-control-plaintext"
-                  id="staticEmail"
                   value="email@example.com"
                 />
               </div>
@@ -582,9 +582,9 @@ const themeColors = [
                 Email address
               </label>
               <input
+                id="exampleInputEmail1"
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 placeholder="Enter email"
               />
@@ -598,18 +598,18 @@ const themeColors = [
               </label>
               <div>
                 <input
+                  id="inputPassword"
                   type="password"
                   class="form-control"
-                  id="inputPassword"
                 />
               </div>
             </div>
             <div class="mb-3">
               <label for="exampleSelect">Example select</label>
               <select
+                id="exampleSelect"
                 class="form-select"
                 aria-label="Default select example"
-                id="exampleSelect"
               >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -621,10 +621,10 @@ const themeColors = [
             <div class="mb-3">
               <label for="exampleMultiSelect">Example multiple select</label>
               <select
+                id="exampleMultiSelect"
                 class="form-select"
                 multiple
                 aria-label="multiple select example"
-                id="exampleMultiSelect"
               >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -638,14 +638,14 @@ const themeColors = [
                 Example textarea
               </label>
               <textarea
-                class="form-control"
                 id="exampleFormControlTextarea1"
+                class="form-control"
                 rows="3"
               ></textarea>
             </div>
             <div class="mb-3">
               <label for="formFile" class="form-label">File input</label>
-              <input type="file" class="form-control" id="formFile" />
+              <input id="formFile" type="file" class="form-control" />
               <div id="fileHelp" class="form-text">
                 This is some placeholder block-level help text for the above
                 input. It's a bit lighter and easily wraps to a new line.
@@ -655,10 +655,10 @@ const themeColors = [
               <legend>Radio buttons</legend>
               <div class="form-check">
                 <input
+                  id="exampleRadios1"
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios1"
                   value="option1"
                   checked
                 />
@@ -668,10 +668,10 @@ const themeColors = [
               </div>
               <div class="form-check">
                 <input
+                  id="exampleRadios2"
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios2"
                   value="option2"
                 />
                 <label class="form-check-label" for="exampleRadios2">
@@ -680,10 +680,10 @@ const themeColors = [
               </div>
               <div class="form-check">
                 <input
+                  id="exampleRadios3"
                   class="form-check-input"
                   type="radio"
                   name="exampleRadios"
-                  id="exampleRadios3"
                   value="option3"
                   disabled
                 />
@@ -696,10 +696,10 @@ const themeColors = [
               <legend>Checkboxes</legend>
               <div class="form-check">
                 <input
+                  id="flexCheckChecked"
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="flexCheckChecked"
                   checked
                 />
                 <label class="form-check-label" for="flexCheckChecked">
@@ -708,10 +708,10 @@ const themeColors = [
               </div>
               <div class="form-check">
                 <input
+                  id="flexCheckChecked"
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="flexCheckChecked"
                   disabled
                 />
                 <label class="form-check-label" for="flexCheckChecked">
@@ -729,8 +729,8 @@ const themeColors = [
             <div class="mb-3">
               <label for="disabledInput">Disabled input</label>
               <input
-                class="form-control"
                 id="disabledInput"
+                class="form-control"
                 type="text"
                 placeholder="Disabled input"
                 aria-label="Disabled input example"
@@ -750,8 +750,8 @@ const themeColors = [
             <div class="mb-3">
               <label for="readonlyInput">Readonly input</label>
               <input
-                class="form-control"
                 id="readonlyInput"
+                class="form-control"
                 type="text"
                 value="Readonly input"
                 aria-label="readonly input example"
@@ -765,9 +765,9 @@ const themeColors = [
                     Valid input
                   </label>
                   <input
+                    id="validationCustom01"
                     type="text"
                     class="form-control is-valid"
-                    id="validationCustom01"
                     value="Correct value"
                     required
                   />
@@ -782,9 +782,9 @@ const themeColors = [
                     Invalid input
                   </label>
                   <input
+                    id="validationCustom02"
                     type="text"
                     class="form-control is-invalid"
-                    id="validationCustom02"
                     value="Wrong value"
                     required
                   />
@@ -797,27 +797,27 @@ const themeColors = [
             <div class="mb-3">
               <label for="inputLarge" class="form-label">Large input</label>
               <input
+                id="inputLarge"
                 type="email"
                 class="form-control form-control-lg"
-                id="inputLarge"
                 placeholder="Large size"
               />
             </div>
             <div class="mb-3">
               <label for="inputDefault" class="form-label">Default input</label>
               <input
+                id="inputDefault"
                 type="email"
                 class="form-control"
-                id="inputDefault"
                 placeholder="Default size"
               />
             </div>
             <div class="mb-3">
               <label for="inputSmall" class="form-label">Small input</label>
               <input
+                id="inputSmall"
                 type="email"
                 class="form-control"
-                id="inputSmall"
                 placeholder="Small size"
               />
             </div>
@@ -825,9 +825,9 @@ const themeColors = [
             <div class="input-group mb-3">
               <span class="input-group-text">$</span>
               <input
+                id="inputAmount"
                 type="text"
                 class="form-control"
-                id="inputAmount"
                 aria-label="Amount (to the nearest dollar)"
               />
               <span class="input-group-text">.00</span>
@@ -837,10 +837,10 @@ const themeColors = [
               <div class="mb-3">
                 <div class="form-check form-switch">
                   <input
+                    id="flexSwitchCheckChecked"
                     class="form-check-input"
                     type="checkbox"
                     role="switch"
-                    id="flexSwitchCheckChecked"
                     checked
                   />
                   <label class="form-check-label" for="flexSwitchCheckChecked">
@@ -849,10 +849,10 @@ const themeColors = [
                 </div>
                 <div class="form-check form-switch">
                   <input
+                    id="flexSwitchCheckDisabled"
                     class="form-check-input"
                     type="checkbox"
                     role="switch"
-                    id="flexSwitchCheckDisabled"
                     disabled
                   />
                   <label class="form-check-label" for="flexSwitchCheckDisabled">
@@ -863,9 +863,9 @@ const themeColors = [
               <div class="mb-3">
                 <div class="form-check form-check-inline">
                   <input
+                    id="inlineCheckbox1"
                     class="form-check-input"
                     type="checkbox"
-                    id="inlineCheckbox1"
                     value="option1"
                   />
                   <label class="form-check-label" for="inlineCheckbox1">
@@ -874,9 +874,9 @@ const themeColors = [
                 </div>
                 <div class="form-check form-check-inline">
                   <input
+                    id="inlineCheckbox2"
                     class="form-check-input"
                     type="checkbox"
-                    id="inlineCheckbox2"
                     value="option2"
                   />
                   <label class="form-check-label" for="inlineCheckbox2">
@@ -885,9 +885,9 @@ const themeColors = [
                 </div>
                 <div class="form-check form-check-inline">
                   <input
+                    id="inlineCheckbox3"
                     class="form-check-input"
                     type="checkbox"
-                    id="inlineCheckbox3"
                     value="option3"
                     disabled
                   />
@@ -900,10 +900,10 @@ const themeColors = [
                 <label class="input-group-text" for="inputGroupFile01">
                   Upload
                 </label>
-                <input type="file" class="form-control" id="inputGroupFile2" />
+                <input id="inputGroupFile2" type="file" class="form-control" />
               </div>
               <div class="input-group mb-3">
-                <input type="file" class="form-control" id="inputGroupFile02" />
+                <input id="inputGroupFile02" type="file" class="form-control" />
                 <label class="input-group-text" for="inputGroupFile02">
                   Upload
                 </label>
@@ -924,14 +924,14 @@ const themeColors = [
         <h2>Tabs</h2>
         <nav>
           <div
-            class="nav nav-tabs"
             id="nav-tab"
+            class="nav nav-tabs"
             role="tablist"
             style="margin-bottom: 15px"
           >
             <button
-              class="nav-link active"
               id="nav-home-tab"
+              class="nav-link active"
               data-bs-toggle="tab"
               data-bs-target="#nav-home"
               type="button"
@@ -942,8 +942,8 @@ const themeColors = [
               Home
             </button>
             <button
-              class="nav-link"
               id="nav-profile-tab"
+              class="nav-link"
               data-bs-toggle="tab"
               data-bs-target="#nav-profile"
               type="button"
@@ -954,8 +954,8 @@ const themeColors = [
               Profile
             </button>
             <button
-              class="nav-link"
               id="nav-contact-tab"
+              class="nav-link"
               data-bs-toggle="tab"
               data-bs-target="#nav-contact"
               type="button"
@@ -990,10 +990,10 @@ const themeColors = [
             </li>
           </div>
         </nav>
-        <div class="tab-content" id="nav-tabContent">
+        <div id="nav-tabContent" class="tab-content">
           <div
-            class="tab-pane fade show active"
             id="nav-home"
+            class="tab-pane fade show active"
             role="tabpanel"
             aria-labelledby="nav-home-tab"
             tabindex="0"
@@ -1007,8 +1007,8 @@ const themeColors = [
             voluptate nisi qui.
           </div>
           <div
-            class="tab-pane fade"
             id="nav-profile"
+            class="tab-pane fade"
             role="tabpanel"
             aria-labelledby="nav-profile-tab"
             tabindex="0"
@@ -1105,9 +1105,9 @@ const themeColors = [
 
         <div class="bg-body-tertiary overflow-hidden card">
           <div
+            id="offcanvas"
             class="offcanvas offcanvas-start"
             tabindex="-1"
-            id="offcanvas"
             aria-labelledby="offcanvasLabel"
             style="
               position: static;
@@ -1117,7 +1117,7 @@ const themeColors = [
             "
           >
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+              <h5 id="offcanvasLabel" class="offcanvas-title">Offcanvas</h5>
               <button
                 type="button"
                 class="btn-close"
@@ -1658,7 +1658,7 @@ const themeColors = [
     <div class="dialogs row justify-content-between">
       <div class="col-5 bs-component">
         <h2>Modal</h2>
-        <div class="modal d-block position-static" id="myModal" tabindex="-1">
+        <div id="myModal" class="modal d-block position-static" tabindex="-1">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -1783,9 +1783,9 @@ const themeColors = [
     <div class="accordions row">
       <div class="col-4 bs-component">
         <h2>Basic Accordion</h2>
-        <div class="accordion" id="accordionExample">
+        <div id="accordionExample" class="accordion">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
+            <h2 id="headingOne" class="accordion-header">
               <button
                 class="accordion-button"
                 type="button"
@@ -1817,7 +1817,7 @@ const themeColors = [
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
+            <h2 id="headingTwo" class="accordion-header">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -1849,7 +1849,7 @@ const themeColors = [
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
+            <h2 id="headingThree" class="accordion-header">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -1884,9 +1884,9 @@ const themeColors = [
       </div>
       <div class="col-4 bs-component">
         <h2>Flush Accordion</h2>
-        <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div id="accordionFlushExample" class="accordion accordion-flush">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
+            <h2 id="flush-headingOne" class="accordion-header">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -1913,7 +1913,7 @@ const themeColors = [
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
+            <h2 id="flush-headingTwo" class="accordion-header">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -1941,7 +1941,7 @@ const themeColors = [
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
+            <h2 id="flush-headingThree" class="accordion-header">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -1975,9 +1975,9 @@ const themeColors = [
       </div>
       <div class="col-4 bs-component">
         <h2>Always open</h2>
-        <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div id="accordionPanelsStayOpenExample" class="accordion">
           <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <h2 id="panelsStayOpen-headingOne" class="accordion-header">
               <button
                 class="accordion-button"
                 type="button"
@@ -2008,7 +2008,7 @@ const themeColors = [
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <h2 id="panelsStayOpen-headingTwo" class="accordion-header">
               <button
                 class="accordion-button collapsed"
                 type="button"
@@ -2039,7 +2039,7 @@ const themeColors = [
             </div>
           </div>
           <div class="accordion-item">
-            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <h2 id="panelsStayOpen-headingThree" class="accordion-header">
               <button
                 class="accordion-button collapsed"
                 type="button"

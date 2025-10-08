@@ -134,6 +134,78 @@
       }
     }
   }
+  .feedback {
+    padding: 122px 0px;
+    @include media-breakpoint-down(md) {
+      padding: 60px 0px 56px 0px;
+    }
+    &__track {
+      will-change: transform; // Optimize for animations
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); // Smooth slide transition
+    }
+    .feedback-card {
+      width: 600px;
+      height: 248px;
+
+      border: 1px solid $gray; // Default gray border
+      position: relative;
+      transition: border-color 0.3s ease; // Smooth border transition
+      padding-top: 68px;
+
+      &:hover {
+        border-color: $primary;
+      }
+      @include media-breakpoint-down(md) {
+        width: 300px;
+        padding-top: 52px;
+      }
+    }
+    $move-distance: calc(
+      3 * (600px + 24px)
+    ); // 3 cards + 3 gaps = 1872px (desktop)
+    $move-distance-mobile: calc(
+      3 * (300px + 16px)
+    ); // 3 cards + 3 gaps = 948px (mobile)
+
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-$move-distance);
+      }
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(-$move-distance);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      @keyframes scroll-right {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-$move-distance-mobile);
+        }
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(-$move-distance-mobile);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
   .best-solutions {
     padding: 164px 12px 64px 12px;
     max-width: 1314px;

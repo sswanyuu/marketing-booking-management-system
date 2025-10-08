@@ -6,10 +6,21 @@
     :disabled="disabled"
     @click="handleClick"
   >
-    <template v-if="variant === 'arrow'">
+    <template v-if="variant === 'arrow-right'">
       <svg xmlns="http://www.w3.org/2000/svg">
         <path
           d="M19 12L5 12M19 12L13 18M19 12L13 6"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </template>
+    <template v-else-if="variant === 'arrow-left'">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M5 12L19 12M5 12L11 18M5 12L11 6"
           stroke="white"
           stroke-width="2"
           stroke-linecap="round"
@@ -32,7 +43,9 @@ const props = defineProps({
     type: String,
     default: 'primary',
     validator: value =>
-      ['primary', 'secondary', 'mobile', 'arrow'].includes(value),
+      ['primary', 'secondary', 'mobile', 'arrow-right', 'arrow-left'].includes(
+        value
+      ),
   },
 
   disabled: {
@@ -50,7 +63,8 @@ const classesMap = {
   primary: 'custom-button-primary md-headline-5-bold headline-6-bold',
   secondary: 'custom-button-secondary md-headline-5-bold headline-6-bold',
   mobile: 'custom-button-mobile headline-6-bold',
-  arrow: 'custom-button-arrow',
+  'arrow-right': 'custom-button-arrow',
+  'arrow-left': 'custom-button-arrow',
 };
 
 const buttonClasses = computed(() => {

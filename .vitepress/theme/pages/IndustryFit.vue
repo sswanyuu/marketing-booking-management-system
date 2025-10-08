@@ -107,6 +107,105 @@
         </div>
       </div>
     </section>
+    <!--feedback-->
+    <section
+      class="feedback w-100 d-flex justify-content-center align-items-center flex-column bg-tertiary"
+    >
+      <div class="headline-4-bold md-headline-1-bold text-center mb-5">
+        聽聽他們怎麼說
+      </div>
+
+      <!-- Feedback Animation Container -->
+      <div
+        class="px-3 px-md-5 w-100"
+        @mouseenter="handleMouseEnter"
+        @mouseleave="handleMouseLeave"
+      >
+        <div
+          ref="trackRef"
+          class="feedback__track gap-3 gap-md-5 d-flex overflow-visible"
+        >
+          <!-- First set of cards -->
+          <div
+            v-for="(feedback, index) in feedbackData"
+            :key="`first-${index}`"
+          >
+            <div
+              class="feedback-card px-5 px-md-9 d-flex flex-column align-items-center gap-4 gap-md-5 bg-white rounded-4"
+            >
+              <div class="d-flex flex-column gap-4 gap-md-5">
+                <div class="body-2 md-body-1">
+                  {{ feedback.content }}
+                </div>
+                <div class="d-flex align-items-center gap-8">
+                  <div class="headline-7-bold">
+                    {{ feedback.name }}
+                  </div>
+                  <div class="d-flex align-items-center gap-1">
+                    <img
+                      v-for="star in 5"
+                      :key="star"
+                      src="../assets/icons/star.svg"
+                      alt="star"
+                      class="star-icon"
+                    />
+                    <span>{{ feedback.rating }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Duplicate set for seamless loop -->
+          <div
+            v-for="(feedback, index) in feedbackData"
+            :key="`first-${index}`"
+          >
+            <div
+              class="feedback-card px-5 px-md-9 d-flex flex-column align-items-center gap-4 gap-md-5 bg-white rounded-4"
+            >
+              <div class="d-flex flex-column gap-4 gap-md-5">
+                <div class="body-2 md-body-1">
+                  {{ feedback.content }}
+                </div>
+                <div class="d-flex align-items-center gap-8">
+                  <div class="headline-7-bold">
+                    {{ feedback.name }}
+                  </div>
+                  <div class="d-flex align-items-center gap-1">
+                    <img
+                      v-for="star in 5"
+                      :key="star"
+                      src="../assets/icons/star.svg"
+                      alt="star"
+                      class="star-icon"
+                    />
+                    <span>{{ feedback.rating }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Controls at Bottom -->
+      <div
+        class="mt-6 mt-md-8 d-flex justify-content-center align-items-center gap-3 mt-4"
+      >
+        <Button
+          variant="arrow-left"
+          @click="prevFeedback"
+          @mouseenter="handleButtonMouseEnter"
+          @mouseleave="handleButtonMouseLeave"
+        />
+        <Button
+          variant="arrow-right"
+          @click="nextFeedback"
+          @mouseenter="handleButtonMouseEnter"
+          @mouseleave="handleButtonMouseLeave"
+        />
+      </div>
+    </section>
     <!--best solutions-->
     <section
       class="best-solutions w-100 d-flex justify-content-center align-items-center flex-column"
@@ -129,6 +228,8 @@
   </div>
 </template>
 <script>
+import Button from '../components/Button.vue';
+import { useFeedbackCarousel } from '../composables/useFeedbackCarousel.js';
 import SuccessfulCasesIcon1 from '../assets/images/pages/industry-fit/successful-case-icon-1.png';
 import SuccessfulCasesIcon2 from '../assets/images/pages/industry-fit/successful-case-icon-2.png';
 import SuccessfulCasesIcon3 from '../assets/images/pages/industry-fit/successful-case-icon-3.png';
@@ -238,10 +339,83 @@ export default {
       },
     ];
 
+    const feedbackData = [
+      {
+        content:
+          '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+        name: '王小明',
+        rating: '5.0',
+      },
+      {
+        content:
+          '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+        name: '李美華',
+        rating: '5.0',
+      },
+      {
+        content:
+          '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
+        name: '張志明',
+        rating: '5.0',
+      },
+      {
+        content:
+          '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+        name: '陳經理',
+        rating: '5.0',
+      },
+      {
+        content:
+          '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
+        name: '林主廚',
+        rating: '5.0',
+      },
+      {
+        content:
+          '我們鐵板燒每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+        name: '張老闆',
+        rating: '5.0',
+      },
+      {
+        content:
+          '我們最喜歡的是 Fullkeep 的行銷工具。客人用完餐後，系統會幫我們發優惠通知或節慶套餐資訊，很多熟客都因此再次回來。比起傳統方式，現在回訪率真的高很多',
+        name: '張老闆',
+        rating: '5.0',
+      },
+      {
+        content:
+          '我們鐵板營營每天座位有限，之前常遇到臨時取消，食材都白準備了。導入 Fullkeep 之後，客人訂位可以先預付訂金，不只降低 No Show，還能讓我們更精準控管食材，營運安心很多。',
+        name: '張老闆',
+        rating: '5.0',
+      },
+    ];
+
+    // ===== FEEDBACK CAROUSEL =====
+    const {
+      trackRef,
+      nextFeedback,
+      prevFeedback,
+      handleMouseEnter,
+      handleMouseLeave,
+      handleButtonMouseEnter,
+      handleButtonMouseLeave,
+    } = useFeedbackCarousel(feedbackData);
+
     return {
+      // Data
       successfulCasesIcons,
       industryFeatures,
       solutions,
+      feedbackData,
+
+      // Feedback carousel
+      trackRef,
+      nextFeedback,
+      prevFeedback,
+      handleMouseEnter,
+      handleMouseLeave,
+      handleButtonMouseEnter,
+      handleButtonMouseLeave,
     };
   },
 };
