@@ -34,8 +34,13 @@
     </section>
     <!-- items -->
     <section
-      class="items w-100 d-flex justify-content-center align-items-center"
+      class="items w-100 d-flex justify-content-center align-items-center position-relative"
     >
+      <img
+        src="../assets/images/bg.png"
+        alt="background"
+        class="items__bg position-absolute d-none d-md-block"
+      />
       <div class="items__list d-flex flex-column">
         <div
           v-for="item in easyUseItems"

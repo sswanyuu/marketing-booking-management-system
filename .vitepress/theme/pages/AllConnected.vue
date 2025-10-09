@@ -50,7 +50,7 @@
       />
     </section>
     <!-- items first section -->
-    <section class="items-first-section w-100 bg-tertiary">
+    <section class="items-first-section w-100 bg-tertiary position-relative">
       <div class="section-container d-flex flex-column align-items-center">
         <div
           class="items-first-section__title md-headline-1-bold headline-4-bold d-md-none"
@@ -82,6 +82,11 @@
           </div>
         </div>
       </div>
+      <img
+        src="../assets/images/bg.png"
+        alt="background"
+        class="items-first-section__bg position-absolute d-none d-md-block"
+      />
     </section>
     <!-- items second section -->
     <section class="items-second-section w-100">
