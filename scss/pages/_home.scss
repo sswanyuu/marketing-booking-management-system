@@ -138,22 +138,39 @@ $hero-smartest-color: #a580ff;
       padding: 0 12px;
       .painpoint-card {
         height: 508px;
-
-        &--first {
-          @include media-breakpoint-up(md) {
-            height: 340px;
-          }
-        }
-
-        @include media-breakpoint-down(md) {
-          height: 280px;
-        }
-
-        &__tourists-content {
+        &__content {
+          width: 60%;
           z-index: 1;
         }
-        &__tourists-image {
-          margin-top: -100px;
+        @include media-breakpoint-down(md) {
+          height: 280px;
+          &__content {
+            width: 100%;
+          }
+        }
+        &--first {
+          background-color: $banner-dark-purple;
+          gap: 100px;
+          height: 340px;
+
+          @include media-breakpoint-down(lg) {
+            gap: 80px;
+          }
+
+          @include media-breakpoint-down(md) {
+            height: 280px;
+            gap: 24px;
+          }
+        }
+        &--second {
+          background-image: url('../assets/images/pages/home/painpoint-2.png');
+          background-size: cover;
+          background-position: center top 10px;
+          background-repeat: no-repeat;
+
+          @include media-breakpoint-down(md) {
+            background-image: url('../assets/images/pages/home/painpoint-2-mobile.png');
+          }
         }
       }
     }

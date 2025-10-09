@@ -8,6 +8,7 @@ $brand-black: #252525;
 $brand-white: #ffffff;
 $brand-danger: #f00;
 $banner-black: #161616;
+$banner-dark-purple: #503294;
 
 /* Neutral */
 $neutral-1: #909090; // Gray01
@@ -42,7 +43,6 @@ $grid-breakpoints: (
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/mixins';
 
-// Override Bootstrap's danger color
 $primary: $brand-main-1;
 $secondary: $brand-main-2;
 $tertiary: $brand-main-3;
@@ -86,6 +86,7 @@ $theme-colors: map-merge(
 $colors: map-merge(
   $colors,
   (
+    'banner-dark-purple': $banner-dark-purple,
     'banner-black': $banner-black,
   )
 );

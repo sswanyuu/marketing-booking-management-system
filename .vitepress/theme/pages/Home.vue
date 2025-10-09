@@ -135,13 +135,13 @@
           不是只能習慣混亂，我們提供更好的選擇，讓餐廳管理回到你能掌握的節奏，痛點不再是日常。
         </div>
       </div>
-      <div class="painpoints__list row gx-4 gy-4">
+      <div class="painpoints__list row gx-5 gy-5">
         <div class="col-12">
           <div
-            class="painpoint-card painpoint-card--first d-flex flex-column flex-md-row gap-4 px-md-9 bg-secondary align-items-center rounded-4 justify-content-between"
+            class="painpoint-card painpoint-card--first d-flex flex-column flex-md-row align-items-center rounded-4 px-md-9 justify-content-between"
           >
             <div
-              class="d-flex flex-column gap-2 text-white col-md-5 mt-7 mt-md-0 mx-7 mx-md-0"
+              class="painpoint-card__content d-flex flex-column gap-3 gap-md-4 text-white mt-7 mt-md-0 px-7 px-md-0 text-center text-md-start"
             >
               <div class="headline-6-bold md-headline-5-bold">
                 {{ painPoints[0].title }}
@@ -150,11 +150,18 @@
                 {{ painPoints[0].description }}
               </div>
             </div>
-            <div class="col-md-7 overflow-hidden mx-5 mx-md-0 align-self-end">
+            <div
+              class="align-self-end d-flex align-items-center align-items-md-end px-7 px-md-0"
+            >
               <img
                 :src="painPoints[0].image"
                 alt="painpoint-image"
-                class="object-fit-cover"
+                class="object-fit-cover d-none d-md-block"
+              />
+              <img
+                :src="painPoints[0].mobileImage"
+                alt="painpoint-image"
+                class="object-fit-cover d-block d-md-none"
               />
             </div>
           </div>
@@ -162,10 +169,10 @@
 
         <div class="col-12 col-md-5">
           <div
-            class="painpoint-card d-flex flex-column pt-7 gap-4 pt-md-9 bg-gray-dark align-items-center rounded-4 justify-content-between"
+            class="painpoint-card painpoint-card--second d-flex flex-column pt-7 gap-4 pt-md-9 align-items-center rounded-4 justify-content-between bg-gray-dark"
           >
             <div
-              class="painpoint-card__tourists-content d-flex flex-column gap-2 text-white w-75"
+              class="painpoint-card__content d-flex flex-column gap-3 gap-md-4 text-white text-center px-7 px-md-0"
             >
               <div class="headline-6-bold md-headline-5-bold">
                 {{ painPoints[1].title }}
@@ -174,11 +181,6 @@
                 {{ painPoints[1].description }}
               </div>
             </div>
-            <img
-              :src="painPoints[1].image"
-              alt="painpoint-image"
-              class="painpoint-card__tourists-image overflow-hidden w-100 object-fit-cover rounded-4"
-            />
           </div>
         </div>
         <div class="col-12 col-md-7">
@@ -186,7 +188,7 @@
             class="painpoint-card d-flex flex-column gap-4 pt-md-9 bg-primary align-items-center rounded-4 justify-content-between"
           >
             <div
-              class="d-flex flex-column gap-2 text-white w-75 mt-7 mt-md-0 mx-7 mx-md-0"
+              class="painpoint-card__content d-flex flex-column gap-3 gap-md-4 text-white mt-7 mt-md-0 px-7 px-md-0 text-center"
             >
               <div class="headline-6-bold md-headline-5-bold">
                 {{ painPoints[2].title }}
@@ -198,7 +200,12 @@
             <img
               :src="painPoints[2].image"
               alt="painpoint-image"
-              class="overflow-hidden"
+              class="overflow-hidden d-none d-md-block"
+            />
+            <img
+              :src="painPoints[2].mobileImage"
+              alt="painpoint-image"
+              class="overflow-hidden d-block d-md-none"
             />
           </div>
         </div>
@@ -213,12 +220,12 @@
       <div class="solutions__container d-flex flex-column">
         <div class="row">
           <div class="col-12">
-            <div class="headline-4-bold md-headline-1-bold text-center">
+            <div class="headline-4-bold md-headline-1-bold text-center px-5">
               全方位的營運體驗，讓你專注把餐廳做到最好
             </div>
           </div>
         </div>
-        <div class="row gx-4 gy-4">
+        <div class="row gx-5 gy-5">
           <div
             v-for="(solution, index) in solutions"
             :key="solution.title"
@@ -247,7 +254,12 @@
               <img
                 :src="solution.image"
                 alt="solution-image"
-                class="overflow-hidden"
+                class="overflow-hidden d-none d-md-block"
+              />
+              <img
+                :src="solution.mobileImage"
+                alt="solution-image"
+                class="overflow-hidden d-block d-md-none"
               />
             </div>
           </div>
@@ -272,13 +284,19 @@ import Feature1 from '../assets/images/pages/home/feature-1.png';
 import Feature2 from '../assets/images/pages/home/feature-2.png';
 import Feature3 from '../assets/images/pages/home/feature-3.png';
 import Solution1 from '../assets/images/pages/home/solution-1.png';
+import Solution1Mobile from '../assets/images/pages/home/solution-1-mobile.png';
 import Solution2 from '../assets/images/pages/home/solution-2.png';
+import Solution2Mobile from '../assets/images/pages/home/solution-2-mobile.png';
 import Solution3 from '../assets/images/pages/home/solution-3.png';
+import Solution3Mobile from '../assets/images/pages/home/solution-3-mobile.png';
 import Solution4 from '../assets/images/pages/home/solution-4.png';
+import Solution4Mobile from '../assets/images/pages/home/solution-4-mobile.png';
 import Solution5 from '../assets/images/pages/home/solution-5.png';
+import Solution5Mobile from '../assets/images/pages/home/solution-5-mobile.png';
 import Painpoint1 from '../assets/images/pages/home/painpoint-1.png';
-import Painpoint2 from '../assets/images/pages/home/painpoint-2.png';
+import Painpoint1Mobile from '../assets/images/pages/home/painpoint-1-mobile.png';
 import Painpoint3 from '../assets/images/pages/home/painpoint-3.png';
+import Painpoint3Mobile from '../assets/images/pages/home/painpoint-3-mobile.png';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 
@@ -357,18 +375,19 @@ const painPoints = [
     description:
       'Fullkeep 支援即時調整人數、時間與備註，可直接編輯預約內容，流程更順暢，服務更彈性。',
     image: Painpoint1,
+    mobileImage: Painpoint1Mobile,
   },
   {
     title: '外籍旅客訂位困難?',
     description:
       'Fullkeep 支援多語介面、Email/國際電話驗證與線上付款，跨國顧客輕鬆完成預約，不再流失訂單。',
-    image: Painpoint2,
   },
   {
     title: '無法由品牌網站直接訂位?',
     description:
       'Fullkeep 提供嵌入式API，快速整合進品牌網站，無需跳轉頁面，維持品牌一致性，客戶體驗不中斷。',
     image: Painpoint3,
+    mobileImage: Painpoint3Mobile,
   },
 ];
 const solutions = [
@@ -377,24 +396,28 @@ const solutions = [
     description:
       '自動發送訂位與候補通知，不再依賴人工逐一聯繫，讓顧客即時收到更新，也讓員工有更多時間專注服務現場。',
     image: Solution1,
+    mobileImage: Solution1Mobile,
   },
   {
     title: 'Google 訂位整合',
     description:
       '搜尋結果不只是曝光，而能直接轉化為訂位機會。搜尋結果同時出現訂位連結，大幅提升轉單效率。',
     image: Solution2,
+    mobileImage: Solution2Mobile,
   },
   {
     title: '預付訂金與提醒功能',
     description:
       '彈性設定訂金金額與付款方式，搭配自動提醒機制，有效降低 No Show 率，讓每一份食材與座位都被善用，提升營運效率。',
     image: Solution3,
+    mobileImage: Solution3Mobile,
   },
   {
     title: 'CRM 與再行銷工具',
     description:
       '內建顧客資料系統與行銷模組，輕鬆設定推播優惠、新菜單通知與節日問候，從一次性客人養成忠誠熟客。',
     image: Solution4,
+    mobileImage: Solution4Mobile,
   },
   {
     title: '跨店共用付款與備註資料',
@@ -402,6 +425,7 @@ const solutions = [
       '記錄每位顧客的付款紀錄與訂位偏好，不論哪家分店，一次輸入即可通用，讓回訪體驗更加順暢，服務更有溫度。',
     image: Solution5,
     class: ['col-md-12', 'flex-md-row'],
+    mobileImage: Solution5Mobile,
   },
 ];
 </script>
