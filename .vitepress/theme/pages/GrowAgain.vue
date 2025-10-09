@@ -7,12 +7,12 @@
       <img
         src="../assets/images/pages/grow-again/hero-bg.png"
         alt="hero"
-        class="background-image__desktop d-none d-md-block"
+        class="hero__bg--desktop d-none d-md-block"
       />
       <img
         src="../assets/images/pages/grow-again/hero-bg-mobile.png"
         alt="hero"
-        class="background-image__mobile d-block d-md-none"
+        class="hero__bg--mobile d-block d-md-none"
       />
       <div
         class="hero__content flex-column w-100 gap-md-8 gap-7 justify-content-center text-white d-flex"
@@ -76,7 +76,7 @@
     <!-- awareness -->
     <section class="awareness d-flex flex-column align-items-center">
       <div
-        class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center"
+        class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center px-5 px-md-0"
       >
         <div class="md-headline-1-bold headline-4-bold">同產業餐飲曝光</div>
 
@@ -194,7 +194,9 @@
           alt="services-1-banner"
           class="d-block d-md-none object-fit-contain"
         />
-        <div class="d-flex flex-column gap-3 gap-md-9 w-100 align-self-center">
+        <div
+          class="d-flex flex-column gap-3 gap-md-9 w-100 align-self-center px-4 px-md-0"
+        >
           <div class="md-headline-1-bold headline-4-bold">資料報告與分析</div>
           <div class="text-gray body-2 md-headline-1-regular">
             提供視覺化報表與關鍵指標追蹤，協助餐廳了解營運狀況與行銷效益，快速調整策略
@@ -204,7 +206,9 @@
       <div
         class="services__banner-2 d-flex flex-column flex-md-row gap-6 gap-md-5 bg-white rounded-4 border border-gray-light"
       >
-        <div class="d-flex flex-column gap-3 gap-md-9 w-100 align-self-center">
+        <div
+          class="d-flex flex-column gap-3 gap-md-9 w-100 align-self-center px-4 px-md-0"
+        >
           <div class="md-headline-1-bold headline-4-bold">多元促銷與優惠券</div>
           <div
             class="d-flex flex-column gap-2 gap-md-3 text-gray body-2 md-headline-2-regular"
@@ -256,20 +260,86 @@
           class="bottom-banner__slogan-decoration d-none d-md-flex position-absolute"
         />
         <div
-          class="bottom-banner__slogan md-headline-1-bold headline-4-bold text-white mx-3 text-center"
+          class="bottom-banner__slogan md-headline-1-bold headline-4-bold text-white px-4 px-md-0 text-center"
         >
           結帳不是結束，而是下一次相見的開始。
+        </div>
+      </div>
+      <div
+        class="row align-items-center bottom-banner__images d-none d-md-flex"
+      >
+        <div class="col d-flex flex-column gap-8">
+          <img
+            src="../assets/images/pages/grow-again/bottom-banner-web-1.png"
+            alt="bottom-banner-web-1"
+            class="rounded-4"
+            data-aos="fade-in"
+            data-aos-once="false"
+            data-aos-delay="0"
+          />
+          <img
+            src="../assets/images/pages/grow-again/bottom-banner-web-2.png"
+            alt="bottom-banner-web-2"
+            class="rounded-4"
+            data-aos="fade-in"
+            data-aos-once="false"
+            data-aos-delay="200"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="../assets/images/pages/grow-again/bottom-banner-web-3.png"
+            alt="bottom-banner-web-3"
+            class="rounded-4"
+            data-aos="fade-in"
+            data-aos-once="false"
+            data-aos-delay="1400"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="../assets/images/pages/grow-again/bottom-banner-web-4.png"
+            alt="bottom-banner-web-4"
+            class="rounded-4"
+            style="margin-top: 124px"
+            data-aos="fade-in"
+            data-aos-once="false"
+            data-aos-delay="600"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="../assets/images/pages/grow-again/bottom-banner-web-5.png"
+            alt="bottom-banner-web-5"
+            class="rounded-4"
+            data-aos="fade-in"
+            data-aos-once="false"
+            data-aos-delay="400"
+          />
+        </div>
+        <div class="col d-flex flex-column gap-8">
+          <img
+            src="../assets/images/pages/grow-again/bottom-banner-web-6.png"
+            alt="bottom-banner-web-6"
+            class="rounded-4"
+            data-aos="fade-in"
+            data-aos-once="false"
+            data-aos-delay="1200"
+          />
+          <img
+            src="../assets/images/pages/grow-again/bottom-banner-web-7.png"
+            alt="bottom-banner-web-7"
+            class="rounded-4"
+            data-aos="fade-in"
+            data-aos-once="false"
+            data-aos-delay="800"
+          />
         </div>
       </div>
       <img
         src="../assets/images/pages/grow-again/bottom-banner-photo-mobile.png"
         alt="bottom-banner"
         class="bottom-banner__photo d-block d-md-none object-fit-contain"
-      />
-      <img
-        src="../assets/images/pages/grow-again/bottom-banner-photo.png"
-        alt="bottom-banner"
-        class="bottom-banner__photo d-none d-md-flex object-fit-contain"
       />
     </section>
     <!-- revenue -->
@@ -287,6 +357,12 @@ import Brand3 from '../assets/images/pages/grow-again/brand-3.png';
 import Brand4 from '../assets/images/pages/grow-again/brand-4.png';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 const brandData = {
   1: { name: '明水然‧樂', image: Brand1 },
   2: { name: '辣國際餐飲集團', image: Brand2 },
@@ -312,6 +388,3 @@ const getTrackClasses = trackIndex => {
   ];
 };
 </script>
-<style lang="scss">
-@import '../../../scss/pages/_grow-again.scss';
-</style>

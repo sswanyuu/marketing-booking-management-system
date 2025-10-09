@@ -7,12 +7,12 @@
       <img
         src="../assets/images/pages/tourist-ready/hero-bg.png"
         alt="hero"
-        class="background-image__desktop d-none d-md-block"
+        class="hero__bg--desktop d-none d-md-block"
       />
       <img
         src="../assets/images/pages/tourist-ready/hero-bg-mobile.png"
         alt="hero"
-        class="background-image__mobile d-block d-md-none"
+        class="hero__bg--mobile d-block d-md-none"
       />
       <div
         class="hero__content flex-column w-100 gap-md-8 gap-7 justify-content-center text-white d-flex"
@@ -35,7 +35,7 @@
     <!-- globe -->
     <section class="globe d-flex flex-column align-items-center">
       <div
-        class="d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-md-7 mx-3 py-5"
+        class="d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-md-7 mx-3 py-5 px-5 px-md-0"
       >
         <div class="md-headline-1-bold headline-4-bold">
           專為精緻餐飲需求打造，與國際無縫接軌
@@ -72,7 +72,7 @@
         >
           <img class="item__image" :src="item.image" :alt="item.title" />
 
-          <div class="item__content d-flex flex-column">
+          <div class="item__content d-flex flex-column px-4 px-md-0">
             <div
               class="item__title-container d-flex flex-column gap-3 gap-md-6"
             >
@@ -107,7 +107,7 @@
       class="integration d-flex justify-content-center flex-column align-items-center"
     >
       <div
-        class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-md-7 py-5"
+        class="integration__content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-md-7 p-5 px-md-0"
       >
         <div class="md-headline-1-bold headline-4-bold">各國系統整合</div>
         <div class="d-flex flex-column align-items-center">
@@ -119,16 +119,28 @@
           </div>
         </div>
       </div>
-      <img
-        src="../assets/images/pages/tourist-ready/integration.png"
-        alt="integration phone"
-        class="integration-phone d-md-block d-none"
-      />
-      <img
-        src="../assets/images/pages/tourist-ready/integration-mobile.png"
-        alt="integration phone"
-        class="integration-phone d-md-none d-block"
-      />
+      <div class="integration__block d-md-block d-none">
+        <div class="circle circle--1"></div>
+        <div class="circle circle--2"></div>
+        <div class="circle circle--3"></div>
+        <div class="circle circle--4"></div>
+        <img
+          src="../assets/images/pages/tourist-ready/integration.png"
+          alt="integration phone"
+          class="integration__phone"
+        />
+      </div>
+      <div class="integration__block d-md-none d-block">
+        <div class="circle circle--1"></div>
+        <div class="circle circle--2"></div>
+        <div class="circle circle--3"></div>
+        <div class="circle circle--4"></div>
+        <img
+          src="../assets/images/pages/tourist-ready/integration-mobile.png"
+          alt="integration phone"
+          class="integration__phone d-md-none d-block"
+        />
+      </div>
     </section>
   </div>
 </template>
@@ -175,6 +187,3 @@ onMounted(() => {
   });
 });
 </script>
-<style lang="scss">
-@import '../../../scss/pages/_tourist-ready.scss';
-</style>

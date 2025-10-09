@@ -1,0 +1,49 @@
+// Button utilities
+$btn-padding-x-xl: 48px;
+$btn-padding-y-xl: 24px;
+$btn-padding-mobile: 16px;
+
+.btn-xl {
+  padding: $btn-padding-y-xl $btn-padding-x-xl;
+  @include media-breakpoint-down(md) {
+    padding: $btn-padding-mobile;
+    width: 100%;
+  }
+}
+
+// Animation utilities
+@keyframes rotate1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: translate(-50%, -50%) rotate(270deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(630deg);
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(480deg);
+  }
+}
+
+@keyframes rotate4 {
+  from {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(405deg);
+  }
+}

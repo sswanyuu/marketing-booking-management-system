@@ -42,7 +42,3 @@
     </div>
   </footer>
 </template>
-
-<style lang="scss">
-@import '../../../scss/components/_simple-footer';
-</style>

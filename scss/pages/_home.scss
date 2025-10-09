@@ -1,6 +1,3 @@
-@import '../_variables';
-@import '../base/typography';
-
 $hero-smartest-color: #a580ff;
 .home {
   .hero {
@@ -26,7 +23,7 @@ $hero-smartest-color: #a580ff;
       height: 424px;
     }
 
-    .background-image__desktop {
+    &__bg--desktop {
       height: 100%;
       width: auto;
       position: absolute;
@@ -34,7 +31,7 @@ $hero-smartest-color: #a580ff;
       right: 0;
       object-fit: cover;
     }
-    .background-image__mobile {
+    &__bg--mobile {
       width: 100%;
       position: absolute;
       right: 0;
@@ -53,7 +50,7 @@ $hero-smartest-color: #a580ff;
     @include media-breakpoint-down(md) {
       margin: 42px 0px;
     }
-    .brand__logo {
+    .brand {
       height: 72px;
       width: 276px;
       @include media-breakpoint-down(md) {
@@ -78,7 +75,7 @@ $hero-smartest-color: #a580ff;
     }
     &__background {
       width: 90%;
-      background-color: $brand-main-1;
+      background-color: $primary;
 
       z-index: -1;
       position: absolute;
@@ -90,11 +87,13 @@ $hero-smartest-color: #a580ff;
       }
     }
     &__list {
-      width: 100%;
+      width: 80%;
       padding: 0 12px;
       margin-top: 54px;
       max-width: 1314px;
+
       @include media-breakpoint-down(md) {
+        width: 100%;
         margin-top: 30px;
       }
       .feature-card {
@@ -115,7 +114,7 @@ $hero-smartest-color: #a580ff;
     @include media-breakpoint-down(md) {
       margin-top: 112px;
     }
-    .header-container {
+    &__header {
       width: 560px;
       @include media-breakpoint-down(md) {
         width: 312px;

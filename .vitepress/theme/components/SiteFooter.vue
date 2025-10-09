@@ -6,16 +6,21 @@
       <section
         class="top-image d-flex align-items-center justify-content-center"
       >
-        <img
-          src="../assets/images/layout/footer/slogan.png"
-          alt="hero"
-          class="background-image__desktop d-none d-md-block mb-md-5"
-        />
-        <img
-          src="../assets/images/layout/footer/slogan-mobile.png"
-          alt="hero"
-          class="background-image__mobile d-flex d-md-none mb-4"
-        />
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="md-headline-2-bold headline-4-bold">交給</span>
+          <img
+            src="../assets/images/layout/footer/slogan.png"
+            alt="hero"
+            class="top-image__bg--desktop d-none d-md-block"
+          />
+          <img
+            src="../assets/images/layout/footer/slogan-mobile.png"
+            alt="hero"
+            class="top-image__bg--mobile d-flex d-md-none"
+          />
+
+          <span class="md-headline-2-bold headline-4-bold">吧！</span>
+        </div>
       </section>
       <section class="w-100 d-flex justify-content-center">
         <div
@@ -24,12 +29,12 @@
           <img
             src="../assets/images/layout/footer/bg.png"
             alt="footer-background"
-            class="background-image__desktop d-none d-md-block rounded-4"
+            class="banner__bg--desktop d-none d-md-block rounded-4"
           />
           <img
             src="../assets/images/layout/footer/bg-mobile.png"
             alt="footer-background"
-            class="background-image__mobile d-block d-md-none rounded-4"
+            class="banner__bg--mobile d-block d-md-none rounded-4"
           />
           <div
             class="banner__content d-flex flex-column w-md-50 w-100 gap-9 justify-content-center"
@@ -112,7 +117,3 @@ import { useNavigation } from '../composables/useNavigation.js';
 
 const { navigateTo, handleDemoBooking, ROUTES } = useNavigation();
 </script>
-
-<style lang="scss">
-@import '../../../scss/components/_footer';
-</style>

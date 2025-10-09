@@ -15,11 +15,13 @@
               <img :src="menuIcon" alt="Open menu" />
             </button>
           </div>
-          <img
-            class="header__logo"
-            src="../assets/images/logo.png"
-            alt="fullkeep"
-          />
+          <div class="header__logo-container" @click="navigateTo(ROUTES.HOME)">
+            <img
+              class="header__logo"
+              src="../assets/images/logo.png"
+              alt="fullkeep"
+            />
+          </div>
         </div>
         <!-- Desktop Navigation -->
         <div class="d-flex align-items-center gap-5">
@@ -28,6 +30,7 @@
               <!-- Design System 🕹️ Remove if not needed -->
               <a
                 class="text-white headline-8-bold text-decoration-none"
+                role="button"
                 @click="navigateTo(ROUTES.DESIGN_SYSTEM)"
               >
                 DESIGN SYSTEM
@@ -36,6 +39,7 @@
             <li class="d-flex align-items-center gap-1">
               <a
                 class="text-white headline-8-bold text-decoration-none"
+                role="button"
                 @click="toggleDesktopFeatures"
               >
                 FEATURES
@@ -50,6 +54,7 @@
             <li>
               <a
                 class="text-white headline-8-bold text-decoration-none"
+                role="button"
                 @click="navigateTo(ROUTES.ALL_CONNECTED)"
               >
                 INTEGRATION
@@ -58,6 +63,7 @@
             <li>
               <a
                 class="text-white headline-8-bold text-decoration-none"
+                role="button"
                 @click="navigateTo(ROUTES.INDUSTRY_FIT)"
               >
                 SOLUTIONS
@@ -108,7 +114,6 @@ import chevronUpIcon from '../assets/icons/chevron-up.svg';
 import { useHeaderHeight } from '../composables/useHeaderHeight';
 import { useNavigation } from '../composables/useNavigation.js';
 const { navigateTo, handleDemoBooking, ROUTES } = useNavigation();
-import '../../../scss/components/_header.scss';
 
 // Reactive state
 const isMenuOpen = ref(false);

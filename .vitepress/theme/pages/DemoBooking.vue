@@ -34,7 +34,7 @@
           </div>
           <div class="form-divider bg-primary"></div>
           <form
-            class="d-flex flex-column gap-6 gap-md-7"
+            class="custom-form d-flex flex-column gap-6 gap-md-7"
             @submit.prevent="handleSubmit"
           >
             <div class="input-container d-flex flex-column">
@@ -74,9 +74,11 @@
                 @input="() => handleFieldValidation('email')"
               />
             </div>
-            <Button class="self-align-center" @click="handleSubmit">
-              加入體驗名單
-            </Button>
+            <div class="w-100 d-flex justify-content-center">
+              <Button class="self-align-center" @click="handleSubmit">
+                加入體驗名單
+              </Button>
+            </div>
           </form>
         </div>
         <div
@@ -134,7 +136,3 @@ const handleSubmit = () => {
   }
 };
 </script>
-
-<style lang="scss">
-@import '../../../scss/pages/_demo-booking.scss';
-</style>

@@ -1,32 +1,34 @@
 <template>
   <div class="row">
     <h2>Custom Input</h2>
-    <Input
-      v-model="formData.email.value"
-      label="信箱"
-      placeholder="輸入您的信箱"
-      type="email"
-      :state="formData.email.isValid ? 'default' : 'error'"
-      :errorMessage="formData.email.errorMessage"
-    />
+    <form class="custom-form">
+      <Input
+        v-model="formData.email.value"
+        label="信箱"
+        placeholder="輸入您的信箱"
+        type="email"
+        :state="formData.email.isValid ? 'default' : 'error'"
+        :error-message="formData.email.errorMessage"
+      />
 
-    <Input
-      v-model="formData.name.value"
-      label="姓名"
-      placeholder="輸入您的姓名"
-      type="text"
-      required
-      :state="formData.name.isValid ? 'default' : 'error'"
-      :errorMessage="formData.name.errorMessage"
-    />
+      <Input
+        v-model="formData.name.value"
+        label="姓名"
+        placeholder="輸入您的姓名"
+        type="text"
+        required
+        :state="formData.name.isValid ? 'default' : 'error'"
+        :error-message="formData.name.errorMessage"
+      />
 
-    <Input
-      v-model="formData.disabledField"
-      label="Error"
-      placeholder="此欄位已禁用"
-      type="text"
-      disabled
-    />
+      <Input
+        v-model="formData.disabledField"
+        label="Error"
+        placeholder="此欄位已禁用"
+        type="text"
+        disabled
+      />
+    </form>
   </div>
 </template>
 

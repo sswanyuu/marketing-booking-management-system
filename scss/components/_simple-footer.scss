@@ -1,20 +1,18 @@
-@import '../_variables';
-
 .simple-footer {
   .navigation {
-    padding: 156px 12px;
+    padding: $simple-footer-navigation-padding;
 
     @media (max-width: 768px) {
-      padding: 48px 12px 56px 12px;
+      padding: $simple-footer-navigation-padding-mobile;
     }
   }
 
   .navigation__content {
-    max-width: 1314px;
+    max-width: $simple-footer-navigation-content-max-width;
   }
 
   .logo {
-    height: 32px;
+    height: $simple-footer-logo-height;
     width: auto;
   }
 }

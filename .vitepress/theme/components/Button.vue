@@ -60,8 +60,9 @@ const props = defineProps({
 
 const emit = defineEmits(['click']);
 const classesMap = {
-  primary: 'custom-button-primary md-headline-5-bold headline-6-bold',
-  secondary: 'custom-button-secondary md-headline-5-bold headline-6-bold',
+  primary: 'btn-primary md-headline-5-bold headline-6-bold btn-xl',
+  secondary:
+    'custom-button-secondary md-headline-5-bold headline-6-bold btn-xl',
   mobile: 'custom-button-mobile headline-6-bold',
   'arrow-right': 'custom-button-arrow',
   'arrow-left': 'custom-button-arrow',

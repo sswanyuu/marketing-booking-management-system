@@ -7,12 +7,12 @@
       <img
         src="../assets/images/pages/industry-fit/hero-bg.png"
         alt="hero"
-        class="background-image__desktop d-none d-md-block"
+        class="hero__bg--desktop d-none d-md-block"
       />
       <img
         src="../assets/images/pages/industry-fit/hero-bg-mobile.png"
         alt="hero"
-        class="background-image__mobile d-block d-md-none"
+        class="hero__bg--mobile d-block d-md-none"
       />
       <div
         class="hero__content flex-column w-100 gap-md-8 gap-7 justify-content-center text-white d-flex"
@@ -38,7 +38,7 @@
         class="successful-cases__container d-flex flex-column align-items-center"
       >
         <div
-          class="d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-3 text-white"
+          class="successful-cases__header d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-3 text-white"
         >
           <div class="md-headline-1-bold headline-4-bold">產業成功案例</div>
 
@@ -91,7 +91,7 @@
         >
           <img class="item__image" :src="item.image" :alt="item.title" />
 
-          <div class="d-flex flex-column gap-3 gap-md-7">
+          <div class="d-flex flex-column gap-3 gap-md-7 px-4 px-md-0">
             <div class="item__title md-headline-3-bold headline-4-bold">
               {{ item.title }}
             </div>
@@ -115,9 +115,9 @@
     </section>
     <!--feedback-->
     <section
-      class="feedback w-100 d-flex justify-content-center align-items-center flex-column bg-tertiary"
+      class="feedback w-100 d-flex justify-content-center align-items-center flex-column bg-tertiary overflow-hidden"
     >
-      <div class="headline-4-bold md-headline-1-bold text-center mb-5">
+      <div class="headline-4-bold md-headline-1-bold text-center mb-7 mb-md-11">
         聽聽他們怎麼說
       </div>
 
@@ -230,10 +230,10 @@
     <section
       class="best-solutions w-100 d-flex justify-content-center align-items-center flex-column"
     >
-      <div class="headline-4-bold md-headline-1-bold text-center">
+      <div class="headline-4-bold md-headline-1-bold text-center px-5 px-md-0">
         最佳解決方案，適用更多餐飲型態
       </div>
-      <div class="row gx-9 gy-9">
+      <div class="row gx-4 gx-md-9 gy-6 gy-md-9">
         <div
           v-for="solution in solutions"
           :key="solution.title"
@@ -421,6 +421,3 @@ const {
   handleButtonMouseLeave,
 } = useFeedbackCarousel(feedbackData);
 </script>
-<style lang="scss">
-@import '../../../scss/pages/_industry-fit.scss';
-</style>

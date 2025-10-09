@@ -75,20 +75,20 @@ const features = [
     icon: uxIcon,
     title: '優良使用體驗',
     description: '貼近使用者操作習慣,顧客與店家都能享受高效的數位訂位體驗。',
-    link: '/easy-use',
+    link: '/easy-use.html',
   },
   {
     icon: marketingIcon,
     title: '行銷再接觸',
     description: '精準行銷與數據分析,深化與顧客的互動,提升品牌忠誠度與回購率。',
-    link: '/grow-again',
+    link: '/grow-again.html',
   },
   {
     icon: touristsIcon,
     title: '觀光客友善',
     description:
       '無論語言、介面或聯繫工具,提供世界各地的顧客順暢的訂位流程與服務資訊。',
-    link: '/tourist-ready',
+    link: '/tourist-ready.html',
   },
 ];
 

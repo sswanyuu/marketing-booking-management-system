@@ -1,0 +1,82 @@
+// Site Footer Component Styles
+// Using Bootstrap utilities first, custom styles only where needed
+
+.footer {
+  &__logo {
+    width: $footer-logo-width;
+  }
+
+  .top-image {
+    padding-top: $footer-top-image-margin;
+    @include media-breakpoint-down(md) {
+      padding: $footer-top-image-padding-mobile;
+    }
+    &__bg--desktop {
+      max-width: 500px;
+    }
+    &__bg--mobile {
+      max-width: 176px;
+      object-fit: cover;
+    }
+  }
+
+  .banner {
+    position: relative;
+    z-index: $zindex-modal;
+    margin: $footer-banner-margin;
+    height: $footer-banner-height;
+    max-width: $footer-banner-max-width;
+    background-color: $banner-black;
+    width: 100%;
+    @include media-breakpoint-down(md) {
+      height: $footer-banner-height-mobile;
+      padding: $footer-banner-padding-mobile;
+      margin: $footer-banner-margin-mobile;
+    }
+
+    &__bg--desktop {
+      height: 100%;
+      width: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      object-fit: cover;
+    }
+    &__bg--mobile {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    &__content {
+      z-index: 1;
+      margin-left: $footer-banner-content-margin-left;
+      @include media-breakpoint-down(md) {
+        margin: 0px;
+      }
+    }
+  }
+
+  &__slogan-decoration {
+    bottom: $footer-slogan-decoration-bottom;
+    left: 0;
+    height: auto;
+
+    @include media-breakpoint-down(md) {
+      bottom: $footer-slogan-decoration-bottom-mobile;
+      left: $footer-slogan-decoration-left-mobile;
+    }
+  }
+
+  .navigation {
+    padding: $footer-navigation-padding;
+
+    @include media-breakpoint-down(md) {
+      padding: $footer-navigation-padding-mobile;
+    }
+    &__content {
+      max-width: $footer-navigation-content-max-width;
+      flex-shrink: 0;
+    }
+  }
+}

@@ -1,40 +1,37 @@
-@import '../variables';
-@import '../base/typography';
-
 .header-features-section {
-  height: 384px;
+  height: $features-section-height;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   width: 100%;
-  padding: 0 12px;
+  padding: $features-section-padding;
   z-index: $zindex-tooltip;
 
   &__container {
-    max-width: 1314px;
+    max-width: $features-container-max-width;
   }
 
   &__info {
-    min-width: 160px;
-    max-width: 280px;
+    min-width: $features-info-min-width;
+    max-width: $features-info-max-width;
   }
 
   &__divider {
-    height: 236px;
-    width: 1px;
-    background-color: #d7d7d7;
+    height: $features-divider-height;
+    width: $features-divider-width;
+    background-color: $features-divider-color;
   }
 
   .feature-card {
-    width: 33.33%;
-    min-width: 180px;
+    width: $feature-card-width;
+    min-width: $feature-card-min-width;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: $feature-card-border-width solid transparent;
 
     &__image {
-      width: 80px;
-      height: 80px;
+      width: $feature-card-image-size;
+      height: $feature-card-image-size;
     }
     &__arrow {
       display: none;

@@ -1,6 +1,6 @@
 <template>
-  <div class="input d-flex flex-column">
-    <label class="md-headline-7-bold headline-5-bold" :for="inputId">
+  <div class="form-group mb-4">
+    <label class="form-label" :for="inputId">
       {{ label }}
     </label>
 
@@ -88,20 +88,10 @@ const inputValue = computed({
 });
 
 const inputClasses = computed(() => {
-  const classes = [
-    'input__field',
-    'body-3',
-    'md-headline-2-regular',
-    'mt-2',
-    'w-100',
-    'bg-white',
-    'px-4',
-    'py-3',
-    'py-md-4',
-  ];
+  const classes = ['form-control'];
 
   if (props.state === 'error') {
-    classes.push('input__field--error');
+    classes.push('is-invalid');
   }
   return classes;
 });

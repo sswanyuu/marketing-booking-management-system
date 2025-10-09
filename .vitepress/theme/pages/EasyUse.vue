@@ -7,12 +7,12 @@
       <img
         src="../assets/images/pages/easy-use/hero-bg.png"
         alt="hero"
-        class="background-image__desktop d-none d-md-block"
+        class="hero__bg--desktop d-none d-md-block"
       />
       <img
         src="../assets/images/pages/easy-use/hero-bg-mobile.png"
         alt="hero"
-        class="background-image__mobile d-block d-md-none"
+        class="hero__bg--mobile d-block d-md-none"
       />
       <div
         class="hero__content flex-column w-100 gap-md-8 gap-7 justify-content-center text-white d-flex"
@@ -42,13 +42,9 @@
         class="items__bg position-absolute d-none d-md-block"
       />
       <div class="items__list d-flex flex-column">
-        <div
-          v-for="item in easyUseItems"
-          :key="item.title"
-          class="item-container d-flex"
-        >
+        <div v-for="item in easyUseItems" :key="item.title" class="item d-flex">
           <img class="item__image" :src="item.image" :alt="item.title" />
-          <div class="item__content d-flex flex-column">
+          <div class="item__content d-flex flex-column px-4 px-md-0">
             <div
               class="item__title-container d-flex flex-column gap-3 gap-md-6"
             >
@@ -65,12 +61,12 @@
               <div
                 v-for="(point, pointIndex) in item.points"
                 :key="point"
-                class="list-point-container d-flex gap-2"
+                class="item__point d-flex gap-2"
                 data-aos="fade-up"
                 :data-aos-delay="pointIndex * 200"
               >
                 <img src="../assets/icons/check.svg" alt="check-icon" />
-                <div class="list-point body-2 md-headline-2-regular">
+                <div class="item__point-text body-2 md-headline-2-regular">
                   {{ point }}
                 </div>
               </div>
@@ -87,12 +83,12 @@
         <img
           src="../assets/images/pages/easy-use/bottom-banner-bg.png"
           alt="hero"
-          class="background-image__desktop d-none d-md-block rounded-4"
+          class="bottom-banner__bg--desktop d-none d-md-block rounded-4"
         />
         <img
           src="../assets/images/pages/easy-use/bottom-banner-bg-mobile.png"
           alt="hero"
-          class="background-image__mobile d-block d-md-none rounded-4"
+          class="bottom-banner__bg--mobile d-block d-md-none rounded-4"
         />
         <div
           class="bottom-banner__content flex-column gap-md-3 gap-2 justify-content-center text-white d-flex align-items-center align-items-md-start"
@@ -105,16 +101,127 @@
             貼近餐廳的每一個日常操作。我們打造的是一套真正符合店家需求的數位工具。高效、好用，讓經營更順手，省時又省力。
           </div>
         </div>
-        <img
-          src="../assets/images/pages/easy-use/bottom-banner-tree.png"
-          alt="tree"
-          class="bottom-banner__tree d-none d-md-block"
-        />
-        <img
-          src="../assets/images/pages/easy-use/bottom-banner-tree-mobile.png"
-          alt="tree"
-          class="bottom-banner__tree d-block d-md-none"
-        />
+        <div class="bottom-banner__ring">
+          <li class="bottom-banner__circle-container" style="--i: 0">
+            <div
+              class="circle justify-content-center align-items-center d-flex flex-column border border-primary bg-white"
+            >
+              <div
+                class="circle__content d-flex flex-column align-items-center w-100 gap-1 gap-md-2"
+              >
+                <img
+                  class="circle__icon"
+                  src="../assets/images/pages/easy-use/circle1.png"
+                />
+                <span class="circle__text body-3 text-center">
+                  預付訂金機制
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="bottom-banner__circle-container" style="--i: 1">
+            <div
+              class="circle justify-content-center align-items-center d-flex flex-column border border-primary bg-white"
+            >
+              <div
+                class="circle__content d-flex flex-column align-items-center w-100 gap-1 gap-md-2"
+              >
+                <img
+                  class="circle__icon"
+                  src="../assets/images/pages/easy-use/circle2.png"
+                />
+                <span class="circle__text body-3 text-center">
+                  顧客確認與取消提醒
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="bottom-banner__circle-container" style="--i: 2">
+            <div
+              class="circle justify-content-center align-items-center d-flex flex-column border border-primary bg-white"
+            >
+              <div
+                class="circle__content d-flex flex-column align-items-center w-100 gap-1 gap-md-2"
+              >
+                <img
+                  class="circle__icon"
+                  src="../assets/images/pages/easy-use/circle3.png"
+                />
+                <span class="circle__text body-3 text-center">
+                  併桌與拆桌操作
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="bottom-banner__circle-container" style="--i: 3">
+            <div
+              class="circle justify-content-center align-items-center d-flex flex-column border border-primary bg-white"
+            >
+              <div
+                class="circle__content d-flex flex-column align-items-center w-100 gap-1 gap-md-2"
+              >
+                <img
+                  class="circle__icon"
+                  src="../assets/images/pages/easy-use/circle4.png"
+                />
+                <span class="circle__text body-3 text-center">
+                  封鎖與解除桌位
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="bottom-banner__circle-container" style="--i: 4">
+            <div
+              class="circle justify-content-center align-items-center d-flex flex-column border border-primary bg-white"
+            >
+              <div
+                class="circle__content d-flex flex-column align-items-center w-100 gap-1 gap-md-2"
+              >
+                <img
+                  class="circle__icon"
+                  src="../assets/images/pages/easy-use/circle5.png"
+                />
+                <span class="circle__text body-3 text-center">
+                  內部備註與溝通欄
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="bottom-banner__circle-container" style="--i: 5">
+            <div
+              class="circle justify-content-center align-items-center d-flex flex-column border border-primary bg-white"
+            >
+              <div
+                class="circle__content d-flex flex-column align-items-center w-100 gap-1 gap-md-2"
+              >
+                <img
+                  class="circle__icon"
+                  src="../assets/images/pages/easy-use/circle6.png"
+                />
+                <span class="circle__text body-3 text-center">
+                  拖曳式桌位圖編輯器
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="bottom-banner__circle-container" style="--i: 6">
+            <div
+              class="circle justify-content-center align-items-center d-flex flex-column border border-primary bg-white"
+            >
+              <div
+                class="circle__content d-flex flex-column align-items-center w-100 gap-1 gap-md-2"
+              >
+                <img
+                  class="circle__icon"
+                  src="../assets/images/pages/easy-use/circle7.png"
+                />
+                <span class="circle__text body-3 text-center">
+                  支援多店共用管理
+                </span>
+              </div>
+            </div>
+          </li>
+        </div>
       </div>
 
       <div
@@ -188,7 +295,3 @@ onMounted(() => {
   });
 });
 </script>
-
-<style lang="scss">
-@import '../../../scss/pages/_easy-use.scss';
-</style>

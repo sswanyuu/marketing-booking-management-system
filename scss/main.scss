@@ -1,34 +1,35 @@
 // Variables
-@import '_variables';
+@import 'variables';
 
 // Bootstrap Icons
-@import '_bootstrap-icons';
+@import 'bootstrap-icons';
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
 // Base
 @import 'base/typography';
+@import 'base/utilities';
 // @import "base/extended";
 
 // component
-@import 'components/_button';
-@import 'components/_input';
-@import 'components/_header';
-@import 'components/_features-section';
-@import 'components/_mobile-menu';
-@import 'components/_footer';
+@import 'components/button';
+@import 'components/input';
+@import 'components/features-section';
+@import 'components/mobile-menu';
+@import 'components/simple-footer';
 
 // Layout
 // @import "layout/base";
-// @import "layout/header";
+@import 'layout/header';
 // @import "layout/banner";
-// @import "layout/footer";
+@import 'layout/footer';
 
 // Pages
-@import 'pages/_home';
-@import 'pages/_easy-use';
-@import 'pages/_all-connected';
-@import 'pages/_grow-again';
-@import 'pages/_industry-fit';
-@import 'pages/_tourist-ready';
+@import 'pages/home';
+@import 'pages/easy-use';
+@import 'pages/all-connected';
+@import 'pages/grow-again';
+@import 'pages/industry-fit';
+@import 'pages/tourist-ready';
+@import 'pages/demo-booking';

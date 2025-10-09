@@ -1,21 +1,11 @@
-@import '../_variables';
-
-// Button Variables
-$button-border-radius: 200px;
-$button-border-radius-mobile: 100px;
-$button-padding-x: 48px;
-$button-padding-y: 24px;
-$button-padding-mobile: 16px;
-$button-transition: all 0.2s ease-in-out;
-
 // Button Base Styles
 .btn {
-  border-radius: $button-border-radius;
+  border-radius: $btn-border-radius;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: $button-transition;
+  transition: $btn-transition;
   white-space: nowrap;
   border: none;
 
@@ -24,35 +14,20 @@ $button-transition: all 0.2s ease-in-out;
     opacity: 0.6;
   }
 }
-
-// Primary Button
-.custom-button-primary {
-  background-color: $brand-main-1;
-  color: $brand-white;
-  border-radius: $button-border-radius;
-  padding: $button-padding-y $button-padding-x;
-  &:hover:not(:disabled),
-  &:active:not(:disabled) {
-    background-color: $brand-main-2;
-    border-color: $brand-main-2;
-    color: $brand-white;
-  }
-
-  &:disabled {
-    opacity: 0.4;
-  }
-  @include media-breakpoint-down(md) {
-    padding: $button-padding-mobile;
-    width: 100%;
-  }
+.btn-sm {
+  padding-left: $btn-padding-x-sm;
+  padding-right: $btn-padding-x-sm;
+}
+.btn-lg {
+  padding-left: $btn-padding-x-lg;
+  padding-right: $btn-padding-x-lg;
 }
 
 // Secondary Button
 .custom-button-secondary {
   background-color: $brand-white;
   color: $brand-main-1;
-  border-radius: $button-border-radius;
-  padding: $button-padding-y $button-padding-x;
+  border-radius: $btn-border-radius;
   &:hover:not(:disabled),
   &active:not(:disabled) {
     background-color: $brand-black;
@@ -64,17 +39,13 @@ $button-transition: all 0.2s ease-in-out;
     background-color: $brand-white;
     opacity: 0.4;
   }
-  @include media-breakpoint-down(md) {
-    padding: $button-padding-mobile;
-    width: 100%;
-  }
 }
 
 // Mobile Button (same as secondary for now, but can be customized)
 .custom-button-mobile {
   @extend .custom-button-secondary;
-  border-radius: $button-border-radius-mobile;
-  padding: $button-padding-mobile;
+  border-radius: $btn-border-radius-mobile;
+  padding: $btn-padding-mobile;
   &:hover:not(:disabled),
   &:active:not(:disabled) {
     background-color: $brand-main-1;

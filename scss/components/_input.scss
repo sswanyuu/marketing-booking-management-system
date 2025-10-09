@@ -1,40 +1,49 @@
-@import '../variables';
-@import '../base/typography';
-
-// Input Variables
-$input-transition: all 0.2s ease-in-out;
-
-.input__field {
-  border: 1px solid $neutral-1;
-  transition: $input-transition;
-
-  &::placeholder {
-    color: $neutral-1;
-  }
-
-  &:focus,
-  &:active,
-  &:hover {
-    border-color: $brand-main-1;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    border-color: $neutral-1;
-    color: $neutral-1;
-    cursor: not-allowed;
-  }
-  &--error {
-    border-color: $danger;
-    color: $danger;
-
-    &::placeholder {
-      color: $danger;
+// Input Styles
+.custom-form {
+  .form-control {
+    border: 1px solid $neutral-1;
+    transition: $input-transition;
+    padding: $input-padding-y $input-padding-x;
+    @include headline-regular(20px, auto, 0%); //headline-5-bold
+    @include media-breakpoint-down(md) {
+      @include body-text(12px, auto, 0%); //body-3
     }
-
-    &:focus {
+    &::placeholder {
+      color: $neutral-1;
+    }
+    &:focus,
+    &:active,
+    &:hover {
+      border-color: $primary;
+      box-shadow: none;
+    }
+    &:disabled {
+      opacity: 0.5;
+      border-color: $neutral-1;
+      color: $neutral-1;
+      cursor: not-allowed;
+    }
+    &.is-invalid {
       border-color: $danger;
       color: $danger;
+      background-image: none;
+
+      &::placeholder {
+        color: $danger;
+      }
+      &:focus {
+        border-color: $danger;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .form-label {
+    margin-bottom: $form-label-margin-bottom;
+    font-weight: $form-label-font-weight;
+    @include headline-bold(24px, 0%); //headline-5-bold
+    @include media-breakpoint-down(md) {
+      @include headline-bold(16px, 0%); //headline-7-bold
     }
   }
 }

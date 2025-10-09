@@ -142,6 +142,7 @@ const themeColors = [
           </template>
         </div>
         <div class="bs-component">
+          <Button type="button" variant="primary">Extra Large button</Button>
           <button type="button" class="btn btn-primary btn-lg">
             Large button
           </button>
@@ -2136,5 +2137,3 @@ const themeColors = [
     </div>
   </div>
 </template>
-
-<style scoped></style>

@@ -1,9 +1,6 @@
-@import '../variables';
-@import '../base/typography';
-
 // Menu Block
 .menu {
-  padding: 24px 12px;
+  padding: $menu-padding;
   top: 0;
   left: 0;
   right: 0;
@@ -11,7 +8,7 @@
   z-index: $zindex-tooltip;
 
   &__divider {
-    height: 1px;
+    height: $menu-divider-height;
     width: 100%;
   }
 
@@ -19,7 +16,7 @@
     &__header {
       cursor: pointer;
       .chevron {
-        transition: transform 0.3s ease;
+        transition: $menu-chevron-transition;
         &--rotated {
           transform: rotate(180deg);
         }
@@ -34,19 +31,19 @@
     max-height: 0;
 
     &--show {
-      max-height: 500px;
+      max-height: $feature-dropdown-max-height;
     }
   }
 
   &__icon {
-    width: 40px;
+    width: $feature-icon-width;
   }
 
   &__arrow {
-    padding: 12px 10px;
+    padding: $feature-arrow-padding;
   }
 
   &__divider {
-    height: 1px;
+    height: $feature-divider-height;
   }
 }

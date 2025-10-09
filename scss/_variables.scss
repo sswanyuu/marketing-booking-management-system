@@ -1,9 +1,18 @@
 // Pre-define variables
 // $theme-colors: ( 'primary': #007bff );
+
+// Input Variables
+$input-transition: all 0.2s ease-in-out;
+$input-padding-y: 12px;
+$input-padding-x: 16px;
+
+// Form Variables
+$form-label-margin-bottom: 8px;
 /* Brand */
 $brand-main-1: #7a4ce3; // Main01
 $brand-main-2: #3c11a4; // Main02
 $brand-main-3: #f2f0f6; // Main03
+$picture-purple: #7a4cea;
 $brand-black: #252525;
 $brand-white: #ffffff;
 $brand-danger: #f00;
@@ -26,7 +35,81 @@ $spacers: (
   7: 32px,
   8: 36px,
   9: 40px,
+  10: 48px,
+  11: 56px,
 );
+
+/* Component Variables */
+
+// Button Variables
+$btn-border-radius: 200px;
+$btn-border-radius-mobile: 100px;
+$btn-padding-mobile: 16px;
+$btn-padding-x: 1.15rem;
+$btn-padding-x-sm: 0.75rem;
+$btn-padding-x-lg: 1.35rem;
+$btn-padding-x-xl: 48px;
+$btn-padding-y-xl: 24px;
+$btn-transition: all 0.2s ease-in-out;
+
+// Header Variables
+$header-padding: 12.5px 12px;
+$header-padding-mobile: 12px 8px;
+
+// Input Variables
+$input-transition: all 0.2s ease-in-out;
+$input-padding-y: 12px;
+$input-padding-x: 16px;
+// Form Variables
+$form-label-margin-bottom: 8px;
+
+// Features Section Variables
+$features-section-height: 384px;
+$features-section-padding: 0 12px;
+$features-container-max-width: 1314px;
+$features-info-min-width: 160px;
+$features-info-max-width: 280px;
+$features-divider-height: 236px;
+$features-divider-width: 1px;
+$features-divider-color: #d7d7d7;
+$feature-card-width: 33.33%;
+$feature-card-min-width: 180px;
+$feature-card-border-width: 2px;
+$feature-card-image-size: 80px;
+
+// Footer Variables
+$footer-logo-width: 164px;
+$footer-top-image-margin: 76px;
+$footer-top-image-margin-mobile: 44px;
+$footer-top-image-padding-mobile: 44px 12px;
+$footer-banner-margin: 152px 12px -186px 12px;
+$footer-banner-height: 448px;
+$footer-banner-max-width: 1314px;
+$footer-banner-height-mobile: 500px;
+$footer-banner-padding-mobile: 56px 20px 122px 20px;
+$footer-banner-margin-mobile: 40px 12px -122px 12px;
+$footer-banner-content-margin-left: 10%;
+$footer-slogan-decoration-bottom: -6px;
+$footer-slogan-decoration-bottom-mobile: -8px;
+$footer-slogan-decoration-left-mobile: 14px;
+$footer-navigation-padding: 274px 12px 118px 12px;
+$footer-navigation-padding-mobile: 178px 0 57px 0;
+$footer-navigation-content-max-width: 1314px;
+
+// Mobile Menu Variables
+$menu-padding: 24px 12px;
+$menu-divider-height: 1px;
+$menu-chevron-transition: transform 0.3s ease;
+$feature-dropdown-max-height: 500px;
+$feature-icon-width: 40px;
+$feature-arrow-padding: 12px 10px;
+$feature-divider-height: 1px;
+
+// Simple Footer Variables
+$simple-footer-navigation-padding: 156px 12px;
+$simple-footer-navigation-padding-mobile: 48px 12px 56px 12px;
+$simple-footer-navigation-content-max-width: 1314px;
+$simple-footer-logo-height: 32px;
 
 @import 'bootstrap/scss/functions';
 

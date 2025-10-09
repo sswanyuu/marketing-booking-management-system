@@ -7,12 +7,12 @@
       <img
         src="../assets/images/pages/home/hero-bg.png"
         alt="hero"
-        class="background-image__desktop d-none d-md-block"
+        class="hero__bg--desktop d-none d-md-block"
       />
       <img
         src="../assets/images/pages/home/hero-bg-mobile.png"
         alt="hero"
-        class="background-image__mobile d-block d-md-none"
+        class="hero__bg--mobile d-block d-md-none"
       />
       <div
         class="hero__content d-flex flex-column gap-9 justify-content-center"
@@ -57,9 +57,9 @@
         <div
           v-for="brand in brands"
           :key="brand.title"
-          class="col-auto brand__logo d-flex align-items-center justify-content-center"
+          class="col-auto brand d-flex align-items-center justify-content-center"
         >
-          <img :src="brand.image" class="" alt="brand-image" />
+          <img :src="brand.image" alt="brand-image" />
         </div>
       </div>
     </section>
@@ -81,7 +81,7 @@
         <div class="row gx-7 gx-xl-9">
           <div v-for="feature in features" :key="feature.title" class="col-4">
             <div
-              class="feature-card d-flex flex-column gap-4 bg-gray-light rounded-4 pt-9 justify-content-between align-items-center"
+              class="feature-card d-flex flex-column gap-4 bg-gray-light rounded-4 pt-9 justify-content-between align-items-center h-100"
             >
               <div class="headline-6-bold xl-headline-5-bold mx-3">
                 {{ feature.title }}
@@ -89,7 +89,7 @@
               <img
                 :src="feature.image"
                 alt="feature-image"
-                class="object-fit-cover overflow-hidden"
+                class="object-fit-cover overflow-hidden rounded-4"
                 :class="feature.class"
               />
             </div>
@@ -128,10 +128,10 @@
     >
       <div class="painpoints__background" />
       <div
-        class="header-container d-flex flex-column align-items-center gap-4 gap-md-6"
+        class="painpoints__header d-flex flex-column align-items-center gap-4 gap-md-6"
       >
-        <div class="header-container__title">管理的難題，我們懂</div>
-        <div class="header-container__description text-center text-gray">
+        <div class="painpoints__header__title">管理的難題，我們懂</div>
+        <div class="painpoints__header__description text-center text-gray">
           不是只能習慣混亂，我們提供更好的選擇，讓餐廳管理回到你能掌握的節奏，痛點不再是日常。
         </div>
       </div>
@@ -236,18 +236,18 @@
           >
             <div
               :class="[
-                'solution-card d-flex bg-gray-light rounded-4 pt-7 pt-md-9 px-7 px-md-9 justify-content-between align-items-center',
+                'solution-card d-flex bg-gray-light rounded-4 pt-7 pt-md-9 justify-content-between align-items-center',
                 index === solutions.length - 1
                   ? 'flex-column flex-md-row'
                   : 'flex-column',
                 'gap-4',
               ]"
             >
-              <div class="d-flex flex-column gap-3 gap-md-4">
+              <div class="d-flex flex-column gap-3 gap-md-4 px-7 px-md-9">
                 <div class="headline-6-bold md-headline-4-bold">
                   {{ solution.title }}
                 </div>
-                <div class="body-3 md-headline-2-regular">
+                <div class="body-3 md-headline-2-regular text-gray">
                   {{ solution.description }}
                 </div>
               </div>
@@ -259,7 +259,8 @@
               <img
                 :src="solution.mobileImage"
                 alt="solution-image"
-                class="overflow-hidden d-block d-md-none"
+                class="overflow-hidden d-block d-md-none object-fit-cover"
+                :class="solution.mobileImageClass"
               />
             </div>
           </div>
@@ -397,6 +398,7 @@ const solutions = [
       '自動發送訂位與候補通知，不再依賴人工逐一聯繫，讓顧客即時收到更新，也讓員工有更多時間專注服務現場。',
     image: Solution1,
     mobileImage: Solution1Mobile,
+    mobileImageClass: 'w-75',
   },
   {
     title: 'Google 訂位整合',
@@ -429,7 +431,3 @@ const solutions = [
   },
 ];
 </script>
-
-<style lang="scss">
-@import '../../../scss/pages/_home.scss';
-</style>
