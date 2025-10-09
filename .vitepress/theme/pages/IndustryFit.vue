@@ -137,9 +137,16 @@
             :key="`first-${index}`"
           >
             <div
-              class="feedback-card px-5 px-md-9 d-flex flex-column align-items-center gap-4 gap-md-5 bg-white rounded-4"
+              class="feedback-card px-5 px-md-9 d-flex flex-column align-items-center gap-4 gap-md-5 bg-white rounded-4 position-relative"
             >
-              <div class="d-flex flex-column gap-4 gap-md-5">
+              <img
+                class="feedback-card__bg position-absolute"
+                src="../assets/images/pages/industry-fit/feedback-bg.png"
+                alt="background"
+              />
+              <div
+                class="feedback-card__content d-flex flex-column gap-4 gap-md-5"
+              >
                 <div class="body-2 md-body-1">
                   {{ feedback.content }}
                 </div>
@@ -169,7 +176,14 @@
             <div
               class="feedback-card px-5 px-md-9 d-flex flex-column align-items-center gap-4 gap-md-5 bg-white rounded-4"
             >
-              <div class="d-flex flex-column gap-4 gap-md-5">
+              <img
+                class="feedback-card__bg position-absolute"
+                src="../assets/images/pages/industry-fit/feedback-bg.png"
+                alt="background"
+              />
+              <div
+                class="feedback-card__content d-flex flex-column gap-4 gap-md-5"
+              >
                 <div class="body-2 md-body-1">
                   {{ feedback.content }}
                 </div>
