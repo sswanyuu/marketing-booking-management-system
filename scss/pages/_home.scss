@@ -67,7 +67,7 @@ $hero-smartest-color: #a580ff;
     .header-container {
       width: 560px;
       @include media-breakpoint-down(md) {
-        width: 312px;
+        width: 400px;
       }
     }
     @include media-breakpoint-down(md) {

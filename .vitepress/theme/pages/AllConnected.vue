@@ -20,15 +20,16 @@
         <div
           class="d-flex flex-column gap-2 align-items-center align-items-md-start"
         >
-          <div class="md-headline-2-bold headline-3-bold">All Connected</div>
-          <div class="md-headline-2-bold headline-3-bold">跨平台整合</div>
+          <div class="md-headline-2-bold headline-3-bold">
+            Cross-Platform Integration
+          </div>
         </div>
         <Button
           variant="primary"
           class="align-self-start"
           @click="handleDemoBooking"
         >
-          預約 Demo
+          Book Demo
         </Button>
       </div>
     </section>
@@ -38,11 +39,12 @@
         class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-3"
       >
         <div class="md-headline-1-bold headline-4-bold">
-          無縫銜接服務，讓好生意跑得更遠
+          Expanding Your Business Reach
         </div>
 
         <div class="text-gray body-2 md-headline-1-regular">
-          無縫連結多種數位工具與系統，打造整合性強、操作便利的訂位管理生態。
+          Seamlessly connect multiple digital tools and systems, creating a
+          comprehensive and easy-to-operate reservation management ecosystem.
         </div>
       </div>
       <div class="connected-brands__block d-md-block d-none">
@@ -74,7 +76,7 @@
         <div
           class="items-first-section__title md-headline-1-bold headline-4-bold d-md-none text-center"
         >
-          快速上手，安心開跑
+          Quick Start, Confident Launch
         </div>
 
         <div class="items-first-section__list d-flex flex-column">
@@ -119,7 +121,7 @@
         <div
           class="items-second-section__title md-headline-1-bold headline-4-bold"
         >
-          輕鬆營運，顧客直送
+          Easy Operations, Direct Customer Connection
         </div>
         <div
           class="items-second-section__list d-flex flex-column align-items-center"
@@ -172,41 +174,41 @@ import 'aos/dist/aos.css';
 
 const itemsFirstSection = [
   {
-    title: '嵌入式客製化系統',
+    title: 'Embedded Custom System',
     description:
-      '直接透過 LINE 傳送訂位提醒、促銷訊息。符合台灣主流通訊習慣，提升顧客互動與回流率。',
+      "Send reservation reminders and promotional messages directly through LINE. Aligned with Taiwan's mainstream communication habits, enhancing customer engagement and return rates.",
     image: Item1,
   },
   {
-    title: '協助企業導入',
+    title: 'Enterprise Integration Support',
     description:
-      '與 Google 預約系統串接，讓消費者可直接從 Google 搜尋結果完成訂位，擴大曝光與訂位管道。',
+      "Integrate with Google's reservation system, allowing consumers to complete bookings directly from Google search results, expanding exposure and booking channels.",
     image: Item2,
   },
   {
-    title: '教育訓練',
+    title: 'Training & Education',
     description:
-      '提供完善的教育訓練與操作指南，協助店家快速上手並有效運用系統功能。',
+      'Provide comprehensive training and operation guides to help businesses quickly get started and effectively utilize system features.',
     image: Item3,
   },
 ];
 const itemsSecondSection = [
   {
-    title: 'LINE 訊息整合',
+    title: 'LINE Message Integration',
     description:
-      '直接透過 LINE 傳送訂位提醒、通知訊息。符合台灣主流通訊習慣，提升顧客互動與回流率。',
+      "Send reservation reminders and notifications directly through LINE. Aligned with Taiwan's mainstream communication habits, enhancing customer engagement and return rates.",
     image: Item4,
   },
   {
-    title: 'Google 訂位整合',
+    title: 'Google Booking Integration',
     description:
-      '與 Google 預約系統串接，讓消費者可直接從 Google 搜尋結果完成訂位，擴大曝光與訂位管道。',
+      "Integrate with Google's reservation system, allowing consumers to complete bookings directly from Google search results, expanding exposure and booking channels.",
     image: Item5,
   },
   {
-    title: '跨店家資訊記憶',
+    title: 'Cross-Location Information Memory',
     description:
-      '支援顧客跨店家資訊記憶，簡化重複輸入流程，提升訂位收取效率與體驗。',
+      'Support customer information memory across locations, simplifying repetitive input processes and improving reservation efficiency and experience.',
     image: Item6,
   },
 ];

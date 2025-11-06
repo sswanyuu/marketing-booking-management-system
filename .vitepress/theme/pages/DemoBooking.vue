@@ -7,7 +7,6 @@
         <h1 class="headline-3-bold md-headline-1-bold mb-1 mb-md-0">
           Coming Soon
         </h1>
-        <p class="headline-3-bold md-headline-1-bold">即將上線</p>
       </div>
     </section>
 
@@ -23,13 +22,16 @@
             class="text-center d-flex flex-column gap-4 gap-md-6 align-items-center"
           >
             <div class="headline-4-bold md-headline-1-bold">
-              立即登記體驗名單
+              Join the Early Access List
             </div>
             <div
               class="body-1 md-headline-1-regular text-gray d-flex flex-column align-items-center"
             >
-              <div>前100位加入的名單，</div>
-              <div>將優先解鎖 Fullkeep 最新功能，搶先一步引領市場</div>
+              <div>The first 100 to join</div>
+              <div>
+                will get priority access to Fullkeep's latest features and lead
+                the market
+              </div>
             </div>
           </div>
           <div class="form-divider bg-primary"></div>
@@ -40,8 +42,8 @@
             <div class="input-container d-flex flex-column">
               <Input
                 v-model="formData.name"
-                label="姓名"
-                placeholder="輸入您的姓名"
+                label="Name"
+                placeholder="Enter your name"
                 type="text"
                 required
                 :state="hasError('name') ? 'error' : 'default'"
@@ -52,8 +54,8 @@
 
               <Input
                 v-model="formData.company"
-                label="單位"
-                placeholder="輸入您的單位名稱"
+                label="Company"
+                placeholder="Enter your company name"
                 type="text"
                 required
                 :state="hasError('company') ? 'error' : 'default'"
@@ -64,8 +66,8 @@
 
               <Input
                 v-model="formData.email"
-                label="信箱"
-                placeholder="輸入您的E-mail"
+                label="Email"
+                placeholder="Enter your email"
                 type="email"
                 required
                 :state="hasError('email') ? 'error' : 'default'"
@@ -76,7 +78,7 @@
             </div>
             <div class="w-100 d-flex justify-content-center">
               <Button class="self-align-center" @click="handleSubmit">
-                加入體驗名單
+                Join Early Access
               </Button>
             </div>
           </form>
@@ -93,11 +95,13 @@
           <div
             class="text-center d-flex flex-column gap-4 gap-md-6 align-items-center"
           >
-            <div class="headline-4-bold md-headline-1-bold">收到您的資料</div>
+            <div class="headline-4-bold md-headline-1-bold">
+              We've Received Your Information
+            </div>
             <div
               class="body-1 md-headline-1-regular text-gray d-flex flex-column align-items-center"
             >
-              我們會盡快聯繫你
+              We'll contact you soon
             </div>
           </div>
         </div>

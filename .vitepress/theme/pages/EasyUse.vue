@@ -21,14 +21,13 @@
           class="d-flex flex-column gap-2 align-items-center align-items-md-start"
         >
           <div class="md-headline-2-bold headline-3-bold">Easy Use</div>
-          <div class="md-headline-2-bold headline-3-bold">優良使用體驗</div>
         </div>
         <Button
           variant="primary"
           class="align-self-start"
           @click="handleDemoBooking"
         >
-          預約 Demo
+          Book Demo
         </Button>
       </div>
     </section>
@@ -65,7 +64,11 @@
                 data-aos="fade-up"
                 :data-aos-delay="pointIndex * 200"
               >
-                <img src="../assets/icons/check.svg" alt="check-icon" />
+                <img
+                  src="../assets/icons/check.svg"
+                  alt="check-icon"
+                  class="align-self-start"
+                />
                 <div class="item__point-text body-2 md-headline-2-regular">
                   {{ point }}
                 </div>
@@ -94,11 +97,13 @@
           class="bottom-banner__content flex-column gap-md-3 gap-2 justify-content-center text-white d-flex align-items-center align-items-md-start"
         >
           <div class="md-headline-1-bold headline-4-bold">
-            經營不必將就，你值得更好的系統
+            Don't Settle for Less
           </div>
           <div class="md-headline-1-regular body-2">
-            從預約到現場管理，Fullkeep
-            貼近餐廳的每一個日常操作。我們打造的是一套真正符合店家需求的數位工具。高效、好用，讓經營更順手，省時又省力。
+            From reservations to on-site management, Fullkeep adapts to every
+            daily operation in your restaurant. We've built a digital tool that
+            truly meets your needs. Efficient, user-friendly, making operations
+            smoother, saving time and effort.
           </div>
         </div>
         <div class="bottom-banner__ring">
@@ -114,7 +119,7 @@
                   src="../assets/images/pages/easy-use/circle1.png"
                 />
                 <span class="circle__text body-3 text-center">
-                  預付訂金機制
+                  Deposit Payment
                 </span>
               </div>
             </div>
@@ -130,9 +135,7 @@
                   class="circle__icon"
                   src="../assets/images/pages/easy-use/circle2.png"
                 />
-                <span class="circle__text body-3 text-center">
-                  顧客確認與取消提醒
-                </span>
+                <span class="circle__text body-3 text-center">Calendar</span>
               </div>
             </div>
           </li>
@@ -148,7 +151,7 @@
                   src="../assets/images/pages/easy-use/circle3.png"
                 />
                 <span class="circle__text body-3 text-center">
-                  併桌與拆桌操作
+                  Table Merging
                 </span>
               </div>
             </div>
@@ -165,7 +168,7 @@
                   src="../assets/images/pages/easy-use/circle4.png"
                 />
                 <span class="circle__text body-3 text-center">
-                  封鎖與解除桌位
+                  Block Tables
                 </span>
               </div>
             </div>
@@ -182,7 +185,7 @@
                   src="../assets/images/pages/easy-use/circle5.png"
                 />
                 <span class="circle__text body-3 text-center">
-                  內部備註與溝通欄
+                  Internal Notes
                 </span>
               </div>
             </div>
@@ -199,7 +202,7 @@
                   src="../assets/images/pages/easy-use/circle6.png"
                 />
                 <span class="circle__text body-3 text-center">
-                  拖曳式桌位圖編輯器
+                  Floor Plan Editor
                 </span>
               </div>
             </div>
@@ -216,7 +219,7 @@
                   src="../assets/images/pages/easy-use/circle7.png"
                 />
                 <span class="circle__text body-3 text-center">
-                  支援多店共用管理
+                  Multi-Location
                 </span>
               </div>
             </div>
@@ -245,43 +248,47 @@ import 'aos/dist/aos.css';
 
 const easyUseItems = [
   {
-    title: '直覺化介面',
-    description: '依桌型、時段彈性安排，優化現場動線與翻桌率。',
+    title: 'Intuitive Interface',
+    description:
+      'Flexibly arrange by table type and time slot, optimizing on-site flow and table turnover.',
     image: Item1,
     points: [
-      '顧客線上訂位、店員也能代客填寫',
-      '支援手機、平板與桌機操作',
-      '店員可代客快速建檔訂位',
+      'Customers can book online, staff can also book on their behalf',
+      'Supports mobile, tablet, and desktop operation',
+      'Staff can quickly create reservations for customers',
     ],
   },
   {
-    title: '桌位管理',
-    description: '依桌型、時段彈性安排，優化現場動線與翻桌率。',
+    title: 'Table Management',
+    description:
+      'Flexibly arrange by table type and time slot, optimizing on-site flow and table turnover.',
     image: Item2,
     points: [
-      'VIP包廂、吧台區域都能納入排位邏輯',
-      '自動避開重疊、按桌型優先建議配置',
-      '提升翻桌率與現場動線效率',
+      'VIP rooms and bar areas can be included in seating logic',
+      'Automatically avoid overlaps, prioritize by table type',
+      'Improve table turnover and on-site flow efficiency',
     ],
   },
   {
-    title: '彈性調整機制',
-    description: '顧客可變更人數或餐點，無需取消重訂，彈性又省時。',
+    title: 'Flexible Adjustment System',
+    description:
+      'Customers can change party size or meal selections without canceling and rebooking, flexible and time-saving.',
     image: Item3,
     points: [
-      '現場人數變動，店員也能即時更新預約資訊',
-      '調整人數、時間、餐點，無需重新預約',
-      '前台與後台同時掌握最新資訊',
+      'On-site party size changes, staff can update reservation info in real-time',
+      'Adjust party size, time, meals without rebooking',
+      'Front and back office simultaneously access the latest information',
     ],
   },
   {
-    title: '平假日設定功能',
-    description: '自由設定不同日子的訂位規則與營運時間，彈性營運無負擔。',
+    title: 'Weekday/Holiday Settings',
+    description:
+      'Freely set reservation rules and operating hours for different days, flexible operations without burden.',
     image: Item4,
     points: [
-      '自由設定不同日子的營運規則',
-      '自動對應營業時段與人力排程',
-      '特別營業日、臨時公休一鍵調整',
+      'Freely set operating rules for different days',
+      'Automatically correspond to business hours and staffing schedules',
+      'One-click adjustment for special business days and temporary closures',
     ],
   },
 ];

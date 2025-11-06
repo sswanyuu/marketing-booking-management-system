@@ -32,8 +32,6 @@
             </div>
           </div>
           <div class="text-white">TO GROW YOUR RESTAURANT.</div>
-
-          <div class="text-white">讓餐廳管理更輕鬆</div>
         </div>
         <div class="d-flex flex-column gap-2">
           <Button
@@ -41,7 +39,7 @@
             class="align-self-start"
             @click="handleDemoBooking"
           >
-            預約 Demo
+            Book Demo
           </Button>
         </div>
       </div>
@@ -51,7 +49,7 @@
       class="brands d-flex flex-column align-items-center gap-4 gap-md-8"
     >
       <div class="headline-2-regular md-headline-1-regular text-gray">
-        領先品牌率先採用
+        Trusted by Leading Brands
       </div>
       <div class="row justify-content-center gy-1">
         <div
@@ -71,9 +69,12 @@
       <div
         class="header-container text-white d-flex flex-column align-items-center gap-4 gap-md-6"
       >
-        <div class="headline-4-bold md-headline-1-bold">不只是訂位這麼簡單</div>
+        <div class="headline-4-bold md-headline-1-bold">
+          More Than Just Booking
+        </div>
         <div class="body-1 md-headline-1-regular text-center">
-          全方位解決方案，零門檻上手，桌位管理、拓展客源，一套搞定。領先品牌率先採用
+          A comprehensive solution with zero learning curve. Table management,
+          customer growth, all in one system. Trusted by leading brands.
         </div>
       </div>
       <!-- features desktop -->
@@ -130,9 +131,13 @@
       <div
         class="painpoints__header d-flex flex-column align-items-center gap-4 gap-md-6"
       >
-        <div class="painpoints__header__title">管理的難題，我們懂</div>
+        <div class="painpoints__header__title">
+          We Understand Your Management Challenges
+        </div>
         <div class="painpoints__header__description text-center text-gray">
-          不是只能習慣混亂，我們提供更好的選擇，讓餐廳管理回到你能掌握的節奏，痛點不再是日常。
+          You don't have to accept chaos. We provide better solutions to restore
+          control over your restaurant management, turning pain points into
+          smooth operations.
         </div>
       </div>
       <div class="painpoints__list row gx-5 gy-5">
@@ -221,7 +226,8 @@
         <div class="row">
           <div class="col-12">
             <div class="headline-4-bold md-headline-1-bold text-center px-5">
-              全方位的營運體驗，讓你專注把餐廳做到最好
+              Comprehensive Operations Experience, Let You Focus on Making Your
+              Restaurant the Best
             </div>
           </div>
         </div>
@@ -356,75 +362,75 @@ const brands = [
 ];
 const features = [
   {
-    title: '一鍵預約‧輕鬆回訪',
+    title: 'One-Click Booking, Easy Returns',
     image: Feature1,
     class: ['w-50'],
   },
   {
-    title: '從本地到國際',
+    title: 'From Local to International',
     image: Feature2,
   },
   {
-    title: '客製系統‧輕鬆嵌入',
+    title: 'Custom System, Easy Integration',
     image: Feature3,
     class: ['mb-9'],
   },
 ];
 const painPoints = [
   {
-    title: '想改人數只能取消重訂?',
+    title: 'Need to Change Party Size? Cancel and Rebook?',
     description:
-      'Fullkeep 支援即時調整人數、時間與備註，可直接編輯預約內容，流程更順暢，服務更彈性。',
+      'Fullkeep supports real-time adjustments to party size, time, and notes. Edit reservations directly for smoother processes and more flexible service.',
     image: Painpoint1,
     mobileImage: Painpoint1Mobile,
   },
   {
-    title: '外籍旅客訂位困難?',
+    title: 'International Guests Struggling to Book?',
     description:
-      'Fullkeep 支援多語介面、Email/國際電話驗證與線上付款，跨國顧客輕鬆完成預約，不再流失訂單。',
+      'Fullkeep supports multi-language interfaces, email/international phone verification, and online payment. International customers can easily complete reservations without losing orders.',
   },
   {
-    title: '無法由品牌網站直接訂位?',
+    title: "Can't Book Directly from Your Brand Website?",
     description:
-      'Fullkeep 提供嵌入式API，快速整合進品牌網站，無需跳轉頁面，維持品牌一致性，客戶體驗不中斷。',
+      'Fullkeep provides embedded APIs for quick integration into your brand website. No page redirects needed, maintaining brand consistency and seamless customer experience.',
     image: Painpoint3,
     mobileImage: Painpoint3Mobile,
   },
 ];
 const solutions = [
   {
-    title: 'LINE 訊息整合',
+    title: 'LINE Message Integration',
     description:
-      '自動發送訂位與候補通知，不再依賴人工逐一聯繫，讓顧客即時收到更新，也讓員工有更多時間專注服務現場。',
+      'Automatically send reservation and waitlist notifications. No more manual follow-ups. Customers receive instant updates while staff focus on in-person service.',
     image: Solution1,
     mobileImage: Solution1Mobile,
     mobileImageClass: 'w-75',
   },
   {
-    title: 'Google 訂位整合',
+    title: 'Google Booking Integration',
     description:
-      '搜尋結果不只是曝光，而能直接轉化為訂位機會。搜尋結果同時出現訂位連結，大幅提升轉單效率。',
+      "Search results don't just create exposure—they convert directly into bookings. Booking links appear in search results, dramatically improving conversion efficiency.",
     image: Solution2,
     mobileImage: Solution2Mobile,
   },
   {
-    title: '預付訂金與提醒功能',
+    title: 'Deposit Payment & Reminder Features',
     description:
-      '彈性設定訂金金額與付款方式，搭配自動提醒機制，有效降低 No Show 率，讓每一份食材與座位都被善用，提升營運效率。',
+      'Flexibly set deposit amounts and payment methods, paired with automatic reminders. Effectively reduce no-show rates, ensuring every ingredient and seat is utilized, boosting operational efficiency.',
     image: Solution3,
     mobileImage: Solution3Mobile,
   },
   {
-    title: 'CRM 與再行銷工具',
+    title: 'CRM & Remarketing Tools',
     description:
-      '內建顧客資料系統與行銷模組，輕鬆設定推播優惠、新菜單通知與節日問候，從一次性客人養成忠誠熟客。',
+      'Built-in customer database and marketing modules. Easily set up promotional pushes, new menu notifications, and holiday greetings. Turn one-time visitors into loyal regulars.',
     image: Solution4,
     mobileImage: Solution4Mobile,
   },
   {
-    title: '跨店共用付款與備註資料',
+    title: 'Cross-Location Shared Payment & Notes',
     description:
-      '記錄每位顧客的付款紀錄與訂位偏好，不論哪家分店，一次輸入即可通用，讓回訪體驗更加順暢，服務更有溫度。',
+      "Record each customer's payment history and booking preferences. Enter once, use across all locations. Make return visits smoother and service more personalized.",
     image: Solution5,
     class: ['col-md-12', 'flex-md-row'],
     mobileImage: Solution5Mobile,

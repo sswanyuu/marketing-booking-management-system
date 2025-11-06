@@ -7,7 +7,7 @@
         class="top-image d-flex align-items-center justify-content-center"
       >
         <div class="d-flex align-items-center justify-content-center">
-          <span class="md-headline-2-bold headline-4-bold">交給</span>
+          <span class="md-headline-2-bold headline-4-bold">Leave it to</span>
           <img
             src="../assets/images/layout/footer/slogan.png"
             alt="hero"
@@ -19,7 +19,7 @@
             class="top-image__bg--mobile d-flex d-md-none"
           />
 
-          <span class="md-headline-2-bold headline-4-bold">吧！</span>
+          <span class="md-headline-2-bold headline-4-bold">!</span>
         </div>
       </section>
       <section class="w-100 d-flex justify-content-center">
@@ -41,14 +41,9 @@
           >
             <div class="d-flex flex-column gap-2 gap-md-4">
               <div
-                class="md-headline-footer-en-bold headline-3-bold text-white"
-              >
-                Fullkeep the Seats. Fulfill the Brand.
-              </div>
-              <div
                 class="md-headline-2-bold headline-4-bold text-white position-relative align-self-start"
               >
-                高朋滿座，富譽盈門
+                Full House, Full Reputation
                 <img
                   src="../assets/images/layout/footer/slogan-decoration.png"
                   alt="slogan-decoration"
@@ -61,7 +56,7 @@
               class="align-self-start"
               @click="handleDemoBooking"
             >
-              預約 Demo
+              Book Demo
             </Button>
           </div>
         </div>
@@ -104,7 +99,7 @@
         <div
           class="body-1 justify-content-end flex-grow-1 text-center md-body-3 text-md-end px-5 px-md-0"
         >
-          Copyright © Fullkeep All Rights Reserved 隱私權條款
+          Copyright © Fullkeep All Rights Reserved Privacy Policy
         </div>
       </div>
     </div>

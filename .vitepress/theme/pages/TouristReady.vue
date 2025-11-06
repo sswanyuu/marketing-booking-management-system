@@ -21,14 +21,13 @@
           class="d-flex flex-column gap-2 align-items-center align-items-md-start"
         >
           <div class="md-headline-2-bold headline-3-bold">Tourist Ready</div>
-          <div class="md-headline-2-bold headline-3-bold">觀光客友善</div>
         </div>
         <Button
           variant="primary"
           class="align-self-start"
           @click="handleDemoBooking"
         >
-          預約 Demo
+          Book Demo
         </Button>
       </div>
     </section>
@@ -38,14 +37,15 @@
         class="d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-md-7 mx-3 py-5 px-5 px-md-0"
       >
         <div class="md-headline-1-bold headline-4-bold">
-          專為精緻餐飲需求打造，與國際無縫接軌
+          International Standards
         </div>
         <div class="d-flex flex-column align-items-center">
           <div class="text-gray body-2 md-headline-1-regular">
-            無論語言、介面或聯繫工具，
+            Regardless of language, interface, or communication tools,
           </div>
           <div class="text-gray body-2 md-headline-1-regular">
-            提供世界各地的顧客順暢的訂位流程與服務資訊。
+            we provide smooth reservation processes and service information for
+            customers worldwide.
           </div>
         </div>
       </div>
@@ -109,13 +109,17 @@
       <div
         class="integration__content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-md-7 p-5 px-md-0"
       >
-        <div class="md-headline-1-bold headline-4-bold">各國系統整合</div>
+        <div class="md-headline-1-bold headline-4-bold">
+          International System Integration
+        </div>
         <div class="d-flex flex-column align-items-center">
           <div class="text-gray body-2 md-headline-1-regular">
-            支援 LINE、WhatsApp 等常見通訊軟體，
+            Support for LINE, WhatsApp, and other common communication
+            platforms,
           </div>
           <div class="text-gray body-2 md-headline-1-regular">
-            來自不同地區的顧客也能即時接收提醒與行銷訊息。
+            customers from different regions can also receive reminders and
+            marketing messages in real-time.
           </div>
         </div>
       </div>
@@ -156,24 +160,25 @@ import Item1 from '../assets/images/pages/tourist-ready/item-1.png';
 import Item2 from '../assets/images/pages/tourist-ready/item-2.png';
 const touristFeatures = [
   {
-    title: '多國語言支援',
+    title: 'Multi-Language Support',
     description:
-      '無論來自哪個國家，都能以熟悉的語言瀏覽、預約與溝通，打造真正國際化的用餐體驗。',
+      "Regardless of which country they're from, customers can browse, book, and communicate in their familiar language, creating a truly international dining experience.",
     image: Item1,
     points: [
-      '多語介面，流程簡單易懂',
-      '自動偵測地區語言，也可手動切換',
-      '菜單與通知信件自動翻譯',
+      'Multi-language interface with simple, easy-to-understand processes',
+      'Automatically detect regional language, also supports manual switching',
+      'Automatic translation of menus and notification emails',
     ],
   },
   {
-    title: '自動切換貨幣',
-    description: '旅客在出發前就能掌握餐廳菜單與價格，安心預訂、從容用餐。',
+    title: 'Automatic Currency Conversion',
+    description:
+      'Travelers can view restaurant menus and prices before departure, booking with confidence and dining at ease.',
     image: Item2,
     points: [
-      '根據用戶所在位置，自動顯示對應幣別',
-      '價格資訊清楚透明，預約更安心',
-      '提升旅客滿意度與轉單率',
+      'Automatically display corresponding currency based on user location',
+      'Clear and transparent pricing information for more confident bookings',
+      'Improve traveler satisfaction and conversion rates',
     ],
   },
 ];

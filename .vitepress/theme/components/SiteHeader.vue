@@ -76,7 +76,7 @@
             class="header__demo-button"
             @click="handleDemoBooking"
           >
-            預約 Demo
+            Book Demo
           </Button>
         </div>
       </div>

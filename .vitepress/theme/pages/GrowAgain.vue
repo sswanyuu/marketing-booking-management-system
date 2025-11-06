@@ -21,67 +21,37 @@
           class="d-flex flex-column gap-2 align-items-center align-items-md-start"
         >
           <div class="md-headline-2-bold headline-3-bold">Grow Again</div>
-          <div class="md-headline-2-bold headline-3-bold">行銷與再接觸</div>
         </div>
         <Button
           variant="primary"
           class="align-self-start"
           @click="handleDemoBooking"
         >
-          預約 Demo
+          Book Demo
         </Button>
       </div>
     </section>
     <!--top-banner-->
-    <section
-      class="top-banner d-flex flex-column justify-content-center align-items-center w-100 position-relative"
-    >
-      <div
-        class="top-banner__container bg-primary w-100 rounded-4 d-flex flex-column justify-content-center align-items-center"
-      >
-        <div
-          class="lg-headline-1-bold headline-4-bold text-white text-center w-100 position-relative"
-        >
-          跨越時空留客於心，
-          <br />
-          延續美好的用餐體驗
-          <img
-            src="../assets/images/pages/grow-again/top-slogan-decoration.png"
-            alt="slogan-decoration"
-            class="top-banner__slogan-decoration d-none d-md-flex position-absolute"
-          />
-        </div>
-      </div>
-      <img
-        src="../assets/images/pages/grow-again/top-banner-photo-left.png"
-        alt="top-banner-photo"
-        class="top-banner__left-photo d-none d-md-flex object-fit-contain position-absolute"
-      />
-      <img
-        src="../assets/images/pages/grow-again/top-banner-photo-right.png"
-        alt="top-banner-photo"
-        class="top-banner__right-photo d-none d-md-flex object-fit-contain position-absolute"
-      />
-      <img
-        src="../assets/images/pages/grow-again/top-banner-photo-left-mobile.png"
-        alt="top-banner-photo"
-        class="top-banner__left-photo d-block d-md-none object-fit-contain position-absolute"
-      />
-      <img
-        src="../assets/images/pages/grow-again/top-banner-photo-right-mobile.png"
-        alt="top-banner-photo"
-        class="top-banner__right-photo d-block d-md-none object-fit-contain position-absolute"
-      />
-    </section>
+
+    <img
+      src="../assets/images/pages/grow-again/top-banner-photo-left.png"
+      alt="top-banner-photo"
+      class="top-banner__left-photo d-none d-md-flex object-fit-contain position-absolute"
+    />
+
     <!-- awareness -->
     <section class="awareness d-flex flex-column align-items-center">
       <div
         class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center px-5 px-md-0"
       >
-        <div class="md-headline-1-bold headline-4-bold">同產業餐飲曝光</div>
+        <div class="md-headline-1-bold headline-4-bold">
+          Industry-Wide Restaurant Exposure
+        </div>
 
         <div class="text-gray body-2 md-headline-1-regular">
-          協助餐廳透過合作夥伴及平台推薦，增加品牌曝光機會，拓展客源，創造共贏生態圈
+          Help restaurants increase brand exposure opportunities through partner
+          and platform recommendations, expand customer base, and create a
+          win-win ecosystem
         </div>
       </div>
 
@@ -108,10 +78,11 @@
       <div
         class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center mx-3"
       >
-        <div class="md-headline-1-bold headline-4-bold">客戶 CRM</div>
+        <div class="md-headline-1-bold headline-4-bold">Customer CRM</div>
         <div class="text-gray body-2 md-headline-1-regular">
-          建立完整顧客資料庫，記錄訂位習慣與偏好，
-          支援分眾行銷與個人化推薦，提升營銷精準度。
+          Build a complete customer database, record booking habits and
+          preferences, support segmented marketing and personalized
+          recommendations, improving marketing precision.
         </div>
       </div>
       <div
@@ -197,9 +168,13 @@
         <div
           class="d-flex flex-column gap-3 gap-md-9 w-100 align-self-center px-4 px-md-0"
         >
-          <div class="md-headline-1-bold headline-4-bold">資料報告與分析</div>
+          <div class="md-headline-1-bold headline-4-bold">
+            Reports & Analytics
+          </div>
           <div class="text-gray body-2 md-headline-1-regular">
-            提供視覺化報表與關鍵指標追蹤，協助餐廳了解營運狀況與行銷效益，快速調整策略
+            Provide visual reports and key metric tracking to help restaurants
+            understand operational status and marketing effectiveness, enabling
+            quick strategy adjustments
           </div>
         </div>
       </div>
@@ -209,7 +184,9 @@
         <div
           class="d-flex flex-column gap-3 gap-md-9 w-100 align-self-center px-4 px-md-0"
         >
-          <div class="md-headline-1-bold headline-4-bold">多元促銷與優惠券</div>
+          <div class="md-headline-1-bold headline-4-bold">
+            Diverse Promotions & Coupons
+          </div>
           <div
             class="d-flex flex-column gap-2 gap-md-3 text-gray body-2 md-headline-2-regular"
           >
@@ -220,7 +197,9 @@
                 class="services__banner-2__icon align-self-start"
               />
               <div>
-                利用多元通路主動觸達顧客，推送專屬優惠與活動訊息，強化顧客回流與品牌黏著度。
+                Actively reach customers through multiple channels, push
+                exclusive offers and event notifications, strengthening customer
+                retention and brand loyalty.
               </div>
             </div>
             <div class="d-flex gap-1 gap-md-3">
@@ -230,7 +209,9 @@
                 class="services__banner-2__icon align-self-start"
               />
               <div>
-                彈性設定多樣化優惠方案與電子優惠券，吸引新客同時激勵舊客回訪，促進銷售成長。
+                Flexibly set diverse promotional plans and digital coupons,
+                attracting new customers while incentivizing returning
+                customers, promoting sales growth.
               </div>
             </div>
           </div>
@@ -262,7 +243,7 @@
         <div
           class="bottom-banner__slogan md-headline-1-bold headline-4-bold text-white px-4 px-md-0 text-center"
         >
-          結帳不是結束，而是下一次相見的開始。
+          Checkout isn't the end—it's the beginning of the next meeting.
         </div>
       </div>
       <div

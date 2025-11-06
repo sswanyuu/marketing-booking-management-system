@@ -36,7 +36,7 @@
         <div
           class="body-1 justify-content-end flex-grow-1 text-center md-body-3 text-md-end px-5 px-md-0"
         >
-          Copyright © Fullkeep All Rights Reserved 隱私權條款
+          Copyright © Fullkeep All Rights Reserved Privacy Policy
         </div>
       </div>
     </div>
