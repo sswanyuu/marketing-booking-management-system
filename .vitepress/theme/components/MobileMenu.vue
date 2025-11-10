@@ -1,12 +1,12 @@
 <template>
   <div v-if="isOpen" ref="menuRef" class="menu position-fixed bg-white">
     <div class="d-flex flex-column start px-2 gap-3">
-      <!-- Why fullkeep Section -->
+      <!-- Why kangabook Section -->
       <div class="d-flex flex-column gap-2">
-        <div class="headline-6-bold text-primary">Why fullkeep?</div>
+        <div class="headline-6-bold text-primary">Why kangabook?</div>
         <div class="body-3 text-black">
-          Fullkeep
-          是專為精緻餐飲設計的訂位管理系統,支援多裝置與多平台整合。協助餐廳簡化營運流程、優化顧客服務,強化品牌專業形象與競爭力。
+          Kangabook - Premium dining booking system with multi-device support.
+          Simplify operations, optimize service, strengthen your brand.
         </div>
       </div>
 
@@ -34,9 +34,12 @@
           >
             <img src="../assets/icons/ux.svg" alt="UX" class="feature__icon" />
             <div class="d-flex flex-column gap-2 flex-grow-1">
-              <div class="headline-7-bold text-primary">優良使用體驗</div>
+              <div class="headline-7-bold text-primary">
+                Excellent User Experience
+              </div>
               <div class="body-3 text-black">
-                貼近使用者操作習慣,顧客與店家都能享受高效的數位訂位體驗。
+                Intuitive interface for customers and merchants. Enjoy efficient
+                digital booking experience.
               </div>
             </div>
             <img
@@ -56,9 +59,12 @@
               class="feature__icon"
             />
             <div class="d-flex flex-column gap-2 flex-grow-1">
-              <div class="headline-7-bold text-primary">行銷再接觸</div>
+              <div class="headline-7-bold text-primary">
+                Marketing & Re-engagement
+              </div>
               <div class="body-3 text-black">
-                精準行銷與數據分析,深化與顧客的互動,提升品牌忠誠度與回購率。
+                Precise marketing and data analysis, deepening customer
+                interaction, improving brand loyalty and repurchase rates.
               </div>
             </div>
             <img
@@ -78,9 +84,11 @@
               alt="Tourist"
             />
             <div class="d-flex flex-column gap-2 flex-grow-1">
-              <div class="headline-7-bold text-primary">觀光客友善</div>
+              <div class="headline-7-bold text-primary">Tourist-Friendly</div>
               <div class="body-3 text-black">
-                無論語言、介面或聯繫工具,提供世界各地的顧客順暢的訂位流程與服務資訊。
+                Whether language, interface or contact tools, provide smooth
+                booking processes and service information for customers
+                worldwide.
               </div>
             </div>
             <img
@@ -142,6 +150,6 @@ const toggleFeatures = () => {
   isFeaturesOpen.value = !isFeaturesOpen.value;
 };
 
-import { useMobileMenu } from '../composables/useMobileMenu';
+import { useMobileMenu } from '../composables/useMobileMenu.js';
 const { menuRef } = useMobileMenu(() => props.isOpen);
 </script>

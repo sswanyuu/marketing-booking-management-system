@@ -8,7 +8,7 @@
       >
         <img
           src="../assets/images/layout/footer/logo.png"
-          alt="fullkeep"
+          alt="kangabook"
           class="logo"
         />
         <div
@@ -18,7 +18,7 @@
             href="/"
             class="text-white text-decoration-none headline-2-medium md-headline-1-medium"
           >
-            WHY FULLKEEP
+            WHY KANGABOOK
           </a>
           <a
             href="/industry-fit"
@@ -36,7 +36,7 @@
         <div
           class="body-1 justify-content-end flex-grow-1 text-center md-body-3 text-md-end px-5 px-md-0"
         >
-          Copyright © Fullkeep All Rights Reserved Privacy Policy
+          Copyright © Kangabook All Rights Reserved Privacy Policy
         </div>
       </div>
     </div>

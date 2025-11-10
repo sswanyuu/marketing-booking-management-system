@@ -162,18 +162,18 @@ const touristFeatures = [
   {
     title: 'Multi-Language Support',
     description:
-      "Regardless of which country they're from, customers can browse, book, and communicate in their familiar language, creating a truly international dining experience.",
+      "Regardless of which country they're from, customers can browse, book, and communicate in their familiar language, creating a truly international booking experience.",
     image: Item1,
     points: [
       'Multi-language interface with simple, easy-to-understand processes',
       'Automatically detect regional language, also supports manual switching',
-      'Automatic translation of menus and notification emails',
+      'Automatic translation of experience descriptions and notification emails',
     ],
   },
   {
     title: 'Automatic Currency Conversion',
     description:
-      'Travelers can view restaurant menus and prices before departure, booking with confidence and dining at ease.',
+      'Travelers can view experience descriptions and prices before departure, booking with confidence and participating at ease.',
     image: Item2,
     points: [
       'Automatically display corresponding currency based on user location',

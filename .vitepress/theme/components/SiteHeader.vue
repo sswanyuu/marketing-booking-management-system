@@ -19,7 +19,7 @@
             <img
               class="header__logo"
               src="../assets/images/logo.png"
-              alt="fullkeep"
+              alt="kangabook"
             />
           </div>
         </div>

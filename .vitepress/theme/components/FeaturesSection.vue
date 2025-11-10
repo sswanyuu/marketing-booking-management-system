@@ -6,12 +6,14 @@
     <div
       class="header-features-section__container d-flex justify-content-center gap-xl-7 gap-3"
     >
-      <!-- Left: Why fullkeep -->
+      <!-- Left: Why kangabook -->
       <div class="d-flex flex-column header-features-section__info gap-3">
-        <div class="text-primary headline-5-bold">Why fullkeep?</div>
+        <div class="text-primary headline-5-bold">Why kangabook?</div>
         <div class="body-1 text-black">
-          Fullkeep
-          是專為精緻餐飲設計的訂位管理系統,支援多裝置與多平台整合。協助餐廳簡化營運流程、優化顧客服務,強化品牌專業形象與競爭力。
+          Kangabook is a reservation management system designed for fine dining,
+          supporting multi-device and multi-platform integration. It helps
+          restaurants streamline operations, optimize customer service, and
+          enhance brand professionalism and competitiveness.
         </div>
       </div>
       <div class="header-features-section__divider align-self-center"></div>
@@ -73,21 +75,23 @@ defineProps({
 const features = [
   {
     icon: uxIcon,
-    title: '優良使用體驗',
-    description: '貼近使用者操作習慣,顧客與店家都能享受高效的數位訂位體驗。',
+    title: 'Excellent User Experience',
+    description:
+      'Aligned with user operation habits, both customers and restaurants can enjoy an efficient digital reservation experience.',
     link: '/easy-use.html',
   },
   {
     icon: marketingIcon,
-    title: '行銷再接觸',
-    description: '精準行銷與數據分析,深化與顧客的互動,提升品牌忠誠度與回購率。',
+    title: 'Marketing & Re-engagement',
+    description:
+      'Precise marketing and data analysis deepen customer interactions, enhancing brand loyalty and repeat purchase rates.',
     link: '/grow-again.html',
   },
   {
     icon: touristsIcon,
-    title: '觀光客友善',
+    title: 'Tourist-Friendly',
     description:
-      '無論語言、介面或聯繫工具,提供世界各地的顧客順暢的訂位流程與服務資訊。',
+      'Regardless of language, interface, or communication tools, we provide smooth reservation processes and service information for customers worldwide.',
     link: '/tourist-ready.html',
   },
 ];
@@ -100,6 +104,7 @@ const handleMouseLeave = () => {
   isHovered.value = null;
 };
 const handleClick = link => {
+  // eslint-disable-next-line no-undef
   window.location.href = link;
 };
 </script>

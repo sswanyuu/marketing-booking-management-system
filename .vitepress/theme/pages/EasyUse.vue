@@ -100,9 +100,9 @@
             Don't Settle for Less
           </div>
           <div class="md-headline-1-regular body-2">
-            From reservations to on-site management, Fullkeep adapts to every
-            daily operation in your restaurant. We've built a digital tool that
-            truly meets your needs. Efficient, user-friendly, making operations
+            From bookings to on-site management, Kangabook adapts to every daily
+            operation in your business. We've built a digital tool that truly
+            meets your needs. Efficient, user-friendly, making operations
             smoother, saving time and effort.
           </div>
         </div>
@@ -151,7 +151,7 @@
                   src="../assets/images/pages/easy-use/circle3.png"
                 />
                 <span class="circle__text body-3 text-center">
-                  Table Merging
+                  Session Merging
                 </span>
               </div>
             </div>
@@ -167,9 +167,7 @@
                   class="circle__icon"
                   src="../assets/images/pages/easy-use/circle4.png"
                 />
-                <span class="circle__text body-3 text-center">
-                  Block Tables
-                </span>
+                <span class="circle__text body-3 text-center">Block Slots</span>
               </div>
             </div>
           </li>
@@ -250,40 +248,40 @@ const easyUseItems = [
   {
     title: 'Intuitive Interface',
     description:
-      'Flexibly arrange by table type and time slot, optimizing on-site flow and table turnover.',
+      'Flexibly arrange by experience type and time slot, optimizing on-site flow and capacity utilization.',
     image: Item1,
     points: [
       'Customers can book online, staff can also book on their behalf',
       'Supports mobile, tablet, and desktop operation',
-      'Staff can quickly create reservations for customers',
+      'Staff can quickly create bookings for customers',
     ],
   },
   {
-    title: 'Table Management',
+    title: 'Capacity Management',
     description:
-      'Flexibly arrange by table type and time slot, optimizing on-site flow and table turnover.',
+      'Flexibly arrange by experience type and time slot, optimizing on-site flow and capacity utilization.',
     image: Item2,
     points: [
-      'VIP rooms and bar areas can be included in seating logic',
-      'Automatically avoid overlaps, prioritize by table type',
-      'Improve table turnover and on-site flow efficiency',
+      'VIP sessions and premium experiences can be included in booking logic',
+      'Automatically avoid overlaps, prioritize by experience type',
+      'Improve capacity utilization and on-site flow efficiency',
     ],
   },
   {
     title: 'Flexible Adjustment System',
     description:
-      'Customers can change party size or meal selections without canceling and rebooking, flexible and time-saving.',
+      'Customers can change group size or experience selections without canceling and rebooking, flexible and time-saving.',
     image: Item3,
     points: [
-      'On-site party size changes, staff can update reservation info in real-time',
-      'Adjust party size, time, meals without rebooking',
+      'On-site group size changes, staff can update booking info in real-time',
+      'Adjust group size, time, experiences without rebooking',
       'Front and back office simultaneously access the latest information',
     ],
   },
   {
     title: 'Weekday/Holiday Settings',
     description:
-      'Freely set reservation rules and operating hours for different days, flexible operations without burden.',
+      'Freely set booking rules and operating hours for different days, flexible operations without burden.',
     image: Item4,
     points: [
       'Freely set operating rules for different days',

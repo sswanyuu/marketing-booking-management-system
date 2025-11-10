@@ -31,13 +31,6 @@
         </Button>
       </div>
     </section>
-    <!--top-banner-->
-
-    <img
-      src="../assets/images/pages/grow-again/top-banner-photo-left.png"
-      alt="top-banner-photo"
-      class="top-banner__left-photo d-none d-md-flex object-fit-contain position-absolute"
-    />
 
     <!-- awareness -->
     <section class="awareness d-flex flex-column align-items-center">
@@ -45,11 +38,11 @@
         class="content-container d-flex flex-column gap-3 gap-md-6 align-items-center text-center px-5 px-md-0"
       >
         <div class="md-headline-1-bold headline-4-bold">
-          Industry-Wide Restaurant Exposure
+          Industry-Wide Business Exposure
         </div>
 
         <div class="text-gray body-2 md-headline-1-regular">
-          Help restaurants increase brand exposure opportunities through partner
+          Help businesses increase brand exposure opportunities through partner
           and platform recommendations, expand customer base, and create a
           win-win ecosystem
         </div>
@@ -172,7 +165,7 @@
             Reports & Analytics
           </div>
           <div class="text-gray body-2 md-headline-1-regular">
-            Provide visual reports and key metric tracking to help restaurants
+            Provide visual reports and key metric tracking to help businesses
             understand operational status and marketing effectiveness, enabling
             quick strategy adjustments
           </div>

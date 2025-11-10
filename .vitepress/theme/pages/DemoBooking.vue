@@ -29,7 +29,7 @@
             >
               <div>The first 100 to join</div>
               <div>
-                will get priority access to Fullkeep's latest features and lead
+                will get priority access to Kangabook's latest features and lead
                 the market
               </div>
             </div>

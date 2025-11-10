@@ -44,8 +44,8 @@
           </div>
 
           <div class="body-2 md-headline-1-regular">
-            Fullkeep is designed for different restaurant formats. From high-end
-            private dining to wedding venues.
+            Kangabook is designed for different experience formats. From
+            high-end private sessions to large group events.
           </div>
         </div>
         <img
@@ -58,15 +58,15 @@
         >
           <div class="content-container d-flex flex-column gap-4">
             <div class="md-headline-3-bold headline-4-bold">
-              Fine Teppanyaki
+              Adventure Tours
             </div>
             <div class="body-2 md-headline-2-regular text-gray">
-              Fullkeep is designed for different restaurant formats. From
-              high-end private dining to wedding venues, we provide flexible
-              reservations, deposit payments, multi-language integration, and
-              customer data management, helping all types of restaurants create
-              stable, smooth reservation experiences that enhance the quality
-              and efficiency of every dining occasion.
+              Kangabook is designed for different experience formats. From
+              high-end private sessions to large group events, we provide
+              flexible bookings, deposit payments, multi-language integration,
+              and customer data management, helping all types of businesses
+              create stable, smooth booking experiences that enhance the quality
+              and efficiency of every experience occasion.
             </div>
           </div>
           <div class="row gx-4 gy-2">
@@ -244,7 +244,7 @@
       class="best-solutions w-100 d-flex justify-content-center align-items-center flex-column"
     >
       <div class="headline-4-bold md-headline-1-bold text-center px-5 px-md-0">
-        Best Solutions for More Restaurant Types
+        Best Solutions for More Experience Types
       </div>
       <div class="row gx-4 gx-md-9 gy-6 gy-md-9">
         <div
@@ -272,7 +272,7 @@ import SuccessfulCasesIcon3 from '../assets/images/pages/industry-fit/successful
 import SuccessfulCasesIcon4 from '../assets/images/pages/industry-fit/successful-case-icon-4.png';
 import Feature1 from '../assets/images/pages/industry-fit/feature-1.png';
 import Feature2 from '../assets/images/pages/industry-fit/feature-2.png';
-import Feature3 from '../assets/images/pages/industry-fit/feature-3.png';
+
 import Solution1 from '../assets/images/pages/industry-fit/solution-1.png';
 import Solution2 from '../assets/images/pages/industry-fit/solution-2.png';
 import Solution3 from '../assets/images/pages/industry-fit/solution-3.png';
@@ -284,90 +284,79 @@ import Solution8 from '../assets/images/pages/industry-fit/solution-8.png';
 
 const successfulCasesIcons = [
   {
-    title: 'Low Table Turnover',
+    title: 'Low Capacity Utilization',
     image: SuccessfulCasesIcon1,
   },
   {
-    title: 'Special Table Arrangements',
+    title: 'Special Session Arrangements',
     image: SuccessfulCasesIcon2,
   },
   {
-    title: 'Set Menu System',
+    title: 'Package System',
     image: SuccessfulCasesIcon3,
   },
   {
-    title: 'Premium Ingredients',
+    title: 'Premium Experiences',
     image: SuccessfulCasesIcon4,
   },
 ];
 
 const industryFeatures = [
   {
-    title: 'Precise Time Slot & Seat Management',
+    title: 'Precise Time Slot & Capacity Management',
     description:
-      "Fullkeep's table type and time slot reservation rules can precisely arrange each table seating, avoiding empty tables and duplicate reservations.",
+      "Kangabook's experience type and time slot booking rules can precisely arrange each session, avoiding empty slots and duplicate bookings.",
     image: Feature1,
 
     points: [
-      "Fullkeep's table type and time slot reservation rules can precisely arrange each table seating, avoiding empty tables and duplicate reservations.",
-      'Support distinction between "bar seating" and "private rooms", making reservation allocation more flexible.',
+      "Kangabook's experience type and time slot booking rules can precisely arrange each session, avoiding empty slots and duplicate bookings.",
+      'Support distinction between "group sessions" and "private experiences", making booking allocation more flexible.',
     ],
   },
   {
     title: 'Deposit Payment System',
     description:
-      'Freely set per-person deposits to ensure premium ingredients (such as wagyu, lobster) are adequately prepared, reducing losses from last-minute cancellations.',
+      'Freely set per-person deposits to ensure premium experiences are adequately prepared, reducing losses from last-minute cancellations.',
     image: Feature2,
 
     points: [
-      'Freely set per-person deposits to ensure premium ingredients (such as wagyu, lobster) are adequately prepared, reducing losses from last-minute cancellations.',
-      "Allow customers to select meal packages (such as chef's menu, lobster menu) during reservation, with notes for allergies, doneness preferences, enabling kitchen to prepare in advance.",
-    ],
-  },
-  {
-    title: 'Marketing & Re-engagement',
-    description:
-      "Record customer spending, dining dates, and preferences, then push premium package offers for holidays (such as Valentine's Day, anniversaries).",
-    image: Feature3,
-
-    points: [
-      "Record customer spending, dining dates, and preferences, then push premium package offers for holidays (such as Valentine's Day, anniversaries).",
-      "Convert repeat diners into returning customers, such as pushing new menus, chef's special tasting experiences.",
+      'Freely set per-person deposits to ensure premium experiences are adequately prepared, reducing losses from last-minute cancellations.',
+      'Allow customers to select experience packages during booking, with notes for preferences and special requirements, enabling staff to prepare in advance.',
     ],
   },
 ];
 
 const solutions = [
   {
-    title: 'Winery',
+    title: 'Adventure Tours',
     image: Solution1,
   },
   {
-    title: 'Highway Restaurant',
+    title: 'Water Sports',
     image: Solution2,
   },
   {
-    title: 'Omakase Restaurant',
+    title: 'Cooking Classes',
     image: Solution3,
   },
   {
-    title: 'Theme Restaurant',
+    title: 'Wellness & Spa',
     image: Solution4,
   },
   {
-    title: 'Michelin Restaurant',
+    title: 'Cultural Experiences',
     image: Solution5,
   },
   {
-    title: 'Japanese Restaurant',
+    title: 'Outdoor Activities',
     image: Solution6,
   },
   {
-    title: 'Scenic Restaurant',
+    title: 'Entertainment',
     image: Solution7,
   },
   {
-    title: 'Resort',
+    title: 'Workshops',
     image: Solution8,
   },
 ];
@@ -375,49 +364,49 @@ const solutions = [
 const feedbackData = [
   {
     content:
-      'Our teppanyaki restaurant has limited seats daily. We used to frequently encounter last-minute cancellations, and ingredients were wasted. After implementing Fullkeep, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage ingredients more precisely. Operations are much more secure now.',
+      'Our adventure tours have limited spots daily. We used to frequently encounter last-minute cancellations, and resources were wasted. After implementing Kangabook, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage resources more precisely. Operations are much more secure now.',
     name: 'Tom',
     rating: '5.0',
   },
   {
     content:
-      'Our teppanyaki restaurant has limited seats daily. We used to frequently encounter last-minute cancellations, and ingredients were wasted. After implementing Fullkeep, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage ingredients more precisely. Operations are much more secure now.',
+      'Our adventure tours have limited spots daily. We used to frequently encounter last-minute cancellations, and resources were wasted. After implementing Kangabook, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage resources more precisely. Operations are much more secure now.',
     name: 'Emma',
     rating: '5.0',
   },
   {
     content:
-      'What we love most about Fullkeep is its marketing tools. After customers dine, the system helps us send promotional notifications or holiday package information. Many regular customers return because of this. Compared to traditional methods, the return visit rate is really much higher now.',
+      'What we love most about Kangabook is its marketing tools. After customers book, the system helps us send promotional notifications or holiday package information. Many regular customers return because of this. Compared to traditional methods, the return visit rate is really much higher now.',
     name: 'John',
     rating: '5.0',
   },
   {
     content:
-      'Our teppanyaki restaurant has limited seats daily. We used to frequently encounter last-minute cancellations, and ingredients were wasted. After implementing Fullkeep, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage ingredients more precisely. Operations are much more secure now.',
+      'Our adventure tours have limited spots daily. We used to frequently encounter last-minute cancellations, and resources were wasted. After implementing Kangabook, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage resources more precisely. Operations are much more secure now.',
     name: 'Bob',
     rating: '5.0',
   },
   {
     content:
-      'What we love most about Fullkeep is its marketing tools. After customers dine, the system helps us send promotional notifications or holiday package information. Many regular customers return because of this. Compared to traditional methods, the return visit rate is really much higher now.',
+      'What we love most about Kangabook is its marketing tools. After customers book, the system helps us send promotional notifications or holiday package information. Many regular customers return because of this. Compared to traditional methods, the return visit rate is really much higher now.',
     name: 'Cindy',
     rating: '5.0',
   },
   {
     content:
-      'Our teppanyaki restaurant has limited seats daily. We used to frequently encounter last-minute cancellations, and ingredients were wasted. After implementing Fullkeep, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage ingredients more precisely. Operations are much more secure now.',
+      'Our adventure tours have limited spots daily. We used to frequently encounter last-minute cancellations, and resources were wasted. After implementing Kangabook, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage resources more precisely. Operations are much more secure now.',
     name: 'Leon',
     rating: '5.0',
   },
   {
     content:
-      'What we love most about Fullkeep is its marketing tools. After customers dine, the system helps us send promotional notifications or holiday package information. Many regular customers return because of this. Compared to traditional methods, the return visit rate is really much higher now.',
+      'What we love most about Kangabook is its marketing tools. After customers book, the system helps us send promotional notifications or holiday package information. Many regular customers return because of this. Compared to traditional methods, the return visit rate is really much higher now.',
     name: 'May',
     rating: '5.0',
   },
   {
     content:
-      'Our teppanyaki restaurant has limited seats daily. We used to frequently encounter last-minute cancellations, and ingredients were wasted. After implementing Fullkeep, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage ingredients more precisely. Operations are much more secure now.',
+      'Our adventure tours have limited spots daily. We used to frequently encounter last-minute cancellations, and resources were wasted. After implementing Kangabook, customers can pay a deposit when booking, which not only reduces no-shows but also allows us to manage resources more precisely. Operations are much more secure now.',
     name: 'kevin',
     rating: '5.0',
   },

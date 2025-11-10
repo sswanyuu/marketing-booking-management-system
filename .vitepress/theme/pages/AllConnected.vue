@@ -176,13 +176,13 @@ const itemsFirstSection = [
   {
     title: 'Embedded Custom System',
     description:
-      "Send reservation reminders and promotional messages directly through LINE. Aligned with Taiwan's mainstream communication habits, enhancing customer engagement and return rates.",
+      "Send booking reminders and promotional messages directly through LINE. Aligned with Taiwan's mainstream communication habits, enhancing customer engagement and return rates.",
     image: Item1,
   },
   {
     title: 'Enterprise Integration Support',
     description:
-      "Integrate with Google's reservation system, allowing consumers to complete bookings directly from Google search results, expanding exposure and booking channels.",
+      "Integrate with Google's booking system, allowing consumers to complete bookings directly from Google search results, expanding exposure and booking channels.",
     image: Item2,
   },
   {
@@ -202,13 +202,13 @@ const itemsSecondSection = [
   {
     title: 'Google Booking Integration',
     description:
-      "Integrate with Google's reservation system, allowing consumers to complete bookings directly from Google search results, expanding exposure and booking channels.",
+      "Integrate with Google's booking system, allowing consumers to complete bookings directly from Google search results, expanding exposure and booking channels.",
     image: Item5,
   },
   {
     title: 'Cross-Location Information Memory',
     description:
-      'Support customer information memory across locations, simplifying repetitive input processes and improving reservation efficiency and experience.',
+      'Support customer information memory across locations, simplifying repetitive input processes and improving booking efficiency and experience.',
     image: Item6,
   },
 ];

@@ -11,12 +11,12 @@
           <img
             src="../assets/images/layout/footer/slogan.png"
             alt="hero"
-            class="top-image__bg--desktop d-none d-md-block"
+            class="top-image__bg--desktop d-none d-md-block mx-3"
           />
           <img
             src="../assets/images/layout/footer/slogan-mobile.png"
             alt="hero"
-            class="top-image__bg--mobile d-flex d-md-none"
+            class="top-image__bg--mobile d-flex d-md-none mx-1"
           />
 
           <span class="md-headline-2-bold headline-4-bold">!</span>
@@ -71,8 +71,8 @@
       >
         <img
           src="../assets/images/layout/footer/logo.png"
-          alt="fullkeep"
-          class="logo"
+          alt="kangabook"
+          class="footer__logo"
         />
         <div
           class="d-flex navigation__links flex-column flex-md-row justify-content-center align-items-center gap-5"
@@ -81,7 +81,7 @@
             class="text-white text-decoration-none headline-2-medium md-headline-1-medium"
             @click="navigateTo(ROUTES.HOME)"
           >
-            WHY FULLKEEP
+            WHY KANGABOOK
           </a>
           <a
             class="text-white text-decoration-none headline-2-medium md-headline-1-medium"
@@ -99,7 +99,7 @@
         <div
           class="body-1 justify-content-end flex-grow-1 text-center md-body-3 text-md-end px-5 px-md-0"
         >
-          Copyright © Fullkeep All Rights Reserved Privacy Policy
+          Copyright © Kangabook All Rights Reserved Privacy Policy
         </div>
       </div>
     </div>

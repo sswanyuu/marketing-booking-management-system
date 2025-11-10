@@ -31,7 +31,7 @@
               />
             </div>
           </div>
-          <div class="text-white">TO GROW YOUR RESTAURANT.</div>
+          <div class="text-white">TO GROW YOUR EXPERIENCE BUSINESS.</div>
         </div>
         <div class="d-flex flex-column gap-2">
           <Button
@@ -51,13 +51,15 @@
       <div class="headline-2-regular md-headline-1-regular text-gray">
         Trusted by Leading Brands
       </div>
-      <div class="row justify-content-center gy-1">
-        <div
-          v-for="brand in brands"
-          :key="brand.title"
-          class="col-auto brand d-flex align-items-center justify-content-center"
-        >
-          <img :src="brand.image" alt="brand-image" />
+      <div class="brands__container">
+        <div class="row justify-content-center gy-1 w-100">
+          <div
+            v-for="brand in brands"
+            :key="brand.title"
+            class="col-auto brand d-flex align-items-center justify-content-center"
+          >
+            <img :src="brand.image" alt="brand-image" />
+          </div>
         </div>
       </div>
     </section>
@@ -67,14 +69,15 @@
     >
       <div class="features__background rounded-4" />
       <div
-        class="header-container text-white d-flex flex-column align-items-center gap-4 gap-md-6"
+        class="header-container text-white d-flex flex-column align-items-center gap-4 gap-md-6 px-4"
       >
-        <div class="headline-4-bold md-headline-1-bold">
+        <div class="headline-5-bold md-headline-2-bold">
           More Than Just Booking
         </div>
         <div class="body-1 md-headline-1-regular text-center">
-          A comprehensive solution with zero learning curve. Table management,
-          customer growth, all in one system. Trusted by leading brands.
+          A comprehensive solution with zero learning curve. Experience
+          management, customer growth, all in one system. Trusted by leading
+          brands.
         </div>
       </div>
       <!-- features desktop -->
@@ -84,7 +87,7 @@
             <div
               class="feature-card d-flex flex-column gap-4 bg-gray-light rounded-4 pt-9 justify-content-between align-items-center h-100"
             >
-              <div class="headline-6-bold xl-headline-5-bold mx-3">
+              <div class="headline-6-bold xl-headline-5-bold mx-3 text-center">
                 {{ feature.title }}
               </div>
               <img
@@ -131,24 +134,24 @@
       <div
         class="painpoints__header d-flex flex-column align-items-center gap-4 gap-md-6"
       >
-        <div class="painpoints__header__title">
+        <div class="headline-6-bold md-headline-2-bold text-center">
           We Understand Your Management Challenges
         </div>
-        <div class="painpoints__header__description text-center text-gray">
+        <div class="body-1 md-headline-1-regular text-center text-gray">
           You don't have to accept chaos. We provide better solutions to restore
-          control over your restaurant management, turning pain points into
+          control over your experience management, turning pain points into
           smooth operations.
         </div>
       </div>
-      <div class="painpoints__list row gx-5 gy-5">
+      <div class="painpoints__list w-100 row gx-5 gy-5">
         <div class="col-12">
           <div
-            class="painpoint-card painpoint-card--first d-flex flex-column flex-md-row align-items-center rounded-4 px-md-9 justify-content-between"
+            class="painpoint-card painpoint-card--first d-flex flex-column flex-md-row align-items-center rounded-4 px-md-9 justify-content-between overflow-hidden"
           >
             <div
               class="painpoint-card__content d-flex flex-column gap-3 gap-md-4 text-white mt-7 mt-md-0 px-7 px-md-0 text-center text-md-start"
             >
-              <div class="headline-6-bold md-headline-5-bold">
+              <div class="headline-7-bold md-headline-5-bold">
                 {{ painPoints[0].title }}
               </div>
               <div class="body-3 md-body-1">
@@ -179,7 +182,7 @@
             <div
               class="painpoint-card__content d-flex flex-column gap-3 gap-md-4 text-white text-center px-7 px-md-0"
             >
-              <div class="headline-6-bold md-headline-5-bold">
+              <div class="headline-7-bold md-headline-5-bold">
                 {{ painPoints[1].title }}
               </div>
               <div class="body-3 md-body-1">
@@ -195,7 +198,7 @@
             <div
               class="painpoint-card__content d-flex flex-column gap-3 gap-md-4 text-white mt-7 mt-md-0 px-7 px-md-0 text-center"
             >
-              <div class="headline-6-bold md-headline-5-bold">
+              <div class="headline-7-bold md-headline-5-bold">
                 {{ painPoints[2].title }}
               </div>
               <div class="body-3 md-body-1">
@@ -225,9 +228,9 @@
       <div class="solutions__container d-flex flex-column">
         <div class="row">
           <div class="col-12">
-            <div class="headline-4-bold md-headline-1-bold text-center px-5">
+            <div class="headline-6-bold md-headline-1-bold text-center px-5">
               Comprehensive Operations Experience, Let You Focus on Making Your
-              Restaurant the Best
+              Experience Business the Best
             </div>
           </div>
         </div>
@@ -378,21 +381,21 @@ const features = [
 ];
 const painPoints = [
   {
-    title: 'Need to Change Party Size? Cancel and Rebook?',
+    title: 'Need to Change Group Size? Cancel and Rebook?',
     description:
-      'Fullkeep supports real-time adjustments to party size, time, and notes. Edit reservations directly for smoother processes and more flexible service.',
+      'Kangabook supports real-time adjustments to group size, time, and notes. Edit bookings directly for smoother processes and more flexible service.',
     image: Painpoint1,
     mobileImage: Painpoint1Mobile,
   },
   {
     title: 'International Guests Struggling to Book?',
     description:
-      'Fullkeep supports multi-language interfaces, email/international phone verification, and online payment. International customers can easily complete reservations without losing orders.',
+      'Kangabook supports multi-language interfaces, email/international phone verification, and online payment. International customers can easily complete bookings without losing experience slots.',
   },
   {
     title: "Can't Book Directly from Your Brand Website?",
     description:
-      'Fullkeep provides embedded APIs for quick integration into your brand website. No page redirects needed, maintaining brand consistency and seamless customer experience.',
+      'Kangabook provides embedded APIs for quick integration into your brand website. No page redirects needed, maintaining brand consistency and seamless customer experience.',
     image: Painpoint3,
     mobileImage: Painpoint3Mobile,
   },
@@ -401,7 +404,7 @@ const solutions = [
   {
     title: 'LINE Message Integration',
     description:
-      'Automatically send reservation and waitlist notifications. No more manual follow-ups. Customers receive instant updates while staff focus on in-person service.',
+      'Automatically send booking and waitlist notifications. No more manual follow-ups. Customers receive instant updates while staff focus on in-person service.',
     image: Solution1,
     mobileImage: Solution1Mobile,
     mobileImageClass: 'w-75',
@@ -416,21 +419,21 @@ const solutions = [
   {
     title: 'Deposit Payment & Reminder Features',
     description:
-      'Flexibly set deposit amounts and payment methods, paired with automatic reminders. Effectively reduce no-show rates, ensuring every ingredient and seat is utilized, boosting operational efficiency.',
+      'Flexibly set deposit amounts and payment methods, paired with automatic reminders. Effectively reduce no-show rates, ensuring every experience slot is utilized, boosting operational efficiency.',
     image: Solution3,
     mobileImage: Solution3Mobile,
   },
   {
     title: 'CRM & Remarketing Tools',
     description:
-      'Built-in customer database and marketing modules. Easily set up promotional pushes, new menu notifications, and holiday greetings. Turn one-time visitors into loyal regulars.',
+      'Built-in customer database and marketing modules. Easily set up promotional pushes, new experience notifications, and holiday greetings. Turn one-time customers into loyal regulars.',
     image: Solution4,
     mobileImage: Solution4Mobile,
   },
   {
     title: 'Cross-Location Shared Payment & Notes',
     description:
-      "Record each customer's payment history and booking preferences. Enter once, use across all locations. Make return visits smoother and service more personalized.",
+      "Record each customer's payment history and booking preferences. Enter once, use across all locations. Make return bookings smoother and service more personalized.",
     image: Solution5,
     class: ['col-md-12', 'flex-md-row'],
     mobileImage: Solution5Mobile,

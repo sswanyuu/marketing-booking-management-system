@@ -112,31 +112,6 @@ npm run docs:dev
 npm run docs:build
 ```
 
-## 📱 Responsive Design
-
-The website is built with a mobile-first approach, featuring:
-
-- **Mobile**: Optimized touch interactions and swiper carousels
-- **Tablet**: Balanced layout with improved spacing
-- **Desktop**: Full feature showcase with multi-column layouts
-
-### Breakpoints
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
-
-## 🎨 Design System
-
-### Color Palette
-- **Primary**: Professional blue (#007bff)
-- **Secondary**: Clean grays for text hierarchy
-- **Accent**: White for contrast and readability
-
-### Typography
-- **Headlines**: Bold, clear hierarchy for B2B audience
-- **Body Text**: Readable font sizes with proper line spacing
-- **Mobile**: Optimized font sizes for mobile readability
-
 ### Components
 - **Buttons**: Primary and secondary variants with hover states
 - **Cards**: Feature showcase with consistent spacing
@@ -159,44 +134,13 @@ npm run format:check      # Check code formatting
 
 ## 📈 Business Impact
 
-### Target Market
-- **Primary**: Taiwanese restaurant industry
-- **Secondary**: International restaurants with diverse customer bases
-- **Focus**: Both local establishments and tourist-ready venues
-
-### Key Value Propositions
-- **Smart Reservation Management**: Real-time table and seat management
-- **Multi-platform Integration**: LINE, Google, and website embedding
-- **International Support**: Multi-language interface and payment processing
-- **CRM Capabilities**: Customer relationship management and marketing tools
-
-### Conversion Strategy
-- Clear value proposition messaging
-- Strategic CTA placement
-- Social proof through brand showcases
-- Problem-solution presentation
-
 ## 🏆 Key Achievements
 
-- **Performance**: Optimized loading times with efficient asset management
 - **User Experience**: Intuitive navigation and clear information hierarchy
 - **Brand Consistency**: Unified design system across all pages
 - **Mobile Optimization**: Seamless experience across all device sizes
 - **Conversion Focus**: Strategic placement of demo request CTAs
 
-## 🔍 SEO & Performance
-
-- **Static Site Generation**: Fast loading with VitePress
-- **Optimized Assets**: Compressed images and efficient CSS
-- **Mobile Performance**: Touch-optimized interactions
-- **Accessibility**: Semantic HTML and proper contrast ratios
-
-## 📞 Contact & Demo
-
-The website includes multiple touchpoints for potential customers:
-- **Demo Requests**: Primary CTA throughout the site
-- **Contact Information**: Clear contact details in footer
-- **Social Proof**: Leading brand showcases
 
 ## 🛡️ Code Quality
 

@@ -1,4 +1,3 @@
-$hero-smartest-color: #a580ff;
 .home {
   .hero {
     &__smartest {
@@ -65,9 +64,9 @@ $hero-smartest-color: #a580ff;
     position: relative;
     padding-top: 58px;
     .header-container {
-      width: 560px;
+      max-width: 600px;
       @include media-breakpoint-down(md) {
-        width: 400px;
+        max-width: 400px;
       }
     }
     @include media-breakpoint-down(md) {
@@ -118,19 +117,6 @@ $hero-smartest-color: #a580ff;
       width: 560px;
       @include media-breakpoint-down(md) {
         width: 312px;
-      }
-      &__title {
-        text-align: center;
-        @include headline-bold(48px, 0%);
-        @include media-breakpoint-down(md) {
-          @include headline-bold(28px, 0%);
-        }
-      }
-      &__description {
-        @include headline-regular(24px, 140%, 0%);
-        @include media-breakpoint-down(md) {
-          @include body-text(16px, 140%, 0%);
-        }
       }
     }
     &__list {
