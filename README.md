@@ -1,36 +1,24 @@
-# Booking Management System - Marketing Website
+🌍 Marketing Booking Management System - A Modern B2B SaaS Marketing Website
 
-A comprehensive marketing website for a B2B SaaS restaurant reservation management system. This project showcases the platform's capabilities through a modern, responsive web experience designed to generate leads and establish brand credibility.
+🔗 Live Demo https://sswanyuu.github.io/marketing-booking-management-system/
 
-## 🎯 Project Overview
+A comprehensive marketing website for a B2B SaaS restaurant reservation management system, built with VitePress and Vue.js. Features a modern, responsive design with smooth animations and a well-structured component architecture.
 
-This is a restaurant reservation management system that helps restaurants streamline their booking processes, manage customer relationships, and integrate with popular platforms like LINE and Google. This marketing website serves as the primary customer acquisition channel, demonstrating the platform's value proposition to potential restaurant clients.
+✨ Key Features
 
-## ✨ Key Features
+✅ Modern & Responsive Design – Mobile-first approach with custom breakpoints, optimized for all devices.
 
-### **Responsive Design**
-- Mobile-first approach with custom breakpoints
-- Optimized user experience across all devices
-- Touch-friendly navigation for mobile users
+✅ Component-Based Architecture – Reusable Vue components with SCSS styling for maintainable code.
 
-### **Conversion Optimization**
-- Strategic CTA placement throughout the site
-- Clear value proposition messaging
-- Streamlined demo request process
+✅ Smooth Animations – AOS (Animate On Scroll) and Swiper.js for enhanced user engagement.
 
-### **Multi-page Architecture**
-- **Home**: Main landing page with hero section and feature overview
-- **All Connected**: Platform integration capabilities
-- **Demo Booking**: Interactive booking demonstration
-- **Easy Use**: User experience and onboarding
-- **Grow Again**: Growth and expansion features
-- **Industry Fit**: Industry-specific solutions
-- **Tourist Ready**: International customer support
+✅ Multi-Page Marketing Site – Comprehensive pages showcasing features, integrations, and solutions.
 
-### **Performance Optimized**
-- Fast loading with optimized assets
-- Efficient static site generation
-- Minimal JavaScript footprint
+✅ Performance Optimized – Fast loading with optimized assets and efficient static site generation.
+
+✅ Bootstrap 5 Integration – Professional UI components with custom styling.
+
+This project showcases my frontend development skills in Vue.js, VitePress, SCSS architecture, component design, and building production-ready marketing websites.
 
 ## 🛠 Technical Stack
 
@@ -39,49 +27,8 @@ This is a restaurant reservation management system that helps restaurants stream
 - **Build Tool**: VitePress for static site generation
 - **Icons**: Bootstrap Icons
 - **Animations**: AOS (Animate On Scroll)
-- **Carousel**: Swiper.js for mobile features
-- **Linting**: ESLint with Vue configuration
-- **Formatting**: Prettier for code consistency
-
-## 📁 Project Structure
-
-```
-booking-management-system/
-├── scss/
-│   ├── components/          # Reusable UI components
-│   │   ├── _button.scss
-│   │   ├── _features-section.scss
-│   │   ├── _footer.scss
-│   │   ├── _header.scss
-│   │   ├── _input.scss
-│   │   ├── _mobile-menu.scss
-│   │   └── _simple-footer.scss
-│   ├── pages/              # Page-specific styles
-│   │   ├── _all-connected.scss
-│   │   ├── _demo-booking.scss
-│   │   ├── _easy-use.scss
-│   │   ├── _grow-again.scss
-│   │   ├── _home.scss
-│   │   ├── _industry-fit.scss
-│   │   └── _tourist-ready.scss
-│   ├── base/               # Base styles and utilities
-│   │   ├── extended.scss
-│   │   ├── typography.scss
-│   │   └── utilities.scss
-│   ├── _bootstrap-icons.scss
-│   ├── _variables.scss
-│   └── main.scss
-├── dist/                   # Built static site
-├── index.md               # Home page
-├── all-connected.md       # Integration features
-├── demo-booking.md       # Booking demonstration
-├── easy-use.md           # User experience
-├── grow-again.md         # Growth features
-├── industry-fit.md       # Industry solutions
-├── tourist-ready.md     # International support
-├── design-system.md     # Design system documentation
-└── package.json
-```
+- **Carousel**: Swiper.js
+- **Deployment**: GitHub Pages with automated workflows
 
 ## 🚀 Getting Started
 
@@ -94,7 +41,7 @@ booking-management-system/
 1. Clone the repository
 ```bash
 git clone [repository-url]
-cd booking-management-system
+cd marketing-booking-management-system
 ```
 
 2. Install dependencies
@@ -112,18 +59,13 @@ npm run docs:dev
 npm run docs:build
 ```
 
-### Components
-- **Buttons**: Primary and secondary variants with hover states
-- **Cards**: Feature showcase with consistent spacing
-- **Navigation**: Clean header with mobile hamburger menu
-
 ## 🔧 Development Scripts
 
 ```bash
 # Development
 npm run docs:dev          # Start development server
-npm run docs:build      # Build for production
-npm run docs:preview       # Preview production build
+npm run docs:build        # Build for production (auto-fixes assets)
+npm run docs:preview      # Preview production build
 
 # Code Quality
 npm run lint              # Run ESLint
@@ -132,26 +74,34 @@ npm run format            # Format code with Prettier
 npm run format:check      # Check code formatting
 ```
 
-## 📈 Business Impact
+## 📁 Project Structure
 
-## 🏆 Key Achievements
+```
+marketing-booking-management-system/
+├── .vitepress/
+│   ├── config.ts         # VitePress configuration
+│   └── theme/            # Custom theme components
+├── scss/
+│   ├── components/       # Reusable UI components
+│   ├── pages/            # Page-specific styles
+│   ├── base/             # Base styles and utilities
+│   └── main.scss
+├── scripts/
+│   ├── postinstall.js    # Auto-fix Bootstrap files
+│   └── fix-assets.js     # Auto-fix asset paths
+├── dist/                 # Built static site
+└── *.md                  # Page content files
+```
 
-- **User Experience**: Intuitive navigation and clear information hierarchy
-- **Brand Consistency**: Unified design system across all pages
-- **Mobile Optimization**: Seamless experience across all device sizes
-- **Conversion Focus**: Strategic placement of demo request CTAs
+## 🚢 Deployment
 
+The project is automatically deployed to GitHub Pages on every push to the `main` branch. The build process includes:
 
-## 🛡️ Code Quality
+- Automatic Bootstrap file fixes
+- Asset path corrections for GitHub Pages
+- Base path configuration
 
-- **ESLint**: Vue.js and JavaScript linting
-- **Prettier**: Consistent code formatting
-- **SCSS**: Organized and maintainable stylesheets
-- **Component Architecture**: Reusable and scalable components
-
-## 📄 License
-
-This project is a marketing website for a booking management system.
+See `.github/workflows/deploy.yml` for deployment configuration.
 
 ---
 

@@ -65,6 +65,7 @@ import marketingIcon from '../assets/icons/marketing.svg';
 import touristsIcon from '../assets/icons/tourists.svg';
 import arrowRightIcon from '../assets/icons/arrow-right.svg';
 import { ref } from 'vue';
+import { useNavigation } from '../composables/useNavigation.js';
 
 defineProps({
   isOpen: {
@@ -72,27 +73,29 @@ defineProps({
     default: false,
   },
 });
+const { navigateTo, ROUTES } = useNavigation();
+
 const features = [
   {
     icon: uxIcon,
     title: 'Excellent User Experience',
     description:
       'Aligned with user operation habits, both customers and restaurants can enjoy an efficient digital reservation experience.',
-    link: '/easy-use.html',
+    link: ROUTES.EASY_USE,
   },
   {
     icon: marketingIcon,
     title: 'Marketing & Re-engagement',
     description:
       'Precise marketing and data analysis deepen customer interactions, enhancing brand loyalty and repeat purchase rates.',
-    link: '/grow-again.html',
+    link: ROUTES.GROW_AGAIN,
   },
   {
     icon: touristsIcon,
     title: 'Tourist-Friendly',
     description:
       'Regardless of language, interface, or communication tools, we provide smooth reservation processes and service information for customers worldwide.',
-    link: '/tourist-ready.html',
+    link: ROUTES.TOURIST_READY,
   },
 ];
 
@@ -104,7 +107,6 @@ const handleMouseLeave = () => {
   isHovered.value = null;
 };
 const handleClick = link => {
-  // eslint-disable-next-line no-undef
-  window.location.href = link;
+  navigateTo(link);
 };
 </script>
