@@ -10,9 +10,10 @@
   },
   "type": "module",
   "scripts": {
+    "postinstall": "node scripts/postinstall.js",
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build --outDir dist",
-    "build": "vitepress build",
+    "docs:build": "vitepress build --outDir dist && node scripts/fix-assets.js",
+    "build": "vitepress build && node scripts/fix-assets.js",
     "docs:preview": "vitepress preview",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
